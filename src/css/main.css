@@ -1,0 +1,393 @@
+@media (min-width: 360px) and (max-width: 759px) {
+    /*=================================*/
+    /*main_content 설정*/
+    /*=================================*/
+
+    .content {
+        max-width: 760px;
+    }
+
+    .main_content {
+        width: 100%;
+        position: relative;
+        display: flex;
+        padding: 0;
+        margin: 0;
+    }
+
+    .line_1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* .line_1 > div {
+        display: inline-block;
+    } */
+
+    /* .content_title {
+        margin-bottom: 3em;
+    } */
+
+    /* .s_text > div {
+        display: inline;
+        align-items: center;
+        margin-left: 10px;
+    } */
+
+    #autobot_button_container1 {
+        justify-content: center;
+    }
+
+    .line_2 > ul {
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .line_2 > ul > li {
+        margin: 0 5px;
+    }
+
+    .s_text > div{
+        align-items: center;
+        justify-content: center;
+        padding-top: 0px;
+    }
+
+    .button_container {
+        display: flex;
+        max-width: 400px;
+    }
+
+    .button_container > a, .button_container > button {
+        display: inline;
+    }
+
+    .button_container > button, .button_container > a > button {
+        width: 130px;
+    }
+
+    .input_container {
+        flex-direction: column;
+    }
+
+    .input_container > div > input[type="text"] {
+        width: 100%;
+    }
+
+    .horizon_line {
+        border-bottom: 2px solid #4374D9;
+    }
+
+    /*=================================*/
+    /*textbox 설정*/
+    /*=================================*/
+
+    .in-line{
+        height: 40px;
+        width: 40px;
+    }
+
+    input{
+        margin:0;
+    }
+
+    input[type="text"]{
+        width:400px;
+        height:100%;
+
+        border-left-width:0;
+        border-right-width:0;
+        border-top-width:0;
+        border-bottom-width:0.5px;
+
+        font-size:1em;
+        padding-left: 5px;
+        font-style: oblique;
+        display:inline;
+        outline:none;
+        box-sizing: border-box;
+        color:black;
+
+    }
+
+    input[type=button]{
+        width:40px;
+        height:100%;
+        border:none;
+        background-color: lightgray;
+        color:black;
+        font-size:1em;
+        outline:none;
+        display:inline;
+        margin-left: 0px;
+        box-sizing: border-box;
+        cursor:pointer;
+        transition:800ms ease all;
+    }
+
+    /* input[type=button]:hover{
+        background-color: navy;
+        color: white;
+    } */
+
+    /*=================================*/
+    /*box 설정*/
+    /*=================================*/
+
+    .line_9 div div{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 0;
+        margin: 0 10px 0 10px;
+    }
+
+    .box_red{
+        height: 200px;
+        width: 400px;
+        background-color: #ffd3d1;
+    }
+    .box_blue{
+        height: 200px;
+        width: 400px;
+        background-color: #bddaff;
+    }
+
+    .box_blue > div {
+        margin-right: 0;
+    }
+
+    .box_blue > div, .box_red > div {
+        width: 120px;
+    }
+
+    .box_2{
+        all: unset;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .box_3{
+        all: unset;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .b_text {
+        margin-bottom: 10px;
+    }
+
+    #autosale_margin_div {
+        display: none;
+    }
+
+    #autosale_buttons {
+        width: 80%;
+        margin-right: 80px;
+        height: 100%
+    }
+
+    #autosale_buttons > button {
+        position:relative;
+        /*padding:0 2em;*/
+        outline:none;
+        height: 40px;
+        width: 100px;
+        border:none;
+        border-radius: 8px;
+        /*border: 2px solid navy;*/
+        /*color:black;*/
+        background-color: #4374D9;
+        color:#fff;
+        font-size:1.3rem;
+        cursor:pointer;
+        /* transition:800ms ease all; */
+    }
+}
+
+
+@media (min-width: 760px) {
+    /*=================================*/
+    /*main_content 설정*/
+    /*=================================*/
+
+    .content {
+        max-width: 760px;
+    }
+
+    .main_content {
+        width: 100%;
+        position: relative;
+        display: flex;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    #line_1 {
+        flex-direction: row;
+    }
+
+    .line_1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* .line_1 > div {
+        display: inline-block;
+    } */
+
+    /* .content_title {
+        margin-bottom: 3em;
+    } */
+
+    /* .s_text > div {
+        display: inline;
+        align-items: center;
+        margin-left: 10px;
+    } */
+
+    .s_text > div{
+        align-items: center;
+        justify-content: center;
+        padding-top: 0px;
+    }
+
+    #autobot_button_container2 {
+        justify-content: flex-end;
+    }
+
+    #autobot_button_container2 > a > button {
+        width: 130px;
+    }
+
+    .button_container {
+        display: flex;
+        max-width: 400px;
+    }
+
+    .button_container > a, .button_container > button {
+        display: inline;
+    }
+
+    .button_container > button, .button_container > a > button {
+        width: 130px;
+    }
+
+    .horizon_line {
+        border-bottom: 2px solid #4374D9;
+    }
+
+    /*=================================*/
+    /*textbox 설정*/
+    /*=================================*/
+
+    .in-line{
+        height: 40px;
+        width: 40px;
+    }
+
+    input{
+        margin:0;
+    }
+
+    input[type="text"]{
+        width:400px;
+        height:100%;
+
+        border-left-width:0;
+        border-right-width:0;
+        border-top-width:0;
+        border-bottom-width:0.5px;
+
+        font-size:1em;
+        padding-left: 5px;
+        font-style: oblique;
+        display:inline;
+        outline:none;
+        box-sizing: border-box;
+        color:black;
+
+    }
+
+    input[type=button]{
+        width:40px;
+        height:100%;
+        border:none;
+        background-color: lightgray;
+        color:black;
+        font-size:1em;
+        outline:none;
+        display:inline;
+        margin-left: 0px;
+        box-sizing: border-box;
+        cursor:pointer;
+        transition:800ms ease all;
+    }
+
+    /* input[type=button]:hover{
+        background-color: navy;
+        color: white;
+    } */
+
+    /*=================================*/
+    /*box 설정*/
+    /*=================================*/
+
+    .line_9 div div{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 0;
+        margin: 0 10px 0 10px;
+    }
+
+    .box_red{
+        height: 200px;
+        width: 400px;
+        background-color: #ffd3d1;
+    }
+    .box_blue{
+        height: 200px;
+        width: 400px;
+        background-color: #bddaff;
+    }
+
+    .box_2{
+        all: unset;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .box_3{
+        all: unset;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .autosale_buttons {
+        max-width: 400px;
+        margin-right: 80px;
+        height: 100%
+    }
+
+    .autosale_buttons > button {
+        position:relative;
+        /*padding:0 2em;*/
+        outline:none;
+        height: 40px;
+        width: 100px;
+        border:none;
+        border-radius: 8px;
+        /*border: 2px solid navy;*/
+        /*color:black;*/
+        background-color: #4374D9;
+        color:#fff;
+        font-size:1.3rem;
+        cursor:pointer;
+        /* transition:800ms ease all; */
+    }
+}

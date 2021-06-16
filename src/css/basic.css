@@ -1,0 +1,661 @@
+@media (min-width: 360px) and (max-width: 759px) {
+    /*=================================*/
+    /*공통 설정*/
+    /*=================================*/
+    html,
+    body {
+        box-sizing: border-box;
+        margin: 0;
+        font-size: 62.5%;
+    }
+
+    body {
+        margin : 0;
+        text-align: center;
+        font-family: 'Spoqa Han Sans Neo', 'sans-serif'; 
+    }
+
+    a:hover,
+    a:visited,
+    a:focus {
+        text-decoration: none !important;
+        /*color: #ffffff;*/
+    }
+
+    a,
+    ul,
+    ol,
+    li {
+        text-decoration: none;
+        list-style: none;
+    }
+
+    /* header */
+    .header {
+        background-color: black;
+    }
+
+    /*=================================*/
+    /*navbar 설정*/
+    /*=================================*/
+
+    .navbar a {
+        color: white;
+    }
+
+    .navbar{
+        max-width: 760px;
+        z-index: 9999;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: black;
+        /* padding: 8px 12px; */
+        padding-top: 8px;
+        padding-bottom: 8px;
+        height: 50px;
+        color: white;
+        margin: 0px auto;
+        position: relative;
+    }
+
+    .nav_logo{
+        font-size: 24px;
+        padding-left: 12px;
+    }
+
+    .nav_logo i {
+        padding-right: 5px;
+        color: coral;
+    }
+
+    .nav_menu{
+        display: none;
+        list-style: none;
+        padding-left: 0;
+        font-size: 1.5rem;
+        cursor:pointer;
+        
+    }
+
+    .nav_menu li div{
+        padding-left: 12px;
+    }
+
+    .nav_menu li {
+        display: flex;
+        padding: 8px 12px;
+    }
+
+    .nav_menu li a:hover{
+        font-weight: bold;
+        color: coral;
+    }
+
+    /*=================================*/
+    /*head_title 설정*/
+    /*=================================*/
+
+    .head_title {
+        background-color: rgba(0,0,0,0.9);
+        height: 30vh;
+        /* width: 100%; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2vh;
+        flex-direction: column;
+        padding-left: 3em;
+    }
+
+    .head_title div{
+        max-width: 760px;
+        width: 100%;
+        text-align: left;
+        display: block;
+        /* vertical-align: middle; */
+        font-size: 4.5rem;
+        font-weight: bold;
+        color: white;
+    }
+
+    .head_title > div > p {
+        margin-bottom: 0;
+    }
+
+    /*=================================*/
+    /* main_content 설정*/
+    /*=================================*/
+
+    .main_content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 120px;
+        padding: 30px;
+        width: 70vw;
+        background-color: white;
+        font-size: 1.6rem;
+    }
+
+    .main_content div{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .content_title > div:nth-child(1) {
+        padding-left: 10px;
+    }
+
+    /*=================================*/
+    /*font 설정*/
+    /*=================================*/
+
+    .content_title{
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .m_text{
+        font-size: 1.5rem;
+    }
+
+    .s_text{
+        font-size: 1.3rem;
+    }
+
+    .b_text{
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .red_text{
+        font-weight: bold;
+        color: red;
+    }
+
+    .blue_text{
+        font-weight: bold;
+        color: blue;
+    }
+
+
+    /*=================================*/
+    /*button 설정*/
+    /*=================================*/
+
+    .main_button{
+        position:relative;
+        /*padding:0 2em;*/
+        outline:none;
+        height: 40px;
+        width: 100px;
+        border:none;
+        border-radius: 8px;
+        /*border: 2px solid navy;*/
+        /*color:black;*/
+        background-color: #4374D9;
+        color:#fff;
+        font-size:1.3rem;
+        cursor:pointer;
+        transition:800ms ease all;
+    }
+
+    /* .main_button:hover{
+        border: none;
+        color:white;
+        background:#b2b2b2;
+    } */
+
+    /*=================================*/
+    /*s_button 설정*/
+    /*=================================*/
+
+    .s_button{
+        margin-top: -30px;
+    }
+
+    .s_button button {
+        margin: 4px;
+        padding: 0;
+        display: inline-block;
+        height: 30px;
+        width:50px;
+        border-radius: 8px;
+        background-color: #b2b2b2;
+        color:#fff;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+        font-size: 15px;
+        cursor: pointer;
+        transition:800ms ease all;
+    }
+
+    /* .s_button button:hover{
+        padding: 0;
+        display: inline-block;
+        height: 30px;
+        width:50px;
+        border-radius: 8px;
+        color:#b2b2b2;
+        background:#fff;
+        border: solid #b2b2b2 2px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 15px;
+        cursor: pointer;
+        transition:800ms ease all;
+    } */
+
+    /*=================================*/
+    /*l_button 설정*/
+    /*=================================*/
+
+    .l_button button {
+        margin: 4px;
+        padding: 0;
+        display: inline-block;
+        height: 50px;
+        width:100%;
+        border-radius: 8px;
+        background-color: navy;
+        color:#fff;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    /* .l_button button:hover{
+        margin: 4px;
+        padding: 0;
+        display: inline-block;
+        height: 50px;
+        width:100%;
+        border-radius: 8px;
+        color:white;
+        background:#b2b2b2;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+        font-size: 15px;
+        cursor: pointer;
+        transition:800ms ease all;
+    } */
+
+    /*=================================*/
+    /*Ul li 설정*/
+    /*=================================*/
+
+    .main_content div ul{
+        display: flex;
+        justify-content: space-between;
+        /* width: 50em; */
+    }
+
+    .main_content div ul li a{
+        cursor:pointer;
+    }
+
+    .main_content div ul li a:hover{
+        color: coral;
+    }
+
+    /*=================================*/
+    /*footer 설정*/
+    /*=================================*/
+
+    footer {
+        background-color: black;
+        height: 40vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        /* margin-top: 20vh; */
+    }
+
+    footer > div {
+        max-width: 760px;
+        color: white;
+        display: block;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+@media (min-width: 760px) {
+    /*=================================*/
+    /*공통 설정*/
+    /*=================================*/
+    html,
+    body {
+        box-sizing: border-box;
+        margin: 0;
+        font-size: 62.5%;
+    }
+
+    body {
+        margin : 0;
+        text-align: center;
+        font-family: 'Spoqa Han Sans Neo', 'sans-serif'; 
+    }
+
+    a:hover,
+    a:visited,
+    a:focus {
+        text-decoration: none !important;
+        /*color: #ffffff;*/
+    }
+
+    a,
+    ul,
+    ol,
+    li {
+        text-decoration: none;
+        list-style: none;
+    }
+
+    /* header */
+    .header {
+        background-color: black;
+    }
+
+    /*=================================*/
+    /*navbar 설정*/
+    /*=================================*/
+
+    .navbar a {
+        color: white;
+    }
+
+    .navbar{
+        max-width: 760px;
+        z-index: 9999;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: black;
+        /* padding: 8px 12px; */
+        padding-top: 8px;
+        padding-bottom: 8px;
+        height: 50px;
+        color: white;
+        margin: 0px auto;
+        position: relative;
+    }
+
+    .nav_logo{
+        font-size: 24px;
+        padding-left: 12px;
+    }
+
+    .nav_logo i {
+        padding-right: 5px;
+        color: coral;
+    }
+
+    .nav_menu{
+        display: flex;
+        list-style: none;
+        padding-left: 0;
+        font-size: 1.5rem;
+        cursor:pointer;
+        
+    }
+
+    .nav_menu li div{
+        padding-left: 12px;
+    }
+
+    .nav_menu li {
+        display: flex;
+        padding: 8px 12px;
+    }
+
+    .nav_menu li a:hover{
+        font-weight: bold;
+        color: coral;
+    }
+
+    /*=================================*/
+    /*head_title 설정*/
+    /*=================================*/
+
+    .head_title {
+        background-color: rgba(0,0,0,0.9);
+        height: 30vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2vh;
+        flex-direction: column;
+    }
+
+    .head_title div{
+        max-width: 760px;
+        width: 100%;
+        text-align: left;
+        display: block;
+        /* vertical-align: middle; */
+        font-size: 4.5rem;
+        font-weight: bold;
+        color: white;
+    }
+
+    .head_title > div > p {
+        margin-bottom: 45px;
+    }
+
+    /*=================================*/
+    /* main_content 설정*/
+    /*=================================*/
+
+    .main_content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 120px;
+        padding: 30px;
+        width: 70vw;
+        background-color: white;
+        font-size: 1.6rem;
+    }
+
+    .main_content div{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    /*=================================*/
+    /*font 설정*/
+    /*=================================*/
+
+    .content_title{
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .m_text{
+        font-size: 1.5rem;
+    }
+
+    .s_text{
+        font-size: 1.3rem;
+    }
+
+    .b_text{
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .red_text{
+        font-weight: bold;
+        color: red;
+    }
+
+    .blue_text{
+        font-weight: bold;
+        color: blue;
+    }
+
+
+    /*=================================*/
+    /*button 설정*/
+    /*=================================*/
+
+    .main_button{
+        position:relative;
+        /*padding:0 2em;*/
+        outline:none;
+        height: 40px;
+        width: 100px;
+        border:none;
+        border-radius: 8px;
+        /*border: 2px solid navy;*/
+        /*color:black;*/
+        background-color: #4374D9;
+        color:#fff;
+        font-size:1.3rem;
+        cursor:pointer;
+        transition:800ms ease all;
+    }
+
+    /* .main_button:hover{
+        border: none;
+        color:white;
+        background:#b2b2b2;
+    } */
+
+    /*=================================*/
+    /*s_button 설정*/
+    /*=================================*/
+
+    .s_button{
+        margin-top: -30px;
+    }
+
+    .s_button button {
+        margin: 4px;
+        padding: 0;
+        display: inline-block;
+        height: 30px;
+        width:50px;
+        border-radius: 8px;
+        background-color: #b2b2b2;
+        color:#fff;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+        font-size: 15px;
+        cursor: pointer;
+        transition:800ms ease all;
+    }
+
+    /* .s_button button:hover{
+        padding: 0;
+        display: inline-block;
+        height: 30px;
+        width:50px;
+        border-radius: 8px;
+        color:#b2b2b2;
+        background:#fff;
+        border: solid #b2b2b2 2px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 15px;
+        cursor: pointer;
+        transition:800ms ease all;
+    } */
+
+    /*=================================*/
+    /*l_button 설정*/
+    /*=================================*/
+
+    .l_button button {
+        margin: 4px;
+        padding: 0;
+        display: inline-block;
+        height: 50px;
+        width:100%;
+        border-radius: 8px;
+        background-color: navy;
+        color:#fff;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    /* .l_button button:hover{
+        margin: 4px;
+        padding: 0;
+        display: inline-block;
+        height: 50px;
+        width:100%;
+        border-radius: 8px;
+        color:white;
+        background:#b2b2b2;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+        font-size: 15px;
+        cursor: pointer;
+        transition:800ms ease all;
+    } */
+
+    /*=================================*/
+    /*Ul li 설정*/
+    /*=================================*/
+
+    .main_content div ul{
+        display: flex;
+        justify-content: space-between;
+        width: 50em;
+    }
+
+    .main_content div ul li a{
+        cursor:pointer;
+    }
+
+    .main_content div ul li a:hover{
+        color: coral;
+    }
+
+    /*=================================*/
+    /*footer 설정*/
+    /*=================================*/
+
+    footer {
+        background-color: black;
+        height: 40vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        /* margin-top: 20vh; */
+    }
+
+    footer > div {
+        max-width: 760px;
+        color: white;
+        display: block;
+        width: 100%;
+    }
+}
+
+
