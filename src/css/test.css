@@ -48,6 +48,10 @@
         margin-top: 0px;
     }
 
+    #total_amount {
+        width: 50px;
+    }
+
     .t_button{
         padding-top: 10px;
         padding-bottom: 10px;
@@ -95,7 +99,7 @@
         height: 30vh;
     }
 
-    .t_button > div > button > input[type="text"]{
+    .t_button > div > button > input[type="text"], .t_button > div > button > input[type="number"]{
         width: 50px;
         height:100%;
 
@@ -126,7 +130,7 @@
         
     }
 
-    .t_button > div > button > input[type="text"] {
+    .t_button > div > button > input[type="text"], .t_button > div > button > input[type="number"] {
         height: auto;
     }
 
@@ -249,6 +253,10 @@
         margin-top: -30px;
     }
 
+    #total_amount {
+        width: 50px;
+    }
+
     .t_button{
         padding-top: 10px;
         padding-bottom: 20px;
@@ -288,7 +296,7 @@
         height: 30vh;
     }
 
-    .t_button > div > button > input[type="text"]{
+    .t_button > div > button > input[type="text"], .t_button > div > button > input[type="number"]{
         width: 50px;
         height:100%;
 
@@ -316,7 +324,7 @@
         width: 150px;
     }
 
-    .t_button > div > button > input[type="text"] {
+    .t_button > div > button > input[type="text"], .t_button > div > button > input[type="number"] {
         height: auto;
     }
 
@@ -361,6 +369,7 @@
         justify-content: center;
         text-align: center;
         width: 100%;
+        font-size: 25px !important;
     }
 
     .content_title > ul {
