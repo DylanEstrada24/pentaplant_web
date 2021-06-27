@@ -43,6 +43,7 @@
     .line_2 > ul {
         padding: 0;
         margin: 0 auto;
+        font-size: 15px !important;
     }
 
     .line_2 > ul > li {
@@ -110,7 +111,7 @@
 
         font-size:1em;
         padding-left: 5px;
-        font-style: oblique;
+        /* font-style: oblique; */
         display:inline;
         outline:none;
         box-sizing: border-box;
@@ -267,12 +268,13 @@
     }
 
     #autobot_button_container2 > a > button {
-        width: 130px;
+        /* width: 130px; */
     }
 
     .button_container {
         display: flex;
-        max-width: 400px;
+        position: relative;
+        /* max-width: 500px; */
     }
 
     .button_container > a, .button_container > button {
@@ -280,7 +282,7 @@
     }
 
     .button_container > button, .button_container > a > button {
-        width: 130px;
+        /* width: 130px; */
     }
 
     .horizon_line {
@@ -310,14 +312,18 @@
         width:400px;
         height:100%;
 
-        border-left-width:0;
+        /* border-left-width:0;
         border-right-width:0;
         border-top-width:0;
-        border-bottom-width:0.5px;
+        border-bottom-width:0.5px; */
+
+        border: 0.5px solid #7C7C7C;
+        border-radius: 10px 0px 0px 10px;
+        background: #FFFFFF;
 
         font-size:1em;
         padding-left: 5px;
-        font-style: oblique;
+        /* font-style: oblique; */
         display:inline;
         outline:none;
         box-sizing: border-box;
@@ -329,9 +335,9 @@
         width:40px;
         height:100%;
         border:none;
-        background-color: lightgray;
-        color:black;
-        font-size:1em;
+        background-color: #FFC700;
+        color:white;
+        font-size:20px;
         outline:none;
         display:inline;
         margin-left: 0px;
@@ -382,24 +388,46 @@
 
     .autosale_buttons {
         max-width: 400px;
-        margin-right: 80px;
-        height: 100%
+        /* margin-right: 80px; */
+        height: 100%;
+        padding-top: 0 !important;
     }
 
     .autosale_buttons > button {
         position:relative;
         /*padding:0 2em;*/
         outline:none;
-        height: 40px;
-        width: 100px;
+        height: 30px;
+        width: 70px;
         border:none;
         border-radius: 8px;
         /*border: 2px solid navy;*/
         /*color:black;*/
-        background-color: #4374D9;
+        background-color: #FFC700;
         color:#fff;
         font-size:1.3rem;
         cursor:pointer;
         /* transition:800ms ease all; */
+    }
+
+    #wallet > div:nth-child(2) {
+        width: 20px;
+    }
+
+    #wallet > div:nth-child(3) {
+        width: 120px;
+    }
+
+    #order_select {
+        justify-content: space-around !important;
+    }
+
+    .in-line > input[type="button"]:nth-child(3) {
+        border-radius: 0px 10px 10px 0px;
+    }
+
+    #trading_widget_container * {
+        width: 100% !important;
+        height: 100% !important;
     }
 }

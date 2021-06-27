@@ -12,6 +12,7 @@
 
     .notice {
         display: flex;
+        overflow: hidden;
         flex-direction: row;
         width: 100%;
         align-items: center;
@@ -50,7 +51,8 @@
     .section3 {
         max-width: 760px;
         position: relative;
-        margin: 0px auto;
+        margin: 5px 10px;
+        height: 250px;
     }
 
     #tableDiv {
@@ -450,10 +452,73 @@
 
 @media (min-width: 760px) {
 
-    .section2 {
+    .section0 {
+        width: 100%;
+        height: 450px;
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+    }
+    
+    .banner_container {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.85);
+    }
+    
+    .banner_text_container {
+        height: 100%;
         max-width: 760px;
+        font-weight: 700;
+        color: #FFFFFF;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 185px;
+    }
+
+    #banner_first {
+        font-size: 34px;
+    }
+
+    #banner_second {
+        margin-top: 19px;
+        font-size: 20px;
+    }
+
+    #banner_second > span{
+        color: #FFDC5F;
+    }
+
+    .section1 {
+        background: #FFC700;
+        position: relative;
+        margin: auto;        
+    }
+    
+    .ticker_container {
+        display: flex;
+        max-width: 760px;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
+    #ticker_widget_container {
+        margin: 10px 0px;
+    }
+
+    .section2 {
         position: relative;
         margin: 0px auto;
+        height: 50px;
+        background-color: #F8F8F8;
+    }
+    
+    .notice {
+        max-width: 760px;
+        margin: auto;
+        height: 50px;
+        overflow: hidden;
     }
 
     .notice > div {
@@ -461,7 +526,7 @@
         padding: 1em;
     }
 
-    .notice > div > * {
+    .notice > div > * , .notice > ul > *{
         font-size: 1.5rem;
     }
 
@@ -477,7 +542,8 @@
     .section3 {
         max-width: 760px;
         position: relative;
-        margin: 0px auto;
+        margin: 5px auto;
+        height: 371px;
     }
 
     #tableDiv {
@@ -503,10 +569,15 @@
 
     tr > th {
         text-align: center;
+        font-weight: 700;
     }
 
     tr {
         display: table-row;
+    }
+
+    td {
+        font-weight: 500;
     }
 
     th, td {
@@ -514,13 +585,14 @@
         padding: 10px;
         text-align: left;
         vertical-align: top;
-        border-bottom: 1px solid #e9e9e9;
-        font-size: 2em;
+        /* border-bottom: 1px solid #e9e9e9; */
+        font-size: 15px;
     }
 
     .section4 {
         position: relative;
-        background-color: #FAFAFA;
+        background-color: #FFFFFF;
+        margin-bottom: 100px;
     }
 
     .section4-box {
@@ -579,9 +651,10 @@
 
     .showcase-content > div:nth-child(2) > h2 {
         color: black;
-        font-size: 4em;
+        font-size: 20px;
         line-height: 1em;
         margin: 0;
+        text-align: center;
     }
 
     .download-area {
@@ -605,14 +678,19 @@
     .QR-content {
         position: relative;
         display: inline-block;
-        width: 70%;
+        width: 100%;
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+        margin-top: 30px;
     }
 
     .QR-content > div {
-        text-align: left;
+        text-align: center;
         width: 100%;
         position: relative;
         display: inline-block;
+        margin: 3px 0px;
 
     }
 
@@ -853,6 +931,31 @@
 
     #start_button {
         background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .rolling {
+        display: flex;
+        position: relative;
+        height: auto;
+        flex-direction: column;
+        padding: 0px 50px;
+        margin: auto;
+    }
+
+    .rolling li {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 15px;
+        font-weight: 500;
+        height: 50px;
+        line-height: 50px;
+        width: 100%;
+    }
+
+    .rolling li > div:nth-child(1) {
+        font-weight: 700;
     }
 
 }

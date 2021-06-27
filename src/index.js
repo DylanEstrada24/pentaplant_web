@@ -15,7 +15,7 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <Router>
       <Header />
-      <Title />
+      {/* <Title /> */}
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/autobot" component={Main} />

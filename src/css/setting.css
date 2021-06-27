@@ -23,7 +23,7 @@
         margin-right: 10px;
     }
 
-    .s_button{
+    /* .s_button{
         margin-top: -10px;
     }
 
@@ -32,7 +32,7 @@
         width: 150px;
         font-size: 12px;
         margin:0 10px;
-    }
+    } */
     #save_buttons {
         display: flex;
         align-items: center;
@@ -95,14 +95,14 @@
         margin-right: 10px;
     }
 
-    .s_button{
+    /* .s_button{
         margin-top: -10px;
     }
 
     .s_button button{
         height: 50px;
         width: 150px;
-    }
+    } */
 
     /* .s_button button:hover{
         height: 50px;
