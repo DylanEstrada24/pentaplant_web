@@ -250,11 +250,11 @@ class SettingTest extends React.Component {
                                     <div><p>` + response.data.data[i].TradeCount + `</p></div>
                                 </div>
                                 <div>
-                                    <div><p>수익률</p></div>
+                                    <div><p>수익률%</p></div>
                                     <div><p>` + response.data.data[i].Returns + `</p></div>
                                 </div>
                                 <div>
-                                    <div><p>수익</p></div>
+                                    <div><p>수익$</p></div>
                                     <div><p>` + response.data.data[i].Profit + `</p></div>
                                 </div>
                             </div>`
