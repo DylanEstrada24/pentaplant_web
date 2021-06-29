@@ -243,6 +243,7 @@
         font-weight: 600;
         cursor:pointer;
         transition:800ms ease all;
+        box-shadow: 2px 2px 5px #999;
     }
 
     /* .main_button:hover{
@@ -275,6 +276,7 @@
         cursor: pointer;
         transition:800ms ease all;
         font-weight: 600;
+        box-shadow: 2px 2px 5px #999;
     }
 
     /* .s_button button:hover{
@@ -312,6 +314,7 @@
         font-size: 15px;
         font-weight: 600;
         cursor: pointer;
+        box-shadow: 2px 2px 5px #999;
     }
 
     /* .l_button button:hover{
@@ -721,6 +724,7 @@
         font-weight: 600;
         cursor:pointer;
         transition:800ms ease all;
+        box-shadow: 2px 2px 5px #999;
     }
 
     /* .main_button:hover{
@@ -752,6 +756,7 @@
         font-size: 14px;
         cursor: pointer;
         font-weight: 600;
+        box-shadow: 2px 2px 5px #999;
         /* transition:800ms ease all; */
     }
 
@@ -790,6 +795,7 @@
         font-size: 19px;
         font-weight: 600;
         cursor: pointer;
+        box-shadow: 2px 2px 5px #999;
     }
 
     /* .l_button button:hover{

@@ -71,7 +71,7 @@ class Main extends React.Component {
 							</div>
 							<div className="horizon_line"></div>
 							<div className="line_2">
-								<ul>
+								<ul id="option_buttons_1">
 									<li><a>초기화 </a></li>
 									<li class="vertical_line">|</li>
 									<li><a>ALL청산 </a></li>
@@ -83,7 +83,7 @@ class Main extends React.Component {
 									<li><a>3 set</a></li>
 								</ul>
 							</div>
-							<div>
+							<div id="order_setting">
 								<div className="content_title">
 									<div>주문설정</div>
 								</div>
@@ -110,52 +110,54 @@ class Main extends React.Component {
 								<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script> */}
 								<TradingViewWidget symbol="BITSTAMP:BTCUSD" />
 							</div>
-							<div>
-								<div className="content_title">
-									<div>수익률 추정</div>
+							<div className="options_container">
+								<div>
+									<div className="content_title">
+										수익률 추정
+									</div>
+									<div className="b_text">
+										7.7%
+									</div>
 								</div>
-								<div className="b_text">
-									7.7%
+								<div>
+									<div className="red_text content_title">
+										이번달 수익률
+									</div>
+									<div className="red_text b_text">
+										17.7%
+									</div>
 								</div>
-							</div>
-							<div>
-								<div className="red_text content_title">
-									<div>이번달 수익률</div>
+								<div className="input_container">
+									<div className="content_title">
+										<div>자동매매 실행금액</div>
+									</div>
+									<div className="in-line">
+										<input type="text" name="name" value="" />
+										<input type="button" name="name" value="-" />
+										<input type="button" name="name" value="+" />
+									</div>
 								</div>
-								<div className="red_text b_text">
-									17.7%
+								<div className="s_button">
+									<div id="autosale_margin_div" className="content_title">
+										<div></div>
+									</div>
+									<div id="autosale_buttons" className="autosale_buttons">
+										<button>10%</button>
+										<button>25%</button>
+										<button>50%</button>
+										<button>75%</button>
+										<button>최대</button>
+									</div>
 								</div>
-							</div>
-							<div className="input_container">
-								<div className="content_title">
-									<div>자동매매 실행금액</div>
-								</div>
-								<div className="in-line">
-									<input type="text" name="name" value="" />
-									<input type="button" name="name" value="-" />
-									<input type="button" name="name" value="+" />
-								</div>
-							</div>
-							<div className="s_button">
-								<div id="autosale_margin_div" className="content_title">
-									<div></div>
-								</div>
-								<div id="autosale_buttons" className="autosale_buttons">
-									<button>10%</button>
-									<button>25%</button>
-									<button>50%</button>
-									<button>75%</button>
-									<button>최대</button>
-								</div>
-							</div>
-							<div className="input_container">
-								<div className="content_title">
-									<div>매매자동종료가격</div>
-								</div>
-								<div className="in-line">
-									<input type="text" name="name" value="" />
-									<input type="button" name="name" value="-" />
-									<input type="button" name="name" value="+" />
+								<div className="input_container">
+									<div className="content_title">
+										<div>매매자동종료가격</div>
+									</div>
+									<div className="in-line">
+										<input type="text" name="name" value="" />
+										<input type="button" name="name" value="-" />
+										<input type="button" name="name" value="+" />
+									</div>
 								</div>
 							</div>
 							{/* <div className="line_9">

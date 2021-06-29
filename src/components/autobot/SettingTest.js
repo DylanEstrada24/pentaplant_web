@@ -9,6 +9,7 @@ import { trackPromise } from 'react-promise-tracker';
 import Loader from '../common/Loader';
 import DatePicker, { registerLocale } from 'react-datepicker';
 import ko from 'date-fns/locale/ko';
+import DatePickerComponent from './DatePickerComponent';
 
 registerLocale("ko", ko);
 
@@ -57,7 +58,9 @@ class SettingTest extends React.Component {
         this.countIncrease = this.countIncrease.bind(this);
         this.countDecrease = this.countDecrease.bind(this);
         this.showResult = this.showResult.bind(this);
-        this.DatePickerComponent = this.DatePickerComponent.bind(this);
+        // this.DatePickerComponent = this.DatePickerComponent.bind(this);
+        this.setStartDate = this.setStartDate.bind(this);
+        this.setEndDate = this.setEndDate.bind(this);
         this.state = {
             count: 1,
             loading: false,
@@ -110,45 +113,18 @@ class SettingTest extends React.Component {
         }
     }
 
+    setStartDate = e => {
+        this.setState({
+            startDate: e.target.value 
+        })
+        console.log(this.state.startDate);
+    }
 
-
-    DatePickerComponent = () => {
-        const startDate = this.state.startDate;
-        const endDate = this.state.endDate;
-        const ExampleCustomInput = ({ value, onClick }) => (
-            <div>
-                <button className="example-custom-input" onClick={onClick}>
-                    {value}
-                </button>
-            </div>
-        );
-        return (
-            <div>
-                <DatePicker
-                    locale="ko"
-                    dateFormat="yyyy-MM-dd"
-                    selected={startDate}
-                    selectsStart
-                    startDate={startDate}
-                    endDate={endDate}
-                    onChange={date => this.state.startDate = date}
-                    customInput={<ExampleCustomInput />}
-                />
-                -
-                <DatePicker
-                    locale="ko"
-                    dateFormat="yyyy-MM-dd"
-                    selected={endDate}
-                    selectsEnd
-                    onChange={date => this.state.endDate = date}
-                    startDate={startDate}
-                    endDate={endDate}
-                    minDate={startDate}
-                    customInput={<ExampleCustomInput />}
-                />
-            </div>
-        );
-    };
+    setEndDate = e => {
+        this.setState({
+            endDate: e.target.value 
+        })
+    }
     
     testButton() {
 
@@ -181,6 +157,9 @@ class SettingTest extends React.Component {
         const secondPyramiding = document.querySelector("#second_section_pyramiding").checked ? true : false;
         const thirdPyramiding = document.querySelector("#third_section_pyramiding").checked ? true : false;
 
+        const timePeriod = document.querySelectorAll(".example-custom-input")[0].innerText + "-" + 
+                            document.querySelectorAll(".example-custom-input")[1].innerText
+
         let secondActive = false;
         let thirdActive = false;
 
@@ -202,12 +181,11 @@ class SettingTest extends React.Component {
             secondActive = true
         }
 
-        const data = {
-            "data": 
+        const data = 
             [
                 {
                     active: true,
-                    TimePeriod: "2012-01-01-2013-05-25",
+                    TimePeriod: timePeriod,
                     UpPyramiding: firstPyramiding,
                     StartingAmount: firstAmount.toString(),
                     PercentRange: firstRange.toString(),
@@ -216,7 +194,7 @@ class SettingTest extends React.Component {
                 },
                 {
                     active: secondActive,
-                    TimePeriod: "2012-01-01-2013-05-25",
+                    TimePeriod: timePeriod,
                     UpPyramiding: secondPyramiding,
                     StartingAmount: secondAmount.toString(),
                     PercentRange: secondRange.toString(),
@@ -225,7 +203,7 @@ class SettingTest extends React.Component {
                 },
                 {
                     active: thirdActive,
-                    TimePeriod: "2012-01-01-2013-05-25",
+                    TimePeriod: timePeriod,
                     UpPyramiding: thirdPyramiding,
                     StartingAmount: thirdAmount.toString(),
                     PercentRange: thirdRange.toString(),
@@ -233,9 +211,11 @@ class SettingTest extends React.Component {
                     PercentReturn: thirdGain.toString()
                 }
             ]
-        }
+            
 
-        console.log(data.data[0].StartingAmount);
+        document.querySelector(".result_container_wrapper").innerHTML = ""
+
+        // console.log(data.data[0].StartingAmount);
 
         try {
             trackPromise(
@@ -245,13 +225,10 @@ class SettingTest extends React.Component {
                     headers: {
                         'Accept': "application/json",
                         'Content-Type': "application/json",
-                        'Access-Control-Allow-Origin': "*"
+                        'Access-Control-Allow-Origin': "*",
                     },
                     data: data
                 }).then((response) => {
-                    console.log(response.data);
-                    console.log(Object.keys(response.data.data).length)
-                    console.log(response.data.data[1] !== "")
                     for(let i = 0; i < Object.keys(response.data.data).length; i++) {
                         if(response.data.data[i].length === 0) {
                             break;
@@ -360,6 +337,9 @@ class SettingTest extends React.Component {
                             </ul>
                             <button id="test_button" onClick={this.testButton}>테스트<br />시작</button>
                         </div>
+                        <div id="datepicker_container">
+                            <DatePickerComponent />
+                        </div>
                         {/* <div id="datepicker_container" className="line_1">
                             <div>
                                 <DatePicker
@@ -369,7 +349,8 @@ class SettingTest extends React.Component {
                                     selectsStart
                                     startDate={startDate}
                                     endDate={endDate}
-                                    onChange={date => this.state.startDate = date}
+                                    onChange={this.setStartDate}
+                                    value={this.state.startDate}
                                     customInput={<ExampleCustomInput />}
                                 />
                                 -
@@ -378,10 +359,11 @@ class SettingTest extends React.Component {
                                     dateFormat="yyyy-MM-dd"
                                     selected={endDate}
                                     selectsEnd
-                                    onChange={date => this.state.endDate = date}
+                                    onChange={this.setEndDate}
                                     startDate={startDate}
                                     endDate={endDate}
                                     minDate={startDate}
+                                    value={this.state.endDate}
                                     customInput={<ExampleCustomInput />}
                                 />
                             </div>

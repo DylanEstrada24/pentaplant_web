@@ -370,6 +370,91 @@
         font-weight: 700;
     }
 
+    #datepicker_container {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: auto !important;
+        height: auto !important;
+    }
+
+    #datepicker_container > div {
+        font-weight: 600;
+        background-color: #FFC700;
+        cursor: pointer;
+        flex-wrap: nowrap;
+        border-radius: 5px;
+        width: auto !important;
+        height: auto !important;
+        flex-direction: row;
+    }
+
+    #datepicker_container > div > div:nth-child(2) {
+        vertical-align: middle;
+        text-align: center;
+        align-items: center;
+        padding-bottom: 2px;
+    }
+
+    #datepicker_container * {
+        padding-top: 0px !important;
+    }
+
+    .example-custom-input {
+        cursor: pointer;
+        padding: 5px 15px;
+        border: 0;
+        border-radius: 4px;
+        background-color: #FFC700;
+        color: black;
+        width:100px;
+    }
+    
+    .react-datepicker-wrapper {
+        width: auto !important;
+        height: auto !important;
+    }
+
+    .react-datepicker__header {
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        
+    }
+    .react-datepicker__month-container {
+        display: flex;
+        flex-direction: column;
+        width:200px !important;
+    }
+
+    .react-datepicker__month {
+        margin: 0.4rem;
+        text-align: center;
+        max-width: 300px;
+        flex-direction: column;
+    }
+
+    .react-datepicker-popper {
+        width:200px !important;
+    }
+
+    .react-datepicker__day-name, .react-datepicker__day, .react-datepicker__time-name {
+        padding: 0 0 0 5px;
+    }
+
+    .react-datepicker__current-month, .react-datepicker-time__header, .react-datepicker-year-header {
+        justify-content: center;
+    }
+
+    #datepicker_container > div:nth-child(1) {
+        width:300px; background:#FFC700;
+        display: flex;
+        justify-content: center;
+    }
+
+    .react-datepicker__navigation--next, .react-datepicker__navigation--previous {
+        padding-bottom: 14px !important;
+    }
+
 }
 
 
@@ -689,15 +774,12 @@
 
     #datepicker_container {
         flex-direction: row;
-        margin-top: 10px;
-        margin-bottom: 20px;
         flex-wrap: nowrap;
         width: auto !important;
         height: auto !important;
     }
 
     #datepicker_container > div {
-        font-size: 16px;
         font-weight: 600;
         background-color: #FFC700;
         cursor: pointer;
@@ -705,12 +787,19 @@
         border-radius: 5px;
         width: auto !important;
         height: auto !important;
+        flex-direction: row;
+
+    }
+
+    #datepicker_container > div > div:nth-child(2) {
+        vertical-align: middle;
+        text-align: center;
+        align-items: center;
+        padding-bottom: 2px;
     }
 
     #datepicker_container * {
-        width: auto !important;
-        height: auto !important;
-        padding-top: 0px;
+        padding-top: 0px !important;
     }
 
     .example-custom-input {
@@ -720,6 +809,53 @@
         border-radius: 4px;
         background-color: #FFC700;
         color: black;
+        width:100px;
+    }
+    
+    .react-datepicker-wrapper {
+        width: auto !important;
+        height: auto !important;
+    }
+
+    .react-datepicker__header {
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        
+    }
+    .react-datepicker__month-container {
+        display: flex;
+        flex-direction: column;
+        width:200px !important;
+    }
+
+    .react-datepicker__month {
+        margin: 0.4rem;
+        text-align: center;
+        max-width: 300px;
+        flex-direction: column;
+    }
+
+    .react-datepicker-popper {
+        width:200px !important;
+    }
+
+    .react-datepicker__day-name, .react-datepicker__day, .react-datepicker__time-name {
+        padding: 0 0 0 5px;
+    }
+
+    .react-datepicker__current-month, .react-datepicker-time__header, .react-datepicker-year-header {
+        justify-content: center;
+    }
+
+    #datepicker_container > div:nth-child(1) {
+        width:300px; background:#FFC700;
+        display: flex;
+        justify-content: center;
+    }
+
+    .react-datepicker__navigation--next, .react-datepicker__navigation--previous {
+        padding-bottom: 14px !important;
     }
 
 }
