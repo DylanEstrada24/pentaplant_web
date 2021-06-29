@@ -218,6 +218,7 @@ class SettingTest extends React.Component {
         // console.log(data.data[0].StartingAmount);
 
         try {
+            document.querySelector(".contentWrap").firstChild.style.display = "block";
             trackPromise(
                 axios({
                     method: 'post',
@@ -257,10 +258,14 @@ class SettingTest extends React.Component {
                                     <div><p>` + response.data.data[i].Profit + `</p></div>
                                 </div>
                             </div>`
+
+                        document.querySelector(".contentWrap").firstChild.style.display = "none";
                         document.querySelector(".result_container_wrapper").appendChild(div);
+                        
                     }
                 }).catch((error) => {
                     console.log(error);
+                    document.querySelector(".contentWrap").firstChild.style.display = "none";
                 })
             );
         } catch(error) {
@@ -276,7 +281,8 @@ class SettingTest extends React.Component {
 
         if(this.state.loading) {
             document.querySelector(".contentWrap").firstChild.style.display = "block";
-            setTimeout(this.showResult, 60000);
+            setTimeout(document.querySelector(".contentWrap").firstChild.style.display = "none", 60000);
+            
         };
     }
 
