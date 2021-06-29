@@ -37,7 +37,7 @@
     /* header */
     .header {
         border-bottom: 1px solid #000000;
-        background-color: #FFFFFF;
+        background-color: #FFC700;
     }
 
     /*=================================*/
@@ -56,7 +56,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: #FFFFFF;
+        background-color: #FFC700;
         /* padding: 8px 12px; */
         padding-top: 8px;
         padding-bottom: 8px;
@@ -104,7 +104,7 @@
     /*=================================*/
 
     .head_title {
-        background-color: rgba(0,0,0,0.9);
+        background-color: #FFFFFF;
         height: 30vh;
         /* width: 100%; */
         display: flex;
@@ -112,7 +112,9 @@
         justify-content: center;
         margin-bottom: 2vh;
         flex-direction: column;
-        padding-left: 3em;
+        padding-left: 10px;
+        background-size: cover;
+        background-position: center center;
     }
 
     .head_title div{
@@ -123,11 +125,42 @@
         /* vertical-align: middle; */
         font-size: 4.5rem;
         font-weight: bold;
-        color: white;
+        color: #000000;
     }
 
     .head_title > div > p {
         margin-bottom: 0;
+    }
+
+
+
+    .title_container > div {
+        text-align: left;
+        height: auto;
+        color: white;
+    }
+
+    .title_container div p {
+        margin: 0 0 0 0;
+        width: 100%;
+        display: inline;
+    }
+    
+    .title_container > div:nth-child(1) {
+        padding-left: 24px;
+        border-left: 6px solid #FFC700;
+        font-size: 24px;
+        font-weight: 700;
+        display: inline;
+    }
+
+    .title_container > div:nth-child(2) {
+        padding-left: 22px;
+        border-left: 2px solid #FFC700;
+        margin-left: 31px;
+        font-size: 16px;
+        font-weight: 700;
+        display: inline;
     }
 
     /*=================================*/
@@ -199,14 +232,15 @@
         /*padding:0 2em;*/
         outline:none;
         height: 40px;
-        width: 100px;
+        width: 120px;
         border:none;
         border-radius: 8px;
         /*border: 2px solid navy;*/
         /*color:black;*/
-        background-color: #4374D9;
-        color:#fff;
-        font-size:1.3rem;
+        background-color: #FFC700;
+        color:#000000;
+        font-size: 14px;
+        font-weight: 600;
         cursor:pointer;
         transition:800ms ease all;
     }
@@ -221,25 +255,26 @@
     /*s_button 설정*/
     /*=================================*/
 
-    .s_button{
+    /* .s_button{
         margin-top: -30px;
-    }
+    } */
 
     .s_button button {
         margin: 4px;
         padding: 0;
         display: inline-block;
-        height: 30px;
-        width:50px;
+        height: 40px;
+        width:120px;
         border-radius: 8px;
-        background-color: #b2b2b2;
-        color:#fff;
+        background-color: #FFC700;
+        color:#000000;
         border: none;
         text-align: center;
         text-decoration: none;
         font-size: 15px;
         cursor: pointer;
         transition:800ms ease all;
+        font-weight: 600;
     }
 
     /* .s_button button:hover{
@@ -275,6 +310,7 @@
         text-align: center;
         text-decoration: none;
         font-size: 15px;
+        font-weight: 600;
         cursor: pointer;
     }
 
@@ -319,7 +355,7 @@
 
     footer {
         background-color: black;
-        height: 40vh;
+        height: 30vh;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -331,7 +367,56 @@
         color: white;
         display: block;
         width: 100%;
+        transform: rotate(180deg);
     }
+
+    .footer_comp_info {
+        margin-top: 50px;
+        margin-bottom: 15px;
+        text-align: center;
+        font-size: 14px;
+        transform: rotate(-180deg);
+    }
+
+    .footer_menu_container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        transform: rotate(-180deg);
+        /* margin-left: 60px; */
+    }
+
+    .footer_menu_container div {
+        text-align: center;
+        /* margin-bottom: 9px; */
+    }
+
+    .footer_menu_container > div {
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .footer_menu_container div > div:nth-child(1), .footer_menu_container div > a > div {
+        font-size: 13px;
+        text-decoration: none; 
+        color: white;
+        font-weight: 700;
+    }
+
+    .footer_menu_container div > div:not(div:nth-child(1)) {
+        display: none;
+    }
+
+    .footer_menu_container div div {
+        cursor: pointer;
+    }
+
+    .vertical_line {
+        color: #FFC700;
+        font-weight: 600;
+    }
+
 }
 
 
@@ -350,6 +435,7 @@
         box-sizing: border-box;
         margin: 0;
         font-size: 62.5%;
+        overflow-x: hidden;
     }
 
     body {
@@ -376,7 +462,7 @@
     /* header */
     .header {
         border-bottom: 1px solid #000000;
-        background-color: #ffffff;
+        background-color: #FFC700;
     }
 
     /*=================================*/
@@ -395,7 +481,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: #FFFFFF;
+        background-color: #FFC700;
         /* padding: 8px 12px; */
         padding-top: 8px;
         padding-bottom: 8px;
@@ -481,7 +567,8 @@
         z-index: 101;
         visibility: hidden;
         opacity: 0;
-        background: #F8F8F8;
+        background: #FFC700;
+        font-weight: 500;
     }
 
     .nav_menu > li:hover > ul {
@@ -506,6 +593,8 @@
         justify-content: center;
         /* margin-bottom: 2vh; */
         flex-direction: column;
+        background-size: cover;
+        position: relative;
     }
 
     .head_title > div{
@@ -527,6 +616,7 @@
     .title_container > div {
         text-align: left;
         height: auto;
+        color: white;
     }
 
     .title_container div p {
@@ -780,7 +870,9 @@
         margin-right: 20px;
     }
 
-    .footer_menu_container div > div:nth-child(1) {
+    .footer_menu_container div > div:nth-child(1), .footer_menu_container div > a > div {
+        text-decoration: none;
+        color: white;
         font-size: 15px;
         font-weight: 700;
     }

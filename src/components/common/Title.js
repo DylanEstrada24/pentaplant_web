@@ -8,7 +8,7 @@ class Title extends React.Component {
         const {header, subTitle} = this.props
 
         return (
-            <div className="head_title">
+            <div className="head_title" style={{"backgroundImage": "url(/img/blockchain01.jpg)"}}>
                 <div className="title_container">
                     <div><p>{header}</p></div>
                     { subTitle != null ? <div id="head_subtitle"><p>{subTitle}</p></div> : null }

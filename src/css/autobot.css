@@ -6,9 +6,9 @@
         /* padding-left: 10px; */
     }
 
-    #autosale_append {
+    /* #autosale_append {
         width: 45%;
-    }
+    } */
 
     .content {
         position: relative;
@@ -41,6 +41,8 @@
         align-items: flex-start;
         justify-content:space-between;
         margin-bottom: 10px;
+        padding-bottom: 6px;
+        border-bottom: 0.5px solid #000000;
     }
 
     .container div[class="line_1"] > div:nth-child(1) {
@@ -63,12 +65,12 @@
         position: relative;
         display: inline-block;
         margin: 0 10px 0 4px;
-        width:45%;
+        /* width:45%; */
     }
 
-    .tooltip button {
+    /* .tooltip button {
         width:100%;
-    }
+    } */
 
     .tooltip-content { 
         visibility: hidden;
@@ -76,7 +78,7 @@
         background-color: white;
         padding: 0;
         /* color: white; */
-        border: solid 1px #4374D9;
+        border: solid 1px #FFC700;
         border-radius: 3px;
         text-align: center;
         position: absolute;
@@ -108,10 +110,12 @@
 
     th {
         color: black;
+        border-bottom: 3px solid #FFC700;
+        font-weight: 700;
     }
 
     th, td {
-        border-bottom: 1px solid #4374D9;
+        /* border-bottom: 1px solid #4374D9; */
         padding: 10px;
         font-size: 15px;
         text-align: center;
@@ -126,9 +130,9 @@
         text-align: center;
     }
 
-    .m_text th  {
+    /* .m_text th  {
         font-size:medium;
-    }
+    } */
 
     /*=================================*/
     /*피라미딩 세팅 설정*/
@@ -148,6 +152,7 @@
 
     .button_container {
         width: 100%;
+        justify-content: center;
     }
 
 

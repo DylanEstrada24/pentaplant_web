@@ -1,47 +1,52 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../../css/test.css';
+import 'react-datepicker/dist/react-datepicker.css'
 import axios from 'axios';
 
 import Title from '../common/Title';
 import TradingViewWidget from 'react-tradingview-widget';
 import { trackPromise } from 'react-promise-tracker';
-import { hidden } from 'jest-matcher-utils/node_modules/chalk';
 import Loader from '../common/Loader';
+import DatePicker, { registerLocale } from 'react-datepicker';
+import ko from 'date-fns/locale/ko';
+
+registerLocale("ko", ko);
+
+let firstRange = "0"
+let secondRange = "0"
+let thirdRange = "0"
+
+let firstAmount = "0"
+let secondAmount = "0"
+let thirdAmount = "0"
+
+let firstEntry = "0"
+let secondEntry = "0"
+let thirdEntry = "0"
+
+let firstGain = "0"
+let secondGain = "0"
+let thirdGain = "0"
+
+const firstPyramiding = true
+let secondPyramiding = false
+let thirdPyramiding = false
+
+let startDate = new Date()
+let endDate = new Date()
+
+const ExampleCustomInput = ({ value, onClick }) => (
+    <div>
+        <button className="example-custom-input" onClick={onClick}>
+            {value}
+        </button>
+    </div>
+);
 
 class SettingTest extends React.Component {
 
     componentDidMount() {
         window.scrollTo(0, 0);
-
-        // const script1 = document.createElement("script");
-
-        // script1.type = "text/javascript";
-        // script1.src = "https://s3.tradingview.com/tv.js";
-
-        // document.querySelector("#trading_widget_container").appendChild(script1);
-
-        // const script2 = document.createElement("script");
-        // script2.type = "text/javascript";
-        // script.src = "https://s3.tradingview.com/tv.js";
-        // script2.async = true;
-        // script2.text = `
-        // new TradingView.widget(
-        //     {
-        //         "autosize": true,
-        //         "symbol": "BITSTAMP:BTCUSD",
-        //         "interval": "D",
-        //         "timezone": "Etc/UTC",
-        //         "theme": "light",
-        //         "style": "1",
-        //         "locale": "kr",
-        //         "toolbar_bg": "#f1f3f6",
-        //         "enable_publishing": false,
-        //         "allow_symbol_change": true,
-        //         "container_id": "tradingview_bbab8"
-        //     }
-        // );`;
-        
-        // document.querySelector("#trading_widget_container").appendChild(script2);
         
     }
 
@@ -52,12 +57,33 @@ class SettingTest extends React.Component {
         this.countIncrease = this.countIncrease.bind(this);
         this.countDecrease = this.countDecrease.bind(this);
         this.showResult = this.showResult.bind(this);
-        // this.checkNumber = this.checkNumber.bind(this);
-    }
+        this.DatePickerComponent = this.DatePickerComponent.bind(this);
+        this.state = {
+            count: 1,
+            loading: false,
+            firstRange : "0",
+            secondRange : "0",
+            thirdRange : "0",
 
-    state = {
-        count: 1,
-        loading: false
+            firstAmount : "0",
+            secondAmount : "0",
+            thirdAmount : "0",
+
+            firstEntry : "0",
+            secondEntry : "0",
+            thirdEntry : "0",
+
+            firstGain : "0",
+            secondGain : "0",
+            thirdGain : "0",
+
+            firstPyramiding : true,
+            secondPyramiding : false,
+            thirdPyramiding : false,
+
+            startDate : new Date(),
+            endDate : new Date()
+        }
     }
 
     countIncrease() {
@@ -65,7 +91,6 @@ class SettingTest extends React.Component {
             this.setState({
                 count: this.state.count + 1
             });
-            console.log(this.state.count);
             if(this.state.count + 1 == 3) {
                 document.querySelector(".l_button").remove();
             }
@@ -84,12 +109,52 @@ class SettingTest extends React.Component {
             alert("최소 1구간이 활성화되어야합니다.");
         }
     }
+
+
+
+    DatePickerComponent = () => {
+        const startDate = this.state.startDate;
+        const endDate = this.state.endDate;
+        const ExampleCustomInput = ({ value, onClick }) => (
+            <div>
+                <button className="example-custom-input" onClick={onClick}>
+                    {value}
+                </button>
+            </div>
+        );
+        return (
+            <div>
+                <DatePicker
+                    locale="ko"
+                    dateFormat="yyyy-MM-dd"
+                    selected={startDate}
+                    selectsStart
+                    startDate={startDate}
+                    endDate={endDate}
+                    onChange={date => this.state.startDate = date}
+                    customInput={<ExampleCustomInput />}
+                />
+                -
+                <DatePicker
+                    locale="ko"
+                    dateFormat="yyyy-MM-dd"
+                    selected={endDate}
+                    selectsEnd
+                    onChange={date => this.state.endDate = date}
+                    startDate={startDate}
+                    endDate={endDate}
+                    minDate={startDate}
+                    customInput={<ExampleCustomInput />}
+                />
+            </div>
+        );
+    };
     
     testButton() {
 
         // API는 기입된 구간까지(2구간까지 했으면 2번) 요청함.
 
-        const url = `http://localhost:3000/test`; // 임시주소
+        const url = `http://pentaplant-1933825305.ap-northeast-2.elb.amazonaws.com/backtest`; // 임시주소
 
         // 구간별 퍼센트
         const firstRange = document.querySelector("#first_section_range").value *= 1;
@@ -112,16 +177,14 @@ class SettingTest extends React.Component {
         const thirdGain = document.querySelector("#third_section_gain").value *= 1;
 
         // 구간별 피라미딩
-        const firstPyramiding = document.querySelector("#first_section_pyramiding").checked ? "True" : "False";
-        const secondPyramiding = document.querySelector("#second_section_pyramiding").checked ? "True" : "False";
-        const thirdPyramiding = document.querySelector("#third_section_pyramiding").checked ? "True" : "False";
-        console.log(firstPyramiding)
+        const firstPyramiding = document.querySelector("#first_section_pyramiding").checked ? true : false;
+        const secondPyramiding = document.querySelector("#second_section_pyramiding").checked ? true : false;
+        const thirdPyramiding = document.querySelector("#third_section_pyramiding").checked ? true : false;
+
+        let secondActive = false;
+        let thirdActive = false;
 
         let totalAmount = "10000";
-        // let totalAmount = (firstAmount + secondAmount + thirdAmount).toString();
-        // let totalEntry = (firstEntry + secondEntry + thirdEntry).toString();
-        // let totalGain = (firstGain + secondGain + thirdGain).toString();
-        // let pyramiding = document.querySelector("input[name='pyramiding']").checked ? "True" : "False";
 
         // 운용자금 < 구간별 총 설정자금 일 경우 리턴
         if((totalAmount *= 1) < (firstAmount + secondAmount + thirdAmount)) {
@@ -131,191 +194,98 @@ class SettingTest extends React.Component {
 
         // 반복할 회수
         let count = this.state.count;
-        // if(firstAmount > 0) {
-        //     count++;
-        // }
-        // if(secondAmount > 0) {
-        //     count++;
-        // }
-        // if(thirdAmount > 0) {
-        //     count++;
-        // }
-        try {
-            
-            for(let i = 0; i < count; i++) {
-                
-                if(i == 0) {
 
-                    trackPromise(
-                        axios({
-                            method: 'post',
-                            url: url,
-                            headers: {
-                                'Accept': "application/json",
-                                'Content-Type': "applycation/json",
-                                'Access-Control-Allow-Origin': "*"
-                            },
-                            params: {
-                                TimePeriod: "2012-01-01-2013-05-25",
-                                UpPyramiding: firstPyramiding,
-                                StartingAmount: firstAmount,
-                                PercentRange: firstRange,
-                                EntryNum: firstEntry,
-                                PercentReturn: firstGain
-                            },
-                        }).then((response) => {
-                            // 그래프 밑 5개항목 부분에 채우는거.
-                            
-                            // PV ~ AnnReturns 까지 왼쪽부터 값 채움
-                            console.log(response);
-                            const div = document.createElement("div");
-                            div.className = "result_container";
-                            div.innerHTML = `
-                                <div class="result_header">
-                                    1 구간
-                                </div>
-                                <div class="result_content">
-                                    <div>
-                                        <div><p>총 누적 수익률</p></div>
-                                        <div><p>173.19%</p></div>
-                                    </div>
-                                    <div>
-                                        <div><p>연 환산 수익률</p></div>
-                                        <div><p>69.23%</p></div>
-                                    </div>
-                                    <div>
-                                        <div><p>MDD</p></div>
-                                        <div><p>4.30%</p></div>
-                                    </div>
-                                    <div>
-                                        <div><p>기간 총 거래횟수</p></div>
-                                        <div><p>388회</p></div>
-                                    </div>
-                                    <div>
-                                        <div><p>월 평균 거래 횟수</p></div>
-                                        <div><p>13회</p></div>
-                                    </div>
-                                </div>`
-                            document.querySelector(".result_container_wrapper").appendChild(div);
-                        }).catch((error) => {
-                            console.log(error);
-                        })
-                    );
-
-                } else if(i == 1) {
-
-                    trackPromise(
-                        axios({
-                            method: 'post',
-                            url: url,
-                            headers: {
-                                'Accept': "application/json",
-                                'Content-Type': "applycation/json",
-                                'Access-Control-Allow-Origin': "*"
-                            },
-                            params: {
-                                TimePeriod: "2012-01-01-2013-05-25",
-                                UpPyramiding: secondPyramiding,
-                                StartingAmount: secondAmount,
-                                PercentRange: secondRange,
-                                EntryNum: secondEntry,
-                                PercentReturn: secondGain
-                            },
-                        }).then((response) => {
-                            console.log(response);
-                            const div = document.createElement("div");
-                            div.className = "result_container";
-                            div.innerHTML = `
-                                <div class="result_header">
-                                    2w 구간
-                                </div>
-                                <div class="result_content">
-                                    <div>
-                                        <div><p>총 누적 수익률</p></div>
-                                        <div><p>173.19%</p></div>
-                                    </div>
-                                    <div>
-                                        <div><p>연 환산 수익률</p></div>
-                                        <div><p>69.23%</p></div>
-                                    </div>
-                                    <div>
-                                        <div><p>MDD</p></div>
-                                        <div><p>4.30%</p></div>
-                                    </div>
-                                    <div>
-                                        <div><p>기간 총 거래횟수</p></div>
-                                        <div><p>388회</p></div>
-                                    </div>
-                                    <div>
-                                        <div><p>월 평균 거래 횟수</p></div>
-                                        <div><p>13회</p></div>
-                                    </div>
-                                </div>`
-                            document.querySelector(".result_container_wrapper").appendChild(div);
-                        }).catch((error) => {
-                            console.log(error);
-                        })
-                    );
-
-                } else if(i == 2) {
-                    
-                    trackPromise(
-                        axios({
-                            method: 'post',
-                            url: url,
-                            headers: {
-                                'Accept': "application/json",
-                                'Content-Type': "applycation/json",
-                                'Access-Control-Allow-Origin': "*"
-                            },
-                            params: {
-                                TimePeriod: "2012-01-01-2013-05-25",
-                                UpPyramiding: thirdPyramiding,
-                                StartingAmount: thirdAmount,
-                                PercentRange: thirdRange,
-                                EntryNum: thirdEntry,
-                                PercentReturn: thirdGain
-                            },
-                        }).then((response) => {
-                            console.log(response);
-                            const div = document.createElement("div");
-                            div.className = "result_container";
-                            div.innerHTML = `
-                                <div class="result_header">
-                                    3 구간
-                                </div>
-                                <div class="result_content">
-                                    <div>
-                                        <div><p>총 누적 수익률</p></div>
-                                        <div><p>173.19%</p></div>
-                                    </div>
-                                    <div>
-                                        <div><p>연 환산 수익률</p></div>
-                                        <div><p>69.23%</p></div>
-                                    </div>
-                                    <div>
-                                        <div><p>MDD</p></div>
-                                        <div><p>4.30%</p></div>
-                                    </div>
-                                    <div>
-                                        <div><p>기간 총 거래횟수</p></div>
-                                        <div><p>388회</p></div>
-                                    </div>
-                                    <div>
-                                        <div><p>월 평균 거래 횟수</p></div>
-                                        <div><p>13회</p></div>
-                                    </div>
-                                </div>`
-                            document.querySelector(".result_container_wrapper").appendChild(div);
-                        }).catch((error) => {
-                            console.log(error);
-                        })
-                    );
-
-                }
-
-                
+        if(count > 1) {
+            if(count > 2) {
+                thirdActive = true
             }
+            secondActive = true
+        }
+
+        const data = {
+            "data": 
+            [
+                {
+                    active: true,
+                    TimePeriod: "2012-01-01-2013-05-25",
+                    UpPyramiding: firstPyramiding,
+                    StartingAmount: firstAmount.toString(),
+                    PercentRange: firstRange.toString(),
+                    EntryNum: firstEntry.toString(),
+                    PercentReturn: firstGain.toString()
+                },
+                {
+                    active: secondActive,
+                    TimePeriod: "2012-01-01-2013-05-25",
+                    UpPyramiding: secondPyramiding,
+                    StartingAmount: secondAmount.toString(),
+                    PercentRange: secondRange.toString(),
+                    EntryNum: secondEntry.toString(),
+                    PercentReturn: secondGain
+                },
+                {
+                    active: thirdActive,
+                    TimePeriod: "2012-01-01-2013-05-25",
+                    UpPyramiding: thirdPyramiding,
+                    StartingAmount: thirdAmount.toString(),
+                    PercentRange: thirdRange.toString(),
+                    EntryNum: thirdEntry.toString(),
+                    PercentReturn: thirdGain.toString()
+                }
+            ]
+        }
+
+        console.log(data.data[0].StartingAmount);
+
+        try {
+            trackPromise(
+                axios({
+                    method: 'post',
+                    url: url,
+                    headers: {
+                        'Accept': "application/json",
+                        'Content-Type': "application/json",
+                        'Access-Control-Allow-Origin': "*"
+                    },
+                    data: data
+                }).then((response) => {
+                    console.log(response.data);
+                    console.log(Object.keys(response.data.data).length)
+                    console.log(response.data.data[1] !== "")
+                    for(let i = 0; i < Object.keys(response.data.data).length; i++) {
+                        if(response.data.data[i].length === 0) {
+                            break;
+                        }
+                        const div = document.createElement("div");
+                        div.className = "result_container";
+                        div.innerHTML = `
+                            <div class="result_header">
+                                ` + (i + 1) + ` 구간
+                            </div>
+                            <div class="result_content">
+                                <div>
+                                    <div><p>거래량</p></div>
+                                    <div><p>` + response.data.data[i].TradeVolume + `</p></div>
+                                </div>
+                                <div>
+                                    <div><p>거래횟수</p></div>
+                                    <div><p>` + response.data.data[i].TradeCount + `</p></div>
+                                </div>
+                                <div>
+                                    <div><p>수익률</p></div>
+                                    <div><p>` + response.data.data[i].Returns + `</p></div>
+                                </div>
+                                <div>
+                                    <div><p>수익</p></div>
+                                    <div><p>` + response.data.data[i].Profit + `</p></div>
+                                </div>
+                            </div>`
+                        document.querySelector(".result_container_wrapper").appendChild(div);
+                    }
+                }).catch((error) => {
+                    console.log(error);
+                })
+            );
         } catch(error) {
             console.log(error);
         }
@@ -376,7 +346,7 @@ class SettingTest extends React.Component {
             return (
                 <>
                     <Title header="Auto 로봇" subTitle="전략 테스트" />
-                    <Loader type="spin" color="black" message={""} />;
+                    <Loader type="spin" color="black" message={""} />
                     <div className="content">
                     <div className="main_content">
                         <div id="test_term_container" className="content_container s_button">
@@ -388,8 +358,34 @@ class SettingTest extends React.Component {
                                 <li className="vertical_line">|</li>
                                 <li><a>수수료 설정 <input type="number" placeholder="0.4" id="fee" />%</a></li>
                             </ul>
-                            <button id="test_button" onClick={this.testIndicator}>테스트<br />시작</button>
+                            <button id="test_button" onClick={this.testButton}>테스트<br />시작</button>
                         </div>
+                        {/* <div id="datepicker_container" className="line_1">
+                            <div>
+                                <DatePicker
+                                    locale="ko"
+                                    dateFormat="yyyy-MM-dd"
+                                    selected={startDate}
+                                    selectsStart
+                                    startDate={startDate}
+                                    endDate={endDate}
+                                    onChange={date => this.state.startDate = date}
+                                    customInput={<ExampleCustomInput />}
+                                />
+                                -
+                                <DatePicker
+                                    locale="ko"
+                                    dateFormat="yyyy-MM-dd"
+                                    selected={endDate}
+                                    selectsEnd
+                                    onChange={date => this.state.endDate = date}
+                                    startDate={startDate}
+                                    endDate={endDate}
+                                    minDate={startDate}
+                                    customInput={<ExampleCustomInput />}
+                                />
+                            </div>
+                        </div> */}
                         <div id="test_section1" className="line_1 test_section_container">
                             <div className="test_section">
                                 <p>1구간</p>

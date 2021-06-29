@@ -50,6 +50,14 @@
         margin: 0 5px;
     }
 
+    #wallet {
+        justify-content: space-around;
+    }
+
+    #wallet > div:nth-child(2) {
+        width: 20px;
+    }
+
     .s_text > div{
         align-items: center;
         justify-content: center;
@@ -65,9 +73,9 @@
         display: inline;
     }
 
-    .button_container > button, .button_container > a > button {
+    /* .button_container > button, .button_container > a > button {
         width: 130px;
-    }
+    } */
 
     .input_container {
         flex-direction: column;
@@ -104,10 +112,16 @@
         width:400px;
         height:100%;
 
-        border-left-width:0;
+        border-bottom: 0.5px solid #7C7C7C;
+        border-left: 0.5px solid #7C7C7C;
+        border-top: 0.5px solid #7C7C7C;
+        border-right: 0px solid #7C7C7C;
+        border-radius: 10px 0px 0px 10px;
+
+        /* border-left-width:0;
         border-right-width:0;
         border-top-width:0;
-        border-bottom-width:0.5px;
+        border-bottom-width:0.5px; */
 
         font-size:1em;
         padding-left: 5px;
@@ -123,7 +137,7 @@
         width:40px;
         height:100%;
         border:none;
-        background-color: lightgray;
+        background-color: #FFC700;
         color:black;
         font-size:1em;
         outline:none;
@@ -192,7 +206,7 @@
 
     #autosale_buttons {
         width: 80%;
-        margin-right: 80px;
+        /* margin-right: 80px; */
         height: 100%
     }
 
@@ -206,12 +220,22 @@
         border-radius: 8px;
         /*border: 2px solid navy;*/
         /*color:black;*/
-        background-color: #4374D9;
+        background-color: #FFC700;
         color:#fff;
         font-size:1.3rem;
         cursor:pointer;
         /* transition:800ms ease all; */
     }
+
+    .in-line > input[type="button"]:nth-child(3) {
+        border-radius: 0px 10px 10px 0px;
+    }
+
+    #trading_widget_container * {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
 }
 
 
@@ -317,7 +341,10 @@
         border-top-width:0;
         border-bottom-width:0.5px; */
 
-        border: 0.5px solid #7C7C7C;
+        border-bottom: 0.5px solid #7C7C7C;
+        border-left: 0.5px solid #7C7C7C;
+        border-top: 0.5px solid #7C7C7C;
+        border-right: 0px solid #7C7C7C;
         border-radius: 10px 0px 0px 10px;
         background: #FFFFFF;
 
@@ -420,6 +447,7 @@
 
     #order_select {
         justify-content: space-around !important;
+        padding: 0px 40px;
     }
 
     .in-line > input[type="button"]:nth-child(3) {

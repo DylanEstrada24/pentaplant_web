@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom';
 import '../../css/basic.css';
 
 function Footer() {
@@ -27,7 +28,7 @@ function Footer() {
                         <div>상장 지원</div>
                     </div>
                     <div>
-                        <div>AUTO로봇</div>
+                        <Link to="/autobot"><div>AUTO로봇</div></Link>
                         <div>고객 지원 센터</div>
                         <div>문의하기</div>
                         <div>API문서</div>

@@ -1,10 +1,10 @@
-import Menu from './Menu';
+import Menubar from './Menubar';
 import '../../css/basic.css';
 
 function Header() {
     return (
         <header className="header">
-            <Menu/>
+            <Menubar/>
         </header>
     )
 }
