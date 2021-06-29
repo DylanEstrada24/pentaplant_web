@@ -37,7 +37,7 @@ function Menubar() {
         <>
             <nav className="navbar">
                 <div className="nav_logo">
-                    {/*<i className="fas fa-bahai"></i>*/}<Link to="/"><img src="/img/logo.png"  style={{"backgroundColor": "white"}}/>&nbsp;Penta Plant</Link>
+                    {/*<i className="fas fa-bahai"></i>*/}<Link to="/"><img src="/img/logo.png"  style={{"backgroundColor": "#d9a814"}}/>&nbsp;Penta Plant</Link>
                 </div>
                 <ul className="nav_menu">
                     <li>
