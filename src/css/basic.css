@@ -237,8 +237,8 @@
         border-radius: 8px;
         /*border: 2px solid navy;*/
         /*color:black;*/
-        background-color: #FFC700;
-        color:#000000;
+        background-color: #ffbc2b;
+        color:rgb(26,26,26);
         font-size: 14px;
         font-weight: 600;
         cursor:pointer;
@@ -267,8 +267,8 @@
         height: 40px;
         width:120px;
         border-radius: 8px;
-        background-color: #FFC700;
-        color:#000000;
+        background-color: #ffbc2b;
+        color:rgb(26, 26, 26);
         border: none;
         text-align: center;
         text-decoration: none;
@@ -306,8 +306,8 @@
         height: 50px;
         width:100%;
         border-radius: 8px;
-        background-color: #FFC700;
-        color:#000000;
+        background-color: #ffbc2b;
+        color:rgb(26,26,26);;
         border: none;
         text-align: center;
         text-decoration: none;
@@ -718,8 +718,8 @@
         border-radius: 8px;
         /*border: 2px solid navy;*/
         /*color:black;*/
-        background-color: #FFC700;
-        color:#000000;
+        background-color: #ffbc2b;
+        color:rgb(26,26,26);
         font-size:14px;
         font-weight: 600;
         cursor:pointer;
@@ -748,8 +748,8 @@
         height: 40px;
         width: 120px;
         border-radius: 8px;
-        background-color: #FFC700;
-        color: black;
+        background-color: #ffbc2b;
+        color: rgb(26, 26, 26);
         border: none;
         text-align: center;
         text-decoration: none;
@@ -787,8 +787,8 @@
         height: 50px;
         width:100%;
         border-radius: 8px;
-        background-color: #FFC700;
-        color:#000000;
+        background-color: #ffbc2b;
+        color:rgb(26,26,26);;
         border: none;
         text-align: center;
         text-decoration: none;
