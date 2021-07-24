@@ -90,13 +90,14 @@ class SettingTest extends React.Component {
     }
 
     countIncrease() {
-        if(this.state.count != 3) {
+        if(this.state.count !== 3) {
             this.setState({
                 count: this.state.count + 1
             });
-            if(this.state.count + 1 == 3) {
-                document.querySelector(".l_button").remove();
+            if(this.state.count + 1 === 3) {
+                document.querySelector("#increase_button").style.display = "none";
             }
+            document.querySelector("#decrease_button").style.display = "flex";
             document.querySelector("#test_section" + (this.state.count + 1)).style.display = "flex";
         } else {
             alert("3구간까지 설정가능합니다.");
@@ -104,10 +105,16 @@ class SettingTest extends React.Component {
     }
 
     countDecrease() {
-        if(this.state.count != 1) {
+        if(this.state.count !== 1) {
             this.setState({
                 count: this.state.count - 1
             });
+            if(this.state.count - 1 === 1) {
+                document.querySelector("#decrease_button").style.display = "none";
+            } else {
+                document.querySelector("#increase_button").style.display = "flex";
+            }
+            document.querySelector("#test_section" + (this.state.count)).style.display = "none";
         } else {
             alert("최소 1구간이 활성화되어야합니다.");
         }
@@ -218,7 +225,6 @@ class SettingTest extends React.Component {
         // console.log(data.data[0].StartingAmount);
 
         try {
-            document.querySelector(".contentWrap").firstChild.style.display = "block";
             trackPromise(
                 axios({
                     method: 'post',
@@ -250,22 +256,18 @@ class SettingTest extends React.Component {
                                     <div><p>` + response.data.data[i].TradeCount + `</p></div>
                                 </div>
                                 <div>
-                                    <div><p>수익률%</p></div>
+                                    <div><p>수익률</p></div>
                                     <div><p>` + response.data.data[i].Returns + `</p></div>
                                 </div>
                                 <div>
-                                    <div><p>수익$</p></div>
+                                    <div><p>수익</p></div>
                                     <div><p>` + response.data.data[i].Profit + `</p></div>
                                 </div>
                             </div>`
-
-                        document.querySelector(".contentWrap").firstChild.style.display = "none";
                         document.querySelector(".result_container_wrapper").appendChild(div);
-                        
                     }
                 }).catch((error) => {
                     console.log(error);
-                    document.querySelector(".contentWrap").firstChild.style.display = "none";
                 })
             );
         } catch(error) {
@@ -281,8 +283,7 @@ class SettingTest extends React.Component {
 
         if(this.state.loading) {
             document.querySelector(".contentWrap").firstChild.style.display = "block";
-            setTimeout(document.querySelector(".contentWrap").firstChild.style.display = "none", 60000);
-            
+            setTimeout(this.showResult, 60000);
         };
     }
 
@@ -441,8 +442,11 @@ class SettingTest extends React.Component {
                             </div>
                         </div>
 
-                        <div className="l_button">
+                        <div className="l_button" id="increase_button">
                             <button onClick={this.countIncrease}>구간 추가</button>
+                        </div>
+                        <div className="l_button" id="decrease_button" style={{"display": "none"}}>
+                            <button onClick={this.countDecrease}>구간 삭제</button>
                         </div>
                         <div id="trading_widget_container" className="img_div">
                             {/* <div className="tradingview-widget-container" ref={this._ref}>
