@@ -42,7 +42,7 @@
     }
 
     .section1 {
-        background: #d9a814;
+        background: #FFC700;
         position: relative;
         margin: auto;        
     }
@@ -64,7 +64,7 @@
         position: relative;
         margin: 0px auto;
         height: 50px;
-        background-color: #ebebeb;
+        background-color: #F8F8F8;
     }
 
     .notice {
@@ -594,7 +594,7 @@
     }
 
     .section1 {
-        background: #d9a814;
+        background: #FFC700;
         position: relative;
         margin: auto;        
     }
@@ -615,7 +615,7 @@
         position: relative;
         margin: 0px auto;
         height: 50px;
-        background-color: #ebebeb;
+        background-color: #F8F8F8;
     }
     
     .notice {

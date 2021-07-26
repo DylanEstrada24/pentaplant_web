@@ -36,14 +36,6 @@ let thirdPyramiding = false
 let startDate = new Date()
 let endDate = new Date()
 
-const ExampleCustomInput = ({ value, onClick }) => (
-    <div>
-        <button className="example-custom-input" onClick={onClick}>
-            {value}
-        </button>
-    </div>
-);
-
 class SettingTest extends React.Component {
 
     componentDidMount() {
@@ -61,6 +53,7 @@ class SettingTest extends React.Component {
         // this.DatePickerComponent = this.DatePickerComponent.bind(this);
         this.setStartDate = this.setStartDate.bind(this);
         this.setEndDate = this.setEndDate.bind(this);
+        this.handleSelect = this.handleSelect.bind(this);
         this.state = {
             count: 1,
             loading: false,
@@ -85,7 +78,7 @@ class SettingTest extends React.Component {
             thirdPyramiding : false,
 
             startDate : new Date(),
-            endDate : new Date()
+            endDate : new Date(),
         }
     }
 
@@ -326,12 +319,32 @@ class SettingTest extends React.Component {
 
     }
 
-        render() {
-            return (
-                <>
-                    <Title header="Auto 로봇" subTitle="전략 테스트" />
-                    <Loader type="spin" color="black" message={""} />
-                    <div className="content">
+    handleSelect = ({target}) => {
+        console.log(typeof(target.id))
+
+        let selectBox;
+
+        if(target.id.indexOf("first") !== -1) {
+            selectBox = document.querySelector("#select_box_1");
+        } else if(target.id.indexOf("second") !== -1) {
+            selectBox = document.querySelector("#select_box_2");
+        } else {
+            selectBox = document.querySelector("#select_box_3");
+        }
+
+        if(target.checked) {
+            selectBox.style.display = "flex";
+        } else {
+            selectBox.style.display = "none";
+        }
+    }
+
+    render() {
+        return (
+            <>
+                <Title header="Auto 로봇" subTitle="전략 테스트" />
+                <Loader type="spin" color="black" message={""} />
+                <div className="content">
                     <div className="main_content">
                         <div id="test_term_container" className="content_container s_button">
                             <div className="content_title" id="test_term">
@@ -347,34 +360,7 @@ class SettingTest extends React.Component {
                         <div id="datepicker_container">
                             <DatePickerComponent />
                         </div>
-                        {/* <div id="datepicker_container" className="line_1">
-                            <div>
-                                <DatePicker
-                                    locale="ko"
-                                    dateFormat="yyyy-MM-dd"
-                                    selected={startDate}
-                                    selectsStart
-                                    startDate={startDate}
-                                    endDate={endDate}
-                                    onChange={this.setStartDate}
-                                    value={this.state.startDate}
-                                    customInput={<ExampleCustomInput />}
-                                />
-                                -
-                                <DatePicker
-                                    locale="ko"
-                                    dateFormat="yyyy-MM-dd"
-                                    selected={endDate}
-                                    selectsEnd
-                                    onChange={this.setEndDate}
-                                    startDate={startDate}
-                                    endDate={endDate}
-                                    minDate={startDate}
-                                    value={this.state.endDate}
-                                    customInput={<ExampleCustomInput />}
-                                />
-                            </div>
-                        </div> */}
+
                         <div id="test_section1" className="line_1 test_section_container">
                             <div className="test_section">
                                 <p>1구간</p>
@@ -393,7 +379,16 @@ class SettingTest extends React.Component {
                                     이익&nbsp; <input type="number" placeholder="0" id="first_section_gain" /> %
                                 </div>
                                 <div className="test_input_section_items3">
-                                    피라미딩 세팅 <input type="checkbox" id="first_section_pyramiding" />
+                                    피라미딩 세팅 <input type="checkbox" id="first_section_pyramiding" onClick={(e) => this.handleSelect(e)} />
+                                </div>
+                                <div className="test_input_section_items4" style={{"display": "none"}} id="select_box_1">
+                                    <select>
+                                        <option>1단계</option>
+                                        <option>2단계</option>
+                                        <option>3단계</option>
+                                        <option>4단계</option>
+                                        <option>5단계</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -415,7 +410,16 @@ class SettingTest extends React.Component {
                                     이익&nbsp; <input type="number" placeholder="0" id="second_section_gain" /> %
                                 </div>
                                 <div className="test_input_section_items3">
-                                    피라미딩 세팅 <input type="checkbox" id="second_section_pyramiding" />
+                                    피라미딩 세팅 <input type="checkbox" id="second_section_pyramiding" onClick={(e) => this.handleSelect(e)} />
+                                </div>
+                                <div className="test_input_section_items4" style={{"display": "none"}} id="select_box_2">
+                                    <select>
+                                        <option>1단계</option>
+                                        <option>2단계</option>
+                                        <option>3단계</option>
+                                        <option>4단계</option>
+                                        <option>5단계</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -437,7 +441,16 @@ class SettingTest extends React.Component {
                                     이익&nbsp; <input type="number" placeholder="0" id="third_section_gain" /> %
                                 </div>
                                 <div className="test_input_section_items3">
-                                    피라미딩 세팅 <input type="checkbox" id="third_section_pyramiding" />
+                                    피라미딩 세팅 <input type="checkbox" id="third_section_pyramiding"  onClick={(e) => this.handleSelect(e)} />
+                                </div>
+                                <div className="test_input_section_items4" style={{"display": "none"}} id="select_box_3">
+                                    <select>
+                                        <option>1단계</option>
+                                        <option>2단계</option>
+                                        <option>3단계</option>
+                                        <option>4단계</option>
+                                        <option>5단계</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -457,106 +470,7 @@ class SettingTest extends React.Component {
                             {/* <img src="/img/graph.png"/> */}
                             <TradingViewWidget symbol="BITSTAMP:BTCUSD" />
                         </div>
-                        <div className="result_container_wrapper">
-                            {/* <div className="result_container">
-                                <div className="result_header">
-                                    1 구간
-                                </div>
-                                <div className="result_content">
-                                    <div>
-                                        <div><p>총 누적 수익률</p></div>
-                                        <div><p>173.19%</p></div>
-                                    </div>
-                                    <div>
-                                        <div><p>연 환산 수익률</p></div>
-                                        <div><p>69.23%</p></div>
-                                    </div>
-                                    <div>
-                                        <div><p>MDD</p></div>
-                                        <div><p>4.30%</p></div>
-                                    </div>
-                                    <div>
-                                        <div><p>기간 총 거래횟수</p></div>
-                                        <div><p>388회</p></div>
-                                    </div>
-                                    <div>
-                                        <div><p>월 평균 거래 횟수</p></div>
-                                        <div><p>13회</p></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="result_container">
-                                <div className="result_header">
-                                    2 구간
-                                </div>
-                                <div className="result_content">
-                                    <div>
-                                        <div><p>총 누적 수익률</p></div>
-                                        <div><p>173.19%</p></div>
-                                    </div>
-                                    <div>
-                                        <div><p>연 환산 수익률</p></div>
-                                        <div><p>69.23%</p></div>
-                                    </div>
-                                    <div>
-                                        <div><p>MDD</p></div>
-                                        <div><p>4.30%</p></div>
-                                    </div>
-                                    <div>
-                                        <div><p>기간 총 거래횟수</p></div>
-                                        <div><p>388회</p></div>
-                                    </div>
-                                    <div>
-                                        <div><p>월 평균 거래 횟수</p></div>
-                                        <div><p>13회</p></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="result_container">
-                                <div className="result_header">
-                                    3 구간
-                                </div>
-                                <div className="result_content">
-                                    <div>
-                                        <div><p>총 누적 수익률</p></div>
-                                        <div><p>173.19%</p></div>
-                                    </div>
-                                    <div>
-                                        <div><p>연 환산 수익률</p></div>
-                                        <div><p>69.23%</p></div>
-                                    </div>
-                                    <div>
-                                        <div><p>MDD</p></div>
-                                        <div><p>4.30%</p></div>
-                                    </div>
-                                    <div>
-                                        <div><p>기간 총 거래횟수</p></div>
-                                        <div><p>388회</p></div>
-                                    </div>
-                                    <div>
-                                        <div><p>월 평균 거래 횟수</p></div>
-                                        <div><p>13회</p></div>
-                                    </div>
-                                </div>
-                            </div> */}
-                        </div>
-                        {/* <div className="content_title" id="result_container">
-                            <ul>
-                                <li><a>총 거래횟수</a></li>
-                                <li><a>총 거래량$</a></li>
-                                <li><a>총 수익률%</a></li>
-                                <li><a>총 수익률$</a></li>
-                                <li><a>최대 플로팅</a></li>
-                            </ul>
-                            <ul className="horizon_line"></ul>
-                            <ul>
-                                <li>200</li>
-                                <li>247824</li>
-                                <li>3%</li>
-                                <li>30000</li>
-                                <li>2</li>
-                            </ul>
-                        </div> */}
+                        <div className="result_container_wrapper"></div>
                     </div>
                 </div>
             </>

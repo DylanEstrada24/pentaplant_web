@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Modal from 'react-modal';
 import { BrowserRouter as Router, Switch, Link, Route, useRouteMatch } from 'react-router-dom';
 import './index.css';
 import Header from './components/common/Header';
