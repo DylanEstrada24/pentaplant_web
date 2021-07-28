@@ -29,7 +29,7 @@ let firstGain = "0"
 let secondGain = "0"
 let thirdGain = "0"
 
-const firstPyramiding = true
+let firstPyramiding = false
 let secondPyramiding = false
 let thirdPyramiding = false
 
@@ -73,7 +73,7 @@ class SettingTest extends React.Component {
             secondGain : "0",
             thirdGain : "0",
 
-            firstPyramiding : true,
+            firstPyramiding : false,
             secondPyramiding : false,
             thirdPyramiding : false,
 
