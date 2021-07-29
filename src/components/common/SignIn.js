@@ -52,7 +52,7 @@ class SignIn extends Component {
                   &times;
                 </span>
                 <form action="#">
-                  <div className="modalContents" onClick={isOpen}>
+                  <div className="modalContents">
                     <input
                       name="email"
                       className="loginId"
@@ -68,34 +68,34 @@ class SignIn extends Component {
                       onChange={this.loginHandler}
                     />
                     <div className="loginMid">
-                      <label className="autoLogin" for="hint">
+                      <label className="autoLogin" htmlFor="hint">
                         {" "}
                         <input type="checkbox" id="hint" /> 로그인 유지하기
                       </label>
                       <div className="autoLogin">아이디/비밀번호 찾기</div>
                     </div>
                     <button className="loginBtn" onClick={() => this.loginClickHandler} type="submit">
-                      {" "}
-                      로그인{" "}
+                        {" "}
+                        로그인{" "}
                     </button>
-                    {/* <div className="socialBox">
-                      <div className="kakao">
-                        <img
-                          className="kakaoLogo"
-                          src="/Images/SignIn/kakao.png"
-                        />
-                        <div className="kakaoText">카카오 계정으로 신규가입</div>
+                  {/* <div className="socialBox">
+                    <div className="kakao">
+                      <img
+                        className="kakaoLogo"
+                        src="/Images/SignIn/kakao.png"
+                      />
+                      <div className="kakaoText">카카오 계정으로 신규가입</div>
+                    </div>
+                    <div className="facebook">
+                      <img
+                        className="facebookLogo"
+                        src="/Images/SignIn/facebook.png"
+                      />
+                      <div className="facebookText">
+                        페이스북 계정으로 신규가입
                       </div>
-                      <div className="facebook">
-                        <img
-                          className="facebookLogo"
-                          src="/Images/SignIn/facebook.png"
-                        />
-                        <div className="facebookText">
-                          페이스북 계정으로 신규가입
-                        </div>
-                      </div>
-                    </div> */}
+                    </div>
+                  </div> */}
                     <div className="loginEnd">
                       <div className="loginLine">
                         회원이 아니신가요? <Link to="/signup">회원가입</Link>

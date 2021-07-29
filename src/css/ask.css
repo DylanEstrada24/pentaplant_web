@@ -1,0 +1,94 @@
+@media (min-width: 360px) and (max-width: 759px) {
+
+}
+
+@media (min-width: 760px) {
+
+    .ask_wrapper {
+		/* background: radial-gradient(ellipse at 100% 0%, #636ea2, #4964c2, #4282db); */
+	}
+
+	.ask_container {
+		max-width: 760px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		margin: 0px auto;
+	}
+
+	.ask_title {
+		font-size: 22px;
+		font-weight: 700;
+	}
+
+	.ask_form {
+		width: 100%;
+	}
+
+	.ask_input_container {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.ask_input_container > div > input, .ask_input_container > div > select, .ask_input_container > div > input::placeholder { 
+		border: 0px;
+		border-radius: 0;
+		background: transparent;
+		font-size: 16px;
+		padding-left: 5px;
+		display: inline;
+		outline: none;
+		box-sizing: border-box;
+	}
+
+	.ask_input_container > div > select > option {
+		background: white;
+		color: black;
+	}
+
+	.ask_input_container > div {
+		margin: 50px auto;
+		height: 30px;
+		width: 100%;
+	}
+
+	.ask_input_container > div > input, .ask_input_container > div > select {
+		width: 90%;
+		height: 40px;
+		background: transparent;
+		border: 0px;
+		border-radius: 0;
+		border-bottom: 1px solid black;
+	}
+
+	.ask_textarea {
+		/* width: 90%;
+		height: 200px; */
+		margin-bottom: 150px !important;
+	}
+
+	.ask_textarea > textarea {
+		width: 90%;
+		height: 120px;
+		resize: none;
+	}
+
+	.recaptcha_container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.ask_button {
+		margin: 20px auto;
+	}
+
+	.ask_button > button:disabled {
+		background-color: gray;
+	}
+
+}

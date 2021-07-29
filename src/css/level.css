@@ -1,0 +1,35 @@
+@media (min-width: 360px) and (max-width: 759px) {
+
+}
+
+@media (min-width: 760px) {
+
+    .level_wrapper {
+        max-width: 760px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0px auto;
+		font-size: 16px;
+    }
+
+	.level_wrapper p {
+		font-weight: bold;
+		font-size: 18px;
+	}
+
+	.level_section1 > div {
+		display: flex;
+	}
+
+	.level_section1 > div ul, .level_section2 ul, .level_section3 ul {
+		text-align: left;
+		font-size: 14px;
+	}
+
+	.level_section1 > div > div:first-child {
+		width: 40%;
+	}
+
+}
