@@ -12,23 +12,23 @@ class Purchase extends Component {
                     <div className="purchase_process">
                         <div className="process_step">
                             <div>
-                                <img src="#" name="프로세스별 이미지" /> <br />
+                                {/* <img src="#" name="프로세스별 이미지" /> <br /> */}
                                 1. AUTO 결재
                             </div>
                             <div>
-                                <img src="#" name="프로세스별 이미지" /> <br />
+                                {/* <img src="#" name="프로세스별 이미지" /> <br /> */}
                                 2. AUTO 결재하기 누름
                             </div>
                             <div>
-                                <img src="#" name="프로세스별 이미지" /> <br />
+                                {/* <img src="#" name="프로세스별 이미지" /> <br /> */}
                                 3. 시장가로 MTOP을 바로구매
                             </div>
                             <div>
-                                <img src="#" name="프로세스별 이미지" /> <br />
+                                {/* <img src="#" name="프로세스별 이미지" /> <br /> */}
                                 4. 해당 MTOP는 거래소(특별) 지갑으로 이동
                             </div>
                             <div>
-                                <img src="#" name="프로세스별 이미지" /> <br />
+                                {/* <img src="#" name="프로세스별 이미지" /> <br /> */}
                                 5. 로봇을 MTOP 결재량 만큼 이용가능
                             </div>
                         </div>

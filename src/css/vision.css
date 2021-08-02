@@ -12,10 +12,10 @@
 
     .vision_wrapper > div {
         display: flex;
-        width: 100%;
-        height: auto;
+        width: 90%;
+        height: 300px;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         flex-direction: column;
         margin: 20px 0;
     }

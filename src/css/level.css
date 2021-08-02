@@ -1,4 +1,126 @@
 @media (min-width: 360px) and (max-width: 759px) {
+	
+	.level_wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0px auto;
+		font-size: 16px;
+    }
+
+	.level_wrapper p {
+		font-weight: bold;
+		font-size: 18px;
+	}
+
+	.level_wrapper > div {
+		width: 90%;
+	}
+
+	.level_wrapper table {
+		width: 100%;
+		white-space: nowrap;
+		overflow-x: scroll;
+		display: block;
+	}
+
+	.level_wrapper table * {
+		text-align: center;
+		/* vertical-align: middle; */
+	}
+
+	.level_section1 {
+		margin-bottom: 50px;
+	}
+
+	.level_section1 > ul{
+		padding-left: 0;
+		word-break: keep-all;
+	}
+
+	.level_table_container_1 {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.level_table_container_1 > div table th {
+		font-size: 14px;
+	}
+
+	.level_table_container_1 > div table td {
+		font-size: 12px;
+	}
+
+	.level_table {
+		width: 100%;
+	}
+
+	.level_table > table > thead {
+		white-space: nowrap;
+	}
+
+	.reward_table {
+		width: 100%;
+		/* border-left: 1px solid black; */
+		word-break: keep-all;
+	}
+
+	.reward_table > table > thead {
+		white-space: nowrap;
+	}
+
+	/* .reward_table > table {
+		border-left: 3px solid #FFC700;
+	} */
+
+	/* .level_section1 > div ul, .level_section2 ul, .level_section3 ul {
+		text-align: left;
+		font-size: 14px;
+	} */
+
+	.level_section1 > div > div:first-child {
+		/* width: 40%; */
+	}
+
+	.level_section2 > table * {
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	.level_section2 > table > thead > tr th {
+		font-size: 12px;
+	}
+
+	.level_section2 > table > tbody > tr th, .level_section2 > table > tbody > tr td {
+		font-size: 10px;
+	}
+
+	.level_section2 > table tr:not(tr:nth-child(1)) > th, .level_section2 > table > tbody th {
+		border-bottom: none;
+	}
+
+	.level_section2 > table > * > tr > th:first-child {
+		border-right: 3px solid #FFC700;
+	}
+
+	.level_section2 > table > thead > tr:not(tr:nth-child(1)), .level_section2 > table > tbody tr:not(tr:last-child) {
+		border-bottom: 1px solid black;
+	}
+
+	.level_section2 > table > thead > tr > th:not(th:first-child, th:last-child), .level_section2 > table > tbody tr td:not(td:last-child) {
+		border-right: 1px solid black;
+	}
+
+	.level_section2 > p:last-child {
+		font-size: 16px;
+		word-break: keep-all;
+		text-align: center;
+	}
 
 }
 
@@ -19,17 +141,89 @@
 		font-size: 18px;
 	}
 
-	.level_section1 > div {
-		display: flex;
+	.level_wrapper table * {
+		text-align: center;
+		/* vertical-align: middle; */
 	}
 
-	.level_section1 > div ul, .level_section2 ul, .level_section3 ul {
-		text-align: left;
+	.level_section1 {
+		margin-bottom: 50px;
+	}
+
+	.level_table_container_1 {
+		display: flex;
+		width: 100%;
+	}
+
+	.level_table_container_1 > div table th {
 		font-size: 14px;
 	}
 
-	.level_section1 > div > div:first-child {
+	.level_table_container_1 > div table td {
+		font-size: 12px;
+	}
+
+	.level_table {
 		width: 40%;
+	}
+
+	.level_table > table > thead {
+		white-space: nowrap;
+	}
+
+	.reward_table {
+		width: 60%;
+		/* border-left: 1px solid black; */
+	}
+
+	.reward_table > table > thead {
+		white-space: nowrap;
+	}
+
+	.reward_table > table {
+		border-left: 3px solid #FFC700;
+	}
+
+	/* .level_section1 > div ul, .level_section2 ul, .level_section3 ul {
+		text-align: left;
+		font-size: 14px;
+	} */
+
+	.level_section1 > div > div:first-child {
+		/* width: 40%; */
+	}
+
+	.level_section2 > table * {
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	.level_section2 > table > thead > tr th {
+		font-size: 12px;
+	}
+
+	.level_section2 > table > tbody > tr th, .level_section2 > table > tbody > tr td {
+		font-size: 10px;
+	}
+
+	.level_section2 > table tr:not(tr:nth-child(1)) > th, .level_section2 > table > tbody th {
+		border-bottom: none;
+	}
+
+	.level_section2 > table > * > tr > th:first-child {
+		border-right: 3px solid #FFC700;
+	}
+
+	.level_section2 > table > thead > tr:not(tr:nth-child(1)), .level_section2 > table > tbody tr:not(tr:last-child) {
+		border-bottom: 1px solid black;
+	}
+
+	.level_section2 > table > thead > tr > th:not(th:first-child, th:last-child), .level_section2 > table > tbody tr td:not(td:last-child) {
+		border-right: 1px solid black;
+	}
+
+	.level_section2 > p:last-child {
+		text-align: left;
 	}
 
 }

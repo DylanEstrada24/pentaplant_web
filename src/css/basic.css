@@ -422,6 +422,10 @@
         font-weight: 600;
     }
 
+    .bold_text {
+        font-weight: 700;
+    }
+
 }
 
 
@@ -899,6 +903,10 @@
 
     .footer_menu_container div div {
         cursor: pointer;
+    }
+
+    .bold_text {
+        font-weight: 700;
     }
 
 }

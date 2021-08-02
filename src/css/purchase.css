@@ -1,5 +1,95 @@
 @media (min-width: 360px) and (max-width: 759px) {
 
+	.purchase_wrapper {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 20px auto;
+		font-size: 16px;
+		flex-direction: column;
+	}
+
+	.purchase_wrapper > div {
+		width: 90%;
+	}
+
+	.purchase_process {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.process_step {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		width: 100%;
+		margin-top: 20px;
+	}
+
+	.process_step > div {
+		width: 40%;
+		height: 200px;
+		margin: 0px 10px;
+	}
+
+	.purchase_menu {
+		width: 100%;
+		flex-direction: row;
+		overflow: hidden;
+	}
+
+	.table_container {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto;
+	}
+
+	.table_container > table {
+        width: 100%;
+        white-space: nowrap;
+        overflow-x: scroll;
+        display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.table_container > table * {
+		font-size: 20px;
+	}
+
+	.purchase_menu p {
+		font-size: 18px;
+	}
+
+	.process_button_container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		width: 100%;
+	}
+
+	.process_button_container > div {
+		display: flex;
+	}
+
+	.process_text * {
+		display: flex;
+		flex-direction: row;
+		padding-left: 0;
+		font-size: 14px;
+		font-weight: 700;
+		justify-content: space-around;
+		align-items: center;
+		margin: 0;
+	}
+
 }
 
 @media (min-width: 760px) {

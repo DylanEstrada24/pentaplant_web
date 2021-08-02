@@ -2,7 +2,7 @@
 
     .fees_wrapper {
         width: 100%;
-        background: radial-gradient(ellipse at 100% 0%, #4b69ce, #6940c9);
+        /* background: radial-gradient(ellipse at 100% 0%, #4b69ce, #6940c9); */
     }
 
     .fees_container {
@@ -21,7 +21,8 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        color: white;
+        color: black;
+        font-weight: 700;
     }
 
     .fees_table {
@@ -47,8 +48,8 @@
     }
 
     .fees_table td {
-        border: 1px solid white;
-        color: white;
+        border-bottom: 1px solid black;
+        color: black;
     }
 
 }
@@ -78,6 +79,10 @@
         align-items: center;
         color: black;
         font-weight: 700;
+    }
+
+    .fees_category > a {
+        cursor: pointer;
     }
 
     .fees_table {

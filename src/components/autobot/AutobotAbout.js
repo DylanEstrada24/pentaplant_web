@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
+import Title from '../common/Title';
 
 import '../../css/autobotAbout.css';
 
 class AutobotAbout extends Component {
 	render() {
 		return (
+			<>
+				<Title header="Autobot ABOUT" />
 				<div className="autobot_about_wrapper">
 					<div className="autobot_about_section1">
-						<img src="#" />
+						<div>
+							<img src="/img/autobot-about-01.png" />
+						</div>
 						<div>
 						BPInvesting의 자체 기술로 개발한 US100 자동 트레이딩 로봇은 선물 시장에서 5년째 꾸준히 수익을 발생시키고 있습니다. <br />
 						Penta Plant는 이를 기반으로 한 기술력을 암호화폐 시장에 그대로 녹여내어 빠른 대응속도 및 <br />
@@ -30,6 +35,7 @@ class AutobotAbout extends Component {
 						<img src="#" />
 					</div>
 				</div>
+			</>
 		);
 	}
 }
