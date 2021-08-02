@@ -45,10 +45,10 @@ class SignIn extends Component {
         ////<div className="modalContents" onClick={isOpen}> 로그인 화면은 버튼 클릭해서 들어오면
          /// true인 상태로 있어서 화면이 안꺼진다.
       
-          <div className="modal">
-            <div onClick={close}>
+          <div id="modal_container" className="modal" onClick={close}>
+            <div id="modal_wrapper" onClick={close}>
               <div className="loginModal">
-                <span className="close" onClick={close}>
+                <span id="modal_close_button" className="close" onClick={close}>
                   &times;
                 </span>
                 <form action="#">
@@ -72,7 +72,7 @@ class SignIn extends Component {
                         {" "}
                         <input type="checkbox" id="hint" /> 로그인 유지하기
                       </label>
-                      <div className="autoLogin">아이디/비밀번호 찾기</div>
+                      <div id="find_button" className="autoLogin">아이디/비밀번호 찾기</div>
                     </div>
                     <button className="loginBtn" onClick={() => this.loginClickHandler} type="submit">
                         {" "}
@@ -97,7 +97,7 @@ class SignIn extends Component {
                     </div>
                   </div> */}
                     <div className="loginEnd">
-                      <div className="loginLine">
+                      <div id="enroll_button" className="loginLine">
                         회원이 아니신가요? <Link to="/signup">회원가입</Link>
                       </div>
                       {/* <div className="noUser">비회원 주문 조회</div> */}
