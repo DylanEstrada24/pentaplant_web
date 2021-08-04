@@ -24,12 +24,15 @@ class SignIn extends Component {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        Username: "test",
-        Password: "test",
+        Username: email,
+        Password: password,
       }),
     })
       .then((res) => res.json())
-      .then((res) => console.log(res));
+      .then((res) => {
+        console.log(res);
+        localStorage.setItem("access_token", res.access_token);
+      });
   }; 
 
   render() {
@@ -74,7 +77,7 @@ class SignIn extends Component {
                       </label>
                       <div id="find_button" className="autoLogin">아이디/비밀번호 찾기</div>
                     </div>
-                    <button className="loginBtn" onClick={() => this.loginClickHandler} type="submit">
+                    <button className="loginBtn" onClick={this.loginClickHandler} type="submit">
                         {" "}
                         로그인{" "}
                     </button>
