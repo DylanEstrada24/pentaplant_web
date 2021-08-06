@@ -132,6 +132,8 @@ class SettingTest extends React.Component {
 
         const url = `http://pentaplant-1933825305.ap-northeast-2.elb.amazonaws.com/backtest`; // 임시주소
 
+        const Commission = document.querySelector("#fee").value *= 1;
+
         // 구간별 퍼센트
         const firstRange = document.querySelector("#first_section_range").value *= 1;
         const secondRange = document.querySelector("#second_section_range").value *= 1;
@@ -190,7 +192,8 @@ class SettingTest extends React.Component {
                     StartingAmount: firstAmount.toString(),
                     PercentRange: firstRange.toString(),
                     EntryNum: firstEntry.toString(),
-                    PercentReturn: firstGain.toString()
+                    PercentReturn: firstGain.toString(),
+                    Commission: Commission
                 },
                 {
                     active: secondActive,
@@ -199,7 +202,8 @@ class SettingTest extends React.Component {
                     StartingAmount: secondAmount.toString(),
                     PercentRange: secondRange.toString(),
                     EntryNum: secondEntry.toString(),
-                    PercentReturn: secondGain
+                    PercentReturn: secondGain,
+                    Commission: Commission
                 },
                 {
                     active: thirdActive,
@@ -208,7 +212,8 @@ class SettingTest extends React.Component {
                     StartingAmount: thirdAmount.toString(),
                     PercentRange: thirdRange.toString(),
                     EntryNum: thirdEntry.toString(),
-                    PercentReturn: thirdGain.toString()
+                    PercentReturn: thirdGain.toString(),
+                    Commission: Commission
                 }
             ]
             
