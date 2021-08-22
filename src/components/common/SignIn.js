@@ -51,7 +51,7 @@ class SignIn extends Component {
                 <span id="modal_close_button" className="close" onClick={close}>
                   &times;
                 </span>
-                <form action="#">
+                <form>
                   <div className="modalContents">
                     <input
                       name="email"
@@ -74,7 +74,7 @@ class SignIn extends Component {
                       </label>
                       <div id="find_button" className="autoLogin">아이디/비밀번호 찾기</div>
                     </div>
-                    <button className="loginBtn" onClick={() => this.loginClickHandler} type="submit">
+                    <button className="loginBtn" onClick={() => this.loginClickHandler} type="button">
                         {" "}
                         로그인{" "}
                     </button>

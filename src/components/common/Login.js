@@ -14,7 +14,7 @@ class Login extends Component {
     };
 
     closeModal = (e) => {
-        console.log(e.target.id);
+        // console.log(e.target.id);
         if(e.target.id === 'modal_container' || e.target.id === 'modal_wrapper' || e.target.id === 'modal_close_button'
             || e.target.id === 'find_button' || e.target.id === 'enroll_button' ) {
             this.setState({ isModalOpen: false });
