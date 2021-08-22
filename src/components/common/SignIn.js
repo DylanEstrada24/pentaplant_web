@@ -45,14 +45,14 @@ class SignIn extends Component {
         ////<div className="modalContents" onClick={isOpen}> 로그인 화면은 버튼 클릭해서 들어오면
          /// true인 상태로 있어서 화면이 안꺼진다.
       
-          <div id="modal_container" className="modal" onClick={close}>
-            <div id="modal_wrapper" onClick={close}>
+          <div className="modal">
+            <div onClick={close}>
               <div className="loginModal">
-                <span id="modal_close_button" className="close" onClick={close}>
+                <span className="close" onClick={close}>
                   &times;
                 </span>
-                <form>
-                  <div className="modalContents">
+                <form action="#">
+                  <div className="modalContents" onClick={isOpen}>
                     <input
                       name="email"
                       className="loginId"
@@ -68,36 +68,36 @@ class SignIn extends Component {
                       onChange={this.loginHandler}
                     />
                     <div className="loginMid">
-                      <label className="autoLogin" htmlFor="hint">
+                      <label className="autoLogin" for="hint">
                         {" "}
                         <input type="checkbox" id="hint" /> 로그인 유지하기
                       </label>
-                      <div id="find_button" className="autoLogin">아이디/비밀번호 찾기</div>
+                      <div className="autoLogin">아이디/비밀번호 찾기</div>
                     </div>
-                    <button className="loginBtn" onClick={() => this.loginClickHandler} type="button">
-                        {" "}
-                        로그인{" "}
+                    <button className="loginBtn" onClick={() => this.loginClickHandler} type="submit">
+                      {" "}
+                      로그인{" "}
                     </button>
-                  {/* <div className="socialBox">
-                    <div className="kakao">
-                      <img
-                        className="kakaoLogo"
-                        src="/Images/SignIn/kakao.png"
-                      />
-                      <div className="kakaoText">카카오 계정으로 신규가입</div>
-                    </div>
-                    <div className="facebook">
-                      <img
-                        className="facebookLogo"
-                        src="/Images/SignIn/facebook.png"
-                      />
-                      <div className="facebookText">
-                        페이스북 계정으로 신규가입
+                    {/* <div className="socialBox">
+                      <div className="kakao">
+                        <img
+                          className="kakaoLogo"
+                          src="/Images/SignIn/kakao.png"
+                        />
+                        <div className="kakaoText">카카오 계정으로 신규가입</div>
                       </div>
-                    </div>
-                  </div> */}
+                      <div className="facebook">
+                        <img
+                          className="facebookLogo"
+                          src="/Images/SignIn/facebook.png"
+                        />
+                        <div className="facebookText">
+                          페이스북 계정으로 신규가입
+                        </div>
+                      </div>
+                    </div> */}
                     <div className="loginEnd">
-                      <div id="enroll_button" className="loginLine">
+                      <div className="loginLine">
                         회원이 아니신가요? <Link to="/signup">회원가입</Link>
                       </div>
                       {/* <div className="noUser">비회원 주문 조회</div> */}
