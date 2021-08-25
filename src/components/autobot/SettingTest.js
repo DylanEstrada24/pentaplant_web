@@ -54,6 +54,7 @@ class SettingTest extends React.Component {
         this.setStartDate = this.setStartDate.bind(this);
         this.setEndDate = this.setEndDate.bind(this);
         this.handleSelect = this.handleSelect.bind(this);
+        this.toggleLoader = this.toggleLoader.bind(this)
         this.state = {
             count: 1,
             loading: false,
@@ -77,8 +78,11 @@ class SettingTest extends React.Component {
             secondPyramiding : false,
             thirdPyramiding : false,
 
+            totalAmount: 10000,
+
             startDate : new Date(),
             endDate : new Date(),
+            isLoading: false,
         }
     }
 
@@ -125,14 +129,18 @@ class SettingTest extends React.Component {
             endDate: e.target.value 
         })
     }
+
+    toggleLoader() {
+        this.setState({
+            isLoading: !this.state.isLoading
+        })
+    }
     
     testButton() {
 
         // API는 기입된 구간까지(2구간까지 했으면 2번) 요청함.
 
         const url = `http://pentaplant-1933825305.ap-northeast-2.elb.amazonaws.com/backtest`; // 임시주소
-
-        const Commission = document.querySelector("#fee").value *= 1;
 
         // 구간별 퍼센트
         const firstRange = document.querySelector("#first_section_range").value *= 1;
@@ -192,8 +200,7 @@ class SettingTest extends React.Component {
                     StartingAmount: firstAmount.toString(),
                     PercentRange: firstRange.toString(),
                     EntryNum: firstEntry.toString(),
-                    PercentReturn: firstGain.toString(),
-                    Commission: Commission
+                    PercentReturn: firstGain.toString()
                 },
                 {
                     active: secondActive,
@@ -202,8 +209,7 @@ class SettingTest extends React.Component {
                     StartingAmount: secondAmount.toString(),
                     PercentRange: secondRange.toString(),
                     EntryNum: secondEntry.toString(),
-                    PercentReturn: secondGain,
-                    Commission: Commission
+                    PercentReturn: secondGain
                 },
                 {
                     active: thirdActive,
@@ -212,8 +218,7 @@ class SettingTest extends React.Component {
                     StartingAmount: thirdAmount.toString(),
                     PercentRange: thirdRange.toString(),
                     EntryNum: thirdEntry.toString(),
-                    PercentReturn: thirdGain.toString(),
-                    Commission: Commission
+                    PercentReturn: thirdGain.toString()
                 }
             ]
             
@@ -223,6 +228,7 @@ class SettingTest extends React.Component {
         // console.log(data.data[0].StartingAmount);
 
         try {
+            this.toggleLoader()
             trackPromise(
                 axios({
                     method: 'post',
@@ -264,8 +270,13 @@ class SettingTest extends React.Component {
                             </div>`
                         document.querySelector(".result_container_wrapper").appendChild(div);
                     }
+                    this.toggleLoader()
                 }).catch((error) => {
                     console.log(error);
+                }).finally(() => {
+                    if(!this.state.isLoading) {
+                        this.toggleLoader()
+                    }
                 })
             );
         } catch(error) {
@@ -277,7 +288,7 @@ class SettingTest extends React.Component {
 
     testIndicator() {
         document.querySelector(".result_container_wrapper").innerHTML = "";
-        this.state.loading = true;
+        this.toggleLoader()
 
         if(this.state.loading) {
             document.querySelector(".contentWrap").firstChild.style.display = "block";
@@ -318,7 +329,7 @@ class SettingTest extends React.Component {
                 document.querySelector(".result_container_wrapper").appendChild(div);
         }
 
-        this.state.loading = false;
+        this.toggleLoader()
 
         document.querySelector(".contentWrap").firstChild.style.display = "none";
 
@@ -348,7 +359,13 @@ class SettingTest extends React.Component {
         return (
             <>
                 <Title header="Auto 로봇" subTitle="전략 테스트" />
-                <Loader type="spin" color="black" message={""} />
+                {
+                    this.state.isLoading ? (
+                        <Loader type="spin" color="black" message={""} />
+                    ) : (
+                        <></>
+                    )
+                }
                 <div className="content">
                     <div className="main_content">
                         <div id="test_term_container" className="content_container s_button">
@@ -356,9 +373,9 @@ class SettingTest extends React.Component {
                                 <div>테스트 기간 설정</div>
                             </div>
                             <ul id="test_subtitle_button" className="content_subtitle">
-                                <li><a>운용자금 10000$ </a></li>
-                                <li className="vertical_line">|</li>
-                                <li><a>수수료 설정 <input type="number" placeholder="0.4" id="fee" />%</a></li>
+                                <li><a>운용자금 {this.state.totalAmount.toLocaleString()}$ </a></li>
+                                {/* <li className="vertical_line">|</li>
+                                <li><a>수수료 설정 <input type="number" placeholder="0.4" id="fee" />%</a></li> */}
                             </ul>
                             <button id="test_button" onClick={this.testButton}>테스트<br />시작</button>
                         </div>

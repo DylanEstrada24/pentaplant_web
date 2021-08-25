@@ -9,9 +9,10 @@ function DatePickerComponent() {
     const [endDate, setEndDate] = useState(new Date());
     const ExampleCustomInput = ({ value, onClick }) => (
         <div>
-            <button className="example-custom-input" onClick={onClick}>
+            {/* <button className="example-custom-input" onClick={onClick}>
                 {value}
-            </button>
+            </button> */}
+            <input type="text" id="example-custom-input" onClick={onClick} value={value} />
         </div>
     );
     return (
@@ -24,7 +25,9 @@ function DatePickerComponent() {
                 startDate={startDate}
                 endDate={endDate}
                 onChange={date => setStartDate(date)}
-                customInput={<ExampleCustomInput />}
+                // customInput={<ExampleCustomInput />}
+                id="example-custom-input"
+                className="example-custom-input"
             />
             <div>-</div>
             <DatePicker
@@ -36,7 +39,9 @@ function DatePickerComponent() {
                 startDate={startDate}
                 endDate={endDate}
                 minDate={startDate}
-                customInput={<ExampleCustomInput />}
+                // customInput={<ExampleCustomInput />}
+                id="example-custom-input"
+                className="example-custom-input"
             />
         </div>
     );

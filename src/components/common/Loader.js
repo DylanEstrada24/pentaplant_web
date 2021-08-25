@@ -9,7 +9,7 @@ function Loader({type, color, message}) {
                 top: "50%",
                 left: "50%",
                 transform: "translate(-50%, -50%)",
-                display: "none",
+                // display: "none",
                 width: "10%",
                 zIndex: 9999
             }}>
