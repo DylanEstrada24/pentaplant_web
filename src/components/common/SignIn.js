@@ -17,8 +17,8 @@ class SignIn extends Component {
     const { email, password } = this.state;
     console.log(" ============== login clicked   ");
     console.log(" ===================  ");
-    //fetch("http://10.58.2.17:8000/auth/login", {
-    fetch("http://127.0.0.1:3030/login", {
+    fetch("http://10.58.2.17:8000/auth/login", {
+    // fetch("http://127.0.0.1:3030/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -28,8 +28,13 @@ class SignIn extends Component {
         Password: "test",
       }),
     })
-      .then((res) => res.json())
-      .then((res) => console.log(res));
+      .then((res) => {
+        //   res.json()
+        console.log("res",res)
+          })
+      .catch((e) => {
+          console.log("e",e)
+          });
   }; 
 
   render() {
@@ -74,9 +79,9 @@ class SignIn extends Component {
                       </label>
                       <div id="find_button" className="autoLogin">아이디/비밀번호 찾기</div>
                     </div>
-                    <button className="loginBtn" onClick={() => this.loginClickHandler} type="button">
-                        {" "}
-                        로그인{" "}
+                    <button className="loginBtn" onClick={() => this.loginClickHandler()} type="button">
+                        
+                        로그인
                     </button>
                   {/* <div className="socialBox">
                     <div className="kakao">
