@@ -1,0 +1,79 @@
+@media (min-width: 760px) {
+
+	.api_modal_container {
+		width: 100%;
+		height: 100%;
+	}
+
+	.api_key_input_title {
+		font-size: 16px;
+		font-weight: 600;
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 15px;
+	}
+
+	.api_key_close_icon {
+		display: flex;
+		justify-content: flex-end;
+		cursor: pointer;
+	}
+
+	.api_key_title {
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	.api_key_input_container {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+	.api_key_input_text {
+		color: #808080;
+		display: flex;
+		font-size: 16px;
+		justify-content: flex-start;
+		margin-bottom: 20px;
+	}
+	.api_key_input {
+		border-bottom: 1px solid #808080 !important;
+		border-radius: 0 !important;
+		border-left: 0 !important;
+		border-right: 0 !important;
+		border-top: 0 !important;
+		padding-bottom: 10px;
+		margin-bottom: 10px;
+		font-size: 14px !important;
+	}
+	
+	.api_key_button_container {
+		margin-top: 30px;
+		display: flex;
+		justify-content: center;
+	}
+
+	.api_key_button_container > button {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	.close_button {
+		position: relative;
+		padding: 0.2em;
+		outline: none;
+		height: 40px;
+		width: 120px;
+		border: none;
+		border-radius: 8px;
+		background-color: #BEBEBE;
+		color: #000000;
+		font-size: 14px;
+		font-weight: 600;
+		cursor: pointer;
+		transition: 800ms ease all;
+		box-shadow: 2px 2px 5px #999;
+	}
+
+}

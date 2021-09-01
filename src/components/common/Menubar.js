@@ -6,6 +6,9 @@ import { MobileView } from 'react-device-detect';
 import { MenuOutlined, MenuFoldOutlined } from '@ant-design/icons';
 import Login from './Login';
 
+import Modal from 'react-modal';
+import '../../css/apiKey.css';
+
 // const MenuList = styled.div`
 //     display: flex;
 //     justify-content: space-between;
@@ -21,6 +24,9 @@ import Login from './Login';
 // `;
 
 function Menubar() {
+
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+    
     // const [toggleMenu, setToggleMenu] = useState(false)
     // const [toggleBar, setToggleBar] = useState(true)
 
@@ -73,6 +79,7 @@ function Menubar() {
                         <ul className="dropdown_content">
                             <li><Link to="/autobot/about">ABOUT</Link></li>
                             <li><Link to="/autobot/purchase">AUTO 결제</Link></li>
+                            <li><a onClick={() => setModalIsOpen(true)}>API KEY 입력</a></li>
                         </ul>
                     </li>
                     <li>|</li>
@@ -144,6 +151,26 @@ function Menubar() {
                 <div className="login_button">
                     <Login />
                 </div>
+                <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
+                    <div className="api_modal_container">
+                        <div className="api_key_input_title">
+                            <a className="api_key_close_icon" onClick={() => setModalIsOpen(false)}>X</a>
+                            <span className="api_key_title">거래소 API Key를 입력해주세요.</span>
+                        </div>
+                        <div className="api_key_input_container">
+                            <span className="api_key_input_text">API Key</span>
+                            <input type="text" className="api_key_input" />
+                        </div>
+                        <div className="api_key_input_container">
+                            <span className="api_key_input_text">Secret Key</span>
+                            <input type="text" className="api_key_input" />
+                        </div>
+                        <div className="api_key_button_container">
+                            <button className="main_button">API 인증</button>
+                            <button className="close_button" onClick={() => setModalIsOpen(false)}>닫기</button>
+                        </div>
+                    </div>
+                </Modal>
             </nav>
         </>
     )
