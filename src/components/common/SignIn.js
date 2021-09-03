@@ -14,6 +14,8 @@ class SignIn extends Component {
   };   ////계산된 속성명 사용
 
   loginClickHandler = () => {
+
+    /*
     const { email, password } = this.state;
     console.log(" ============== login clicked   ");
     console.log(" ===================  ");
@@ -30,6 +32,43 @@ class SignIn extends Component {
     })
       .then((res) => res.json())
       .then((res) => console.log(res));
+    */
+
+    const { email, password } = this.state;
+    /*
+    console.log(" ================= login clicked   ");
+    console.log(" email   ", email);
+    console.log(" password   ", password);
+    console.log(" ================= login clicked   ");
+    */
+    fetch("https://api.pentaplant.com:8443/api/user/supportLogin",{
+      method: "POST",
+      headers: {
+        'Accept': 'application/json',
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: email,
+        password: password
+      }),
+    }).then((res) => {
+      //console.log(" ===== response1   ",res.json());
+      return res.json();
+    }).then((resp) => {
+      //console.log(" ===== response2   ",resp.userResult.userId);resp.userResult.userId
+      return fetch("https://api.pentaplant.com:8443/api/oauth/token" ,{
+      method: "GET",
+      headers: {
+        'Accept': 'application/json',
+        "Content-Type": "application/json",
+      },
+      })
+    }).then((res) => {
+      console.log(" ==== ", res);
+    })
+
+
+
   }; 
 
   render() {
@@ -74,7 +113,7 @@ class SignIn extends Component {
                       </label>
                       <div id="find_button" className="autoLogin">아이디/비밀번호 찾기</div>
                     </div>
-                    <button className="loginBtn" onClick={() => this.loginClickHandler} type="button">
+                    <button className="loginBtn" onClick={() => this.loginClickHandler()} type="button">
                         {" "}
                         로그인{" "}
                     </button>

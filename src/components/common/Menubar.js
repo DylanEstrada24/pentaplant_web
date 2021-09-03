@@ -26,6 +26,13 @@ import '../../css/apiKey.css';
 function Menubar() {
 
     const [modalIsOpen, setModalIsOpen] = useState(false);
+
+    const setApikey = () => {
+        const apikey = document.querySelector("#api_key_id").value;
+        const secret = document.querySelector("#api_secret_id").value;
+        
+
+    } 
     
     // const [toggleMenu, setToggleMenu] = useState(false)
     // const [toggleBar, setToggleBar] = useState(true)
@@ -159,14 +166,14 @@ function Menubar() {
                         </div>
                         <div className="api_key_input_container">
                             <span className="api_key_input_text">API Key</span>
-                            <input type="text" className="api_key_input" />
+                            <input type="text" className="api_key_input" id="api_key_id"/>
                         </div>
                         <div className="api_key_input_container">
                             <span className="api_key_input_text">Secret Key</span>
-                            <input type="text" className="api_key_input" />
+                            <input type="text" className="api_key_input" id="api_secret_id"/>
                         </div>
                         <div className="api_key_button_container">
-                            <button className="main_button">API 인증</button>
+                            <button className="main_button" onClick={() => setApikey()}>API 인증</button>
                             <button className="close_button" onClick={() => setModalIsOpen(false)}>닫기</button>
                         </div>
                     </div>
