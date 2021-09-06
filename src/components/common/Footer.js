@@ -8,7 +8,7 @@ function Footer() {
                 <div class="footer_comp_info">
                     주식회사 펜타플렌트            <br/>
                     사업자 등록번호 : 000-00-0000 <br/>
-                    부산광역시 해운대구 센텀1로 28 <br/>
+                     <br/>
                     support@pentaplant.com
                 </div>
                 <div class="footer_menu_container">
