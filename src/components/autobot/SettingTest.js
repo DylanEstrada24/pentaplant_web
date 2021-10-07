@@ -135,6 +135,18 @@ class SettingTest extends React.Component {
             isLoading: !this.state.isLoading
         })
     }
+
+    toggleLoaderTrue() {
+        this.setState({
+            isLoading: true
+        })
+    }
+
+    toggleLoaderFalse() {
+        this.setState({
+            isLoading: false
+        })
+    }
     
     testButton() {
 
@@ -228,7 +240,7 @@ class SettingTest extends React.Component {
         // console.log(data.data[0].StartingAmount);
 
         try {
-            this.toggleLoader()
+            this.toggleLoaderTrue()
             trackPromise(
                 axios({
                     method: 'post',
@@ -270,12 +282,12 @@ class SettingTest extends React.Component {
                             </div>`
                         document.querySelector(".result_container_wrapper").appendChild(div);
                     }
-                    this.toggleLoader()
+                    this.toggleLoaderFalse()
                 }).catch((error) => {
                     console.log(error);
                 }).finally(() => {
                     if(!this.state.isLoading) {
-                        this.toggleLoader()
+                        this.toggleLoaderFalse()
                     }
                 })
             );
