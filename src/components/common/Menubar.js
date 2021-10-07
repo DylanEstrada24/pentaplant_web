@@ -26,13 +26,6 @@ import '../../css/apiKey.css';
 function Menubar() {
 
     const [modalIsOpen, setModalIsOpen] = useState(false);
-
-    const setApikey = () => {
-        const apikey = document.querySelector("#api_key_id").value;
-        const secret = document.querySelector("#api_secret_id").value;
-        
-
-    } 
     
     // const [toggleMenu, setToggleMenu] = useState(false)
     // const [toggleBar, setToggleBar] = useState(true)
@@ -60,6 +53,7 @@ function Menubar() {
                             <li><Link to="/market/about">ABOUT</Link></li>
                             <li>링크연결</li>
                             <li><Link to="/market/fees">수수료</Link></li>
+                            <li><Link to="/autobot/tradeHistory">거래 내역</Link></li>
                         </ul>
                     </li>
                     <li>|</li>
@@ -166,14 +160,14 @@ function Menubar() {
                         </div>
                         <div className="api_key_input_container">
                             <span className="api_key_input_text">API Key</span>
-                            <input type="text" className="api_key_input" id="api_key_id"/>
+                            <input type="text" className="api_key_input" />
                         </div>
                         <div className="api_key_input_container">
                             <span className="api_key_input_text">Secret Key</span>
-                            <input type="text" className="api_key_input" id="api_secret_id"/>
+                            <input type="text" className="api_key_input" />
                         </div>
                         <div className="api_key_button_container">
-                            <button className="main_button" onClick={() => setApikey()}>API 인증</button>
+                            <button className="main_button">API 인증</button>
                             <button className="close_button" onClick={() => setModalIsOpen(false)}>닫기</button>
                         </div>
                     </div>

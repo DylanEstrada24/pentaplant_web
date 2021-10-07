@@ -167,8 +167,8 @@ class SettingTest extends React.Component {
         const secondPyramiding = document.querySelector("#second_section_pyramiding").checked ? true : false;
         const thirdPyramiding = document.querySelector("#third_section_pyramiding").checked ? true : false;
 
-        const timePeriod = document.querySelectorAll(".example-custom-input")[0].value + "~" + 
-                            document.querySelectorAll(".example-custom-input")[1].value
+        const timePeriod = document.querySelectorAll(".example-custom-input")[0].innerText + "-" + 
+                            document.querySelectorAll(".example-custom-input")[1].innerText
 
         let secondActive = false;
         let thirdActive = false;
