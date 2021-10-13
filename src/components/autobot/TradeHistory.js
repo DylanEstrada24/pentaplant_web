@@ -34,6 +34,18 @@ class TradeHistory extends Component {
 			category: 'all',
 		})
     }
+	componentDidMount() {
+		fetch("http://15.164.232.119:5055/transactionhistory", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({
+				userid: 1
+			}),
+		}).then((res) => res.json())
+		.then((res) => console.log(res));
+	}
 
     changeCategory = (category) => {
 
