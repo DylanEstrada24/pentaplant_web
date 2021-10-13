@@ -6,9 +6,9 @@ function Footer() {
         <footer>
             <div>
                 <div class="footer_comp_info">
-                    주식회사 펜타플렌트 | 대표 : 홍길동 <br/>
-                    사업자 등록번호 : 000-00-0000 <br/>
-                    부산광역시 남구 전포대로 00 <br/>
+                    주식회사         | 대표 :     <br/>
+                    사업자 등록번호 :             <br/>
+                                                 <br/>
                     support@pentaplant.com
                 </div>
                 <div class="footer_menu_container">
