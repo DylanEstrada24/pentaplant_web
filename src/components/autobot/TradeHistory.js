@@ -34,7 +34,7 @@ class TradeHistory extends Component {
 			category: 'all',
 		})
     }
-	componentDidMount() {
+    componentDidMount() {
 		fetch("http://15.164.232.119:5055/transactionhistory", {
 			method: "POST",
 			headers: {
@@ -153,14 +153,19 @@ class TradeHistory extends Component {
                             {/* 거래 수수료 */}
                             <table className="trading_fees_table">
 								<colgroup>
-									<col width="10%"/>
+									<col width="3%"/>
 									<col width="15%"/>
+									<col width="3%"/>
+									<col width="3%"/>
+									<col width="3%"/>
+									<col width="6%"/>
+									<col width="6%"/>
+									<col width="3%"/>
+									<col width="12%"/>
 									<col width="10%"/>
-									<col width="10%"/>
-									<col width="10%"/>
-									<col width="17.5%"/>
-									<col width="17.5%"/>
-									<col width="10%"/>
+									<col width="12%"/>
+									<col width="12%"/>
+									<col width="12%"/>
 								</colgroup>
                                 <thead>
                                     <tr>
@@ -172,6 +177,11 @@ class TradeHistory extends Component {
                                         <th>수량</th>
                                         <th>단가</th>
                                         <th>가치</th>
+                                        <th>청산 횟수</th>
+                                        <th>총 익절 횟수</th>
+                                        <th>원금 대비 손익</th>
+                                        <th>진입 횟수</th>
+                                        <th>총 거래량</th>
                                     </tr>
                                 </thead>
 								<tbody>
@@ -187,6 +197,11 @@ class TradeHistory extends Component {
 														<td>{value.type}</td>
 														<td>{value.amount}</td>
 														<td>{value.price}</td>
+														<td>{value.worth}</td>
+														<td>{value.worth}</td>
+														<td>{value.worth}</td>
+														<td>{value.worth}</td>
+														<td>{value.worth}</td>
 														<td>{value.worth}</td>
 													</tr>
 												)
