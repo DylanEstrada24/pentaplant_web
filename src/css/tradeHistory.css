@@ -200,15 +200,24 @@
     .trading_history_table {
         width: 100%;
         margin-bottom: 50px;
+        /* table-layout: fixed; */
     }
 
     .trading_history_table th, .trading_history_table td{
         font-size: 13px;
+        word-wrap: break-word;
+        text-align: center;
+        vertical-align: middle;
     }
 
     .trading_history_table th {
         background-color: white;
         color: black;
+    }
+
+    .trading_history_table > table > thead > tr > th {
+        padding: 10px 3px; 
+
     }
 
     .trading_history_table td {
