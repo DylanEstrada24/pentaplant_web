@@ -45,8 +45,14 @@ class TradeHistory extends Component {
 			}),
 		}).then((res) => res.json())
 		.then((res) => {
-			fetcheddata = res.data;
-			this.state.data = fetcheddata;
+			var data = res.data;
+			var category = "all";
+			console.log("====== ");
+			console.log(data);
+			this.setState({
+				category,
+				data
+			})
 		});
 	}
 

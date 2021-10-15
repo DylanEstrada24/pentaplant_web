@@ -9,6 +9,9 @@ import Login from './Login';
 import Modal from 'react-modal';
 import '../../css/apiKey.css';
 
+
+import translation from "../../translation"
+
 // const MenuList = styled.div`
 //     display: flex;
 //     justify-content: space-between;
@@ -48,12 +51,12 @@ function Menubar() {
                 </div>
                 <ul className="nav_menu">
                     <li>
-                        <Link to="#">거래소</Link>
+                        <Link to="#">{translation.exchange.eng}</Link>
                         <ul className="dropdown_content">
                             <li><Link to="/market/about">ABOUT</Link></li>
                             <li>링크연결</li>
-                            <li><Link to="/market/fees">수수료</Link></li>
-                            <li><Link to="/autobot/tradeHistory">거래 내역</Link></li>
+                            <li><Link to="/market/fees">{translation.option.eng}</Link></li>
+                            <li><Link to="/autobot/tradeHistory">{translation.transactions.eng}</Link></li> 
                         </ul>
                     </li>
                     <li>|</li>
