@@ -1,185 +1,181 @@
-
-
 @media (min-width: 360px) and (max-width: 759px) {
-    .content_container {
-        padding:10px 0;
-        border-bottom: 0.5px solid #000000;
-    }
+  .content_container {
+    padding: 10px 0;
+    border-bottom: 0.5px solid #000000;
+  }
 
-    #test_term {
-        margin-top: 0px;
-        padding-top: 0px;
-        order: 1;
-        width: 50%;
-        margin: 0;
-    }
+  #test_term {
+    margin-top: 0px;
+    padding-top: 0px;
+    order: 1;
+    width: 50%;
+    margin: 0;
+  }
 
-    #test_term_container {
-        flex-direction: row;
-        align-items: center;
-        flex-wrap: wrap;
-    }
+  #test_term_container {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 
-    #test_term_container > ul > li:nth-child(2) {
-        width: 30px;
-    }
+  #test_term_container > ul > li:nth-child(2) {
+    width: 30px;
+  }
 
-    #test_button {
-        font-weight: 600;
-        order: 2;
-        margin: auto;
-    }
+  #test_button {
+    font-weight: 600;
+    order: 2;
+    margin: auto;
+  }
 
-    /* #test_term_container > button {
+  /* #test_term_container > button {
         margin-left: 15px;
     } */
 
-    .content_title > div {
-        padding-top: 0px;
-        font-size: 22px;
-    }
+  .content_title > div {
+    padding-top: 0px;
+    font-size: 22px;
+  }
 
-    .content_title > button {
-        width: 235px;
-    }
+  .content_title > button {
+    width: 235px;
+  }
 
-    #test_subtitle_button {
-        justify-content: space-around;
-        width: 90%;
-        order: 3;
-        margin: 20px auto 10px auto;
-    }
+  #test_subtitle_button {
+    justify-content: space-around;
+    width: 90%;
+    order: 3;
+    margin: 20px auto 10px auto;
+  }
 
-    .content_subtitle {
-        font-size: 0.9em;
-        padding:0;
-        /* width:30em; */
-    }
+  .content_subtitle {
+    font-size: 0.9em;
+    padding: 0;
+    /* width:30em; */
+  }
 
-    .line_1{
-        display: flex;
-        flex-direction: column;
-        margin-top: 0px;
-    }
+  .line_1 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+  }
 
-    #total_amount {
-        width: 50px;
-    }
+  #total_amount {
+    width: 50px;
+  }
 
-    .t_button{
-        padding-top: 10px;
-        padding-bottom: 10px;
-        border-bottom: 2px solid #4374D9;
-        height: 49px;
-        width: 93%;
-        padding-right:0;
-        display: flex;
-        padding:20px 0;
-        margin:20px 0 0 10px;
-        justify-content: center;
-    }
+  .t_button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #4374d9;
+    height: 49px;
+    width: 93%;
+    padding-right: 0;
+    display: flex;
+    padding: 20px 0;
+    margin: 20px 0 0 10px;
+    justify-content: center;
+  }
 
-    .t_button > div {
-        padding:0;
-        margin:0;
-    }
+  .t_button > div {
+    padding: 0;
+    margin: 0;
+  }
 
-    .t_button button{
-        margin-left: 100px;
-        height: 40px;
-        /* width: 110px;
+  .t_button button {
+    margin-left: 100px;
+    height: 40px;
+    /* width: 110px;
         margin: 4px; */
-        padding: 0;
-        display: inline-block;
-        border-radius: 8px;
-        background-color: white;
-        color:black;
-        border: solid 1px;
-        text-align: center;
-        text-decoration: none;
-        font-size: 10px;
-        cursor: pointer;
-    }
+    padding: 0;
+    display: inline-block;
+    border-radius: 8px;
+    background-color: white;
+    color: black;
+    border: solid 1px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 10px;
+    cursor: pointer;
+  }
 
-    /* .t_button button:hover{
+  /* .t_button button:hover{
         height: 40px;
         width: 110px;
     } */
 
-    .img_div{
-        margin: 30px 0;
-        align-items: center;
-        background-color: #444444;
-        height: 30vh;
-    }
+  .img_div {
+    margin: 30px 0;
+    align-items: center;
+    background-color: #444444;
+    height: 30vh;
+  }
 
-    .t_button > div > button > input[type="text"], .t_button > div > button > input[type="number"]{
-        width: 50px;
-        height:100%;
+  .t_button > div > button > input[type="text"],
+  .t_button > div > button > input[type="number"] {
+    width: 50px;
+    height: 100%;
 
-        border-left-width:0;
-        border-right-width:0;
-        border-top-width:0;
-        border-bottom-width:0.5px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0.5px;
 
-        font-size:1em;
-        padding-left: 5px;
-        /* font-style: oblique; */
-        display:inline;
-        outline:none;
-        box-sizing: border-box;
-        color:black;
-    }
+    font-size: 1em;
+    padding-left: 5px;
+    /* font-style: oblique; */
+    display: inline;
+    outline: none;
+    box-sizing: border-box;
+    color: black;
+  }
 
-    .main_button{
-        margin-left: 10px;
-    }
+  .main_button {
+    margin-left: 10px;
+  }
 
+  .t_button > div > button {
+    margin: 10px;
+    height: 55px;
+    width: 100%;
+  }
 
+  .t_button > div > button > input[type="text"],
+  .t_button > div > button > input[type="number"] {
+    height: auto;
+  }
 
-    .t_button > div > button {
-        margin: 10px;
-        height: 55px;
-        width: 100%;
-        
-    }
+  .pyramiding-checkbox {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
 
-    .t_button > div > button > input[type="text"], .t_button > div > button > input[type="number"] {
-        height: auto;
-    }
+  .pyramiding-checkbox > input {
+    zoom: 1.5;
+    margin: 2px 0 0 25px;
+  }
 
-    .pyramiding-checkbox {
-        font-size: 1.5em;
-        font-weight: bold;
-    }
+  #additional-option {
+    width: 100%;
+    height: 11vh;
+    padding-top: 0;
+    margin: 20px 0 0 0;
+  }
 
-    .pyramiding-checkbox > input {
-        zoom: 1.5;
-        margin:2px 0 0 25px;
+  #additional-option > div {
+    width: 25%;
+    height: 100%;
+  }
 
-    }
+  #additional-option > div > button {
+    height: 100%;
+  }
 
-    #additional-option {
-        width:100%;
-        height:11vh;
-        padding-top: 0;
-        margin:20px 0 0 0;
-    }
+  #pyramiding_title {
+    width: 40em;
+  }
 
-    #additional-option > div {
-        width:25%;
-        height: 100%;
-    }
-
-    #additional-option > div > button {
-        height: 100%;
-    }
-
-    #pyramiding_title {
-        width: 40em;
-    }
-
-    /* #additional-option > div > button:hover{
+  /* #additional-option > div > button:hover{
         padding: 0;
         display: inline-block;
         height: 60px;
@@ -195,429 +191,430 @@
         transition:800ms ease all;
     } */
 
-    .horizon_line {
-        border-bottom: 0.5px solid #000000;
-    }
+  .horizon_line {
+    border-bottom: 0.5px solid #000000;
+  }
 
-    #result_container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        width: 100%;
-        font-size: 12px;
-    }
+  #result_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+  }
 
-    .content_title > ul {
-        display: flex;
-        justify-content: center;
-        width: 97%;
-        max-width: 760px;
-        padding: 0px 5px;
-    }
+  .content_title > ul {
+    display: flex;
+    justify-content: center;
+    width: 97%;
+    max-width: 1200px;
+    padding: 0px 5px;
+  }
 
-    .content_title > ul > li {
-        width: 100%;
-        max-width: 150px;
-    }
+  .content_title > ul > li {
+    width: 100%;
+    max-width: 150px;
+  }
 
-    .img_div {
-        background-color: white;
-    }
+  .img_div {
+    background-color: white;
+  }
 
-    .img_div > img{
-        width: 100%;
-        height: 100%;
-    }
+  .img_div > img {
+    width: 100%;
+    height: 100%;
+  }
 
-    #fee {
-        width: 60px;
-        border-top-width: 0px;
-        border-left-width: 0px;
-        border-right-width: 0px;
-        border-bottom-width: 0.5px;
-        border-radius: 0px;
-        text-align: center;
-    }
-    
-    .test_section {
-        width: 30% !important;
-        font-size: 15px;
-        font-weight: 700;
-        /* border-right: 2px solid #FFC700; */
-        justify-content: center;
-        padding: 0 15px 0 0 !important;
-    }
+  #fee {
+    width: 60px;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0.5px;
+    border-radius: 0px;
+    text-align: center;
+  }
 
-    .test_section_container {
-        flex-direction: row;
-        display: flex;
-    }
-    
-    .test_section_container div {
-        padding-top: 0px;
-    }
-    
-    .test_input_section {
-        justify-content: space-around;
-        flex-direction: row;
-        flex-wrap: wrap;
-        font-size: 12px;
-        font-weight: 500;
-        text-align: center;
-        width: 70% !important;
-        border-left: 2px solid #FFC700;
-    }
+  .test_section {
+    width: 30% !important;
+    font-size: 15px;
+    font-weight: 700;
+    /* border-right: 2px solid #FFC700; */
+    justify-content: center;
+    padding: 0 15px 0 0 !important;
+  }
 
+  .test_section_container {
+    flex-direction: row;
+    display: flex;
+  }
 
-    .test_input_section_items1 {
-        justify-content: center;
-        margin-bottom: 5px;
-        width: 50% !important;
-    }
+  .test_section_container div {
+    padding-top: 0px;
+  }
 
-    .test_input_section_items2 {
-        justify-content: center;
-        margin-bottom: 5px;
-        width: 50% !important;
-    }
+  .test_input_section {
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    width: 70% !important;
+    border-left: 2px solid #ffc700;
+  }
 
-    .test_input_section_items3 {
-        justify-content: center;
-        width: 50% !important;
-        /* padding-left: 0px; */
-    }
+  .test_input_section_items1 {
+    justify-content: center;
+    margin-bottom: 5px;
+    width: 50% !important;
+  }
 
-    .test_input_section_items3 > input[type="checkbox"] {
-        zoom: 1.3;
-    }
+  .test_input_section_items2 {
+    justify-content: center;
+    margin-bottom: 5px;
+    width: 50% !important;
+  }
 
-    .test_input_section_items4 {
-        justify-content: center;
-        width: 50% !important;
-    }
+  .test_input_section_items3 {
+    justify-content: center;
+    width: 50% !important;
+    /* padding-left: 0px; */
+  }
 
-    .test_input_section input {
-        width: 30px;
-        text-align: center;
-        border-top-width: 0px;
-        border-left-width: 0px;
-        border-right-width: 0px;
-        border-bottom-width: 0.5px;
-        border-radius: 0px;
-    }
+  .test_input_section_items3 > input[type="checkbox"] {
+    zoom: 1.3;
+  }
 
-    #trading_widget_container {
-        height: auto;
-    }
+  .test_input_section_items4 {
+    justify-content: center;
+    width: 50% !important;
+  }
 
-    #trading_widget_container {
-        height: 280px;
-    }
+  .test_input_section input {
+    width: 30px;
+    text-align: center;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0.5px;
+    border-radius: 0px;
+  }
 
-    .tradingview-widget-container, .tradingview-widget-container > div {
-        height: 100%;
-    }
+  #trading_widget_container {
+    height: auto;
+  }
 
-    .result_container_wrapper {
-        margin-top: 30px;
-        justify-content: center;
-        flex-direction: column;
-    }
+  #trading_widget_container {
+    height: 280px;
+  }
 
-    .result_container {
-        width: 220px !important;
-        height: 330px !important;
-        padding: 0px !important;
-        border: 0.5px solid #FFC700;
-        box-sizing: border-box;
-        border-radius: 25px;
-        flex-direction: column;
-        margin: 20px 30px;
-    }
+  .tradingview-widget-container,
+  .tradingview-widget-container > div {
+    height: 100%;
+  }
 
-    .result_header {
-        width: 220px !important;
-        height: 50px !important;
-        padding: 0px !important;
-        background: #FFC700;
-        border-radius: 25px 25px 0px 0px;
-        justify-content: center;
-        align-items: center;
-        font-size: 20px;
-        font-weight: 600;
-    }
+  .result_container_wrapper {
+    margin-top: 30px;
+    justify-content: center;
+    flex-direction: column;
+  }
 
-    .result_content {
-        margin: auto 0px;
-        flex-direction: column;
-        font-size: 15px;
-        font-weight: 500;
-        line-height: 15px;
-        height: 50% !important;
-        padding: 0px !important;
-    }
+  .result_container {
+    width: 220px !important;
+    height: 330px !important;
+    padding: 0px !important;
+    border: 0.5px solid #ffc700;
+    box-sizing: border-box;
+    border-radius: 25px;
+    flex-direction: column;
+    margin: 20px 30px;
+  }
 
-    .result_content div {
-        padding: 0px;
-    }
+  .result_header {
+    width: 220px !important;
+    height: 50px !important;
+    padding: 0px !important;
+    background: #ffc700;
+    border-radius: 25px 25px 0px 0px;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+  }
 
-    .result_content > div > div:nth-child(1) {
-        width: 100%;
-    }
+  .result_content {
+    margin: auto 0px;
+    flex-direction: column;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 15px;
+    height: 50% !important;
+    padding: 0px !important;
+  }
 
-    .result_content > div div p {
-        margin: 6px 10px;
-    }
+  .result_content div {
+    padding: 0px;
+  }
 
-    .result_content > div > div:nth-child(2) {
-        width: 40%;
-        justify-content: flex-end;
-        font-weight: 700;
-    }
+  .result_content > div > div:nth-child(1) {
+    width: 100%;
+  }
 
-    #datepicker_container {
-        flex-direction: row;
-        flex-wrap: nowrap;
-        width: auto !important;
-        height: auto !important;
-    }
+  .result_content > div div p {
+    margin: 6px 10px;
+  }
 
-    #datepicker_container > div {
-        font-weight: 600;
-        background-color: #FFC700;
-        cursor: pointer;
-        flex-wrap: nowrap;
-        border-radius: 5px;
-        width: auto !important;
-        height: auto !important;
-        flex-direction: row;
-    }
+  .result_content > div > div:nth-child(2) {
+    width: 40%;
+    justify-content: flex-end;
+    font-weight: 700;
+  }
 
-    #example-custom-input {
-        cursor: pointer;
-        padding: 5px 15px;
-        border: 0;
-        border-radius: 4px;
-        background-color: #FFC700;
-        color: black;
-        width: 130px;
-        text-align: center;
-    }
+  #datepicker_container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: auto !important;
+    height: auto !important;
+  }
 
-    #datepicker_container > div > div:nth-child(2) {
-        vertical-align: middle;
-        text-align: center;
-        align-items: center;
-        padding-bottom: 2px;
-    }
+  #datepicker_container > div {
+    font-weight: 600;
+    background-color: #ffc700;
+    cursor: pointer;
+    flex-wrap: nowrap;
+    border-radius: 5px;
+    width: auto !important;
+    height: auto !important;
+    flex-direction: row;
+  }
 
-    #datepicker_container * {
-        padding-top: 0px !important;
-    }
+  #example-custom-input {
+    cursor: pointer;
+    padding: 5px 15px;
+    border: 0;
+    border-radius: 4px;
+    background-color: #ffc700;
+    color: black;
+    width: 130px;
+    text-align: center;
+  }
 
-    .example-custom-input {
-        cursor: pointer;
-        padding: 5px 15px;
-        border: 0;
-        border-radius: 4px;
-        background-color: #FFC700;
-        color: black;
-        width:100px;
-    }
-    
-    .react-datepicker-wrapper {
-        width: auto !important;
-        height: auto !important;
-    }
+  #datepicker_container > div > div:nth-child(2) {
+    vertical-align: middle;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 2px;
+  }
 
-    .react-datepicker__header {
-        display: flex;
-        flex-direction: column;
-        /* max-width: 300px; */
-        
-    }
-    .react-datepicker__month-container {
-        display: flex;
-        flex-direction: column;
-        /* width:200px !important; */
-    }
+  #datepicker_container * {
+    padding-top: 0px !important;
+  }
 
-    .react-datepicker__month {
-        margin: 0.4rem;
-        text-align: center;
-        max-width: 300px;
-        flex-direction: column;
-    }
+  .example-custom-input {
+    cursor: pointer;
+    padding: 5px 15px;
+    border: 0;
+    border-radius: 4px;
+    background-color: #ffc700;
+    color: black;
+    width: 100px;
+  }
 
-    .react-datepicker-popper {
-        width:260px !important;
-    }
+  .react-datepicker-wrapper {
+    width: auto !important;
+    height: auto !important;
+  }
 
-    .react-datepicker__day-name, .react-datepicker__day, .react-datepicker__time-name {
-        padding: 0 0 0 5px;
-        height: 25px;
-        font-size: 14px;
-    }
+  .react-datepicker__header {
+    display: flex;
+    flex-direction: column;
+    /* max-width: 300px; */
+  }
+  .react-datepicker__month-container {
+    display: flex;
+    flex-direction: column;
+    /* width:200px !important; */
+  }
 
-    .react-datepicker__current-month, .react-datepicker-time__header, .react-datepicker-year-header {
-        justify-content: center;
-        height: 25px;
-        font-size: 14px !important;
-    }
+  .react-datepicker__month {
+    margin: 0.4rem;
+    text-align: center;
+    max-width: 300px;
+    flex-direction: column;
+  }
 
-    #datepicker_container > div:nth-child(1) {
-        width:300px; background:#FFC700;
-        display: flex;
-        justify-content: center;
-    }
+  .react-datepicker-popper {
+    width: 260px !important;
+  }
 
-    .react-datepicker__navigation--next, .react-datepicker__navigation--previous {
-        padding-bottom: 14px !important;
-    }
+  .react-datepicker__day-name,
+  .react-datepicker__day,
+  .react-datepicker__time-name {
+    padding: 0 0 0 5px;
+    height: 25px;
+    font-size: 14px;
+  }
 
-    .react-datepicker__input-container {
-        width: 300px;
-        height: 30px;
-    }
+  .react-datepicker__current-month,
+  .react-datepicker-time__header,
+  .react-datepicker-year-header {
+    justify-content: center;
+    height: 25px;
+    font-size: 14px !important;
+  }
 
+  #datepicker_container > div:nth-child(1) {
+    width: 300px;
+    background: #ffc700;
+    display: flex;
+    justify-content: center;
+  }
+
+  .react-datepicker__navigation--next,
+  .react-datepicker__navigation--previous {
+    padding-bottom: 14px !important;
+  }
+
+  .react-datepicker__input-container {
+    width: 300px;
+    height: 30px;
+  }
 }
 
-
-
-
-
-
 @media (min-width: 760px) {
-    .content_container {
-        padding-bottom: 20px;
-        border-bottom: 0.5px solid #000000;
-    }
+  .content_container {
+    padding-bottom: 20px;
+    border-bottom: 0.5px solid #000000;
+  }
 
-    #test_term {
-        margin-top: 0px;
-        padding-top: 0px;
-        width: 30% !important;
-    }
+  #test_term {
+    margin-top: 0px;
+    padding-top: 0px;
+    width: 30% !important;
+  }
 
-    #test_subtitle_button {
-        width: 45%;
-        margin-right: 20px;
-        padding-left: 115px;
-    }
+  #test_subtitle_button {
+    width: 45%;
+    margin-right: 20px;
+    padding-left: 115px;
+  }
 
-    .content_title > div {
-        padding-top: 0px;
-        font-size: 20px;
-    }
+  .content_title > div {
+    padding-top: 0px;
+    font-size: 20px;
+  }
 
-    .content_title > button {
-        width: 200px;
-    }
+  .content_title > button {
+    width: 200px;
+  }
 
-    .content_subtitle {
-        font-size: 15px;
-        font-weight: 500;
-    }
+  .content_subtitle {
+    font-size: 15px;
+    font-weight: 500;
+  }
 
-    .line_1{
-        display: flex;
-        flex-direction: column;
-        margin-top: -30px;
-    }
+  .line_1 {
+    display: flex;
+    flex-direction: column;
+    margin-top: -30px;
+  }
 
-    #total_amount {
-        width: 50px;
-    }
+  #total_amount {
+    width: 50px;
+  }
 
-    .t_button{
-        padding-top: 10px;
-        padding-bottom: 20px;
-        border-bottom: 2px solid #4374D9;
-    }
+  .t_button {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #4374d9;
+  }
 
-    .t_button > div {
-        padding-top: 5px;
-    }
+  .t_button > div {
+    padding-top: 5px;
+  }
 
-    .t_button button{
-        margin-left: 100px;
-        height: 40px;
-        width: 110px;
-        margin: 4px;
-        padding: 0;
-        display: inline-block;
-        border-radius: 8px;
-        background-color: white;
-        color:black;
-        border: solid 1px;
-        text-align: center;
-        text-decoration: none;
-        font-size: 15px;
-        cursor: pointer;
-    }
+  .t_button button {
+    margin-left: 100px;
+    height: 40px;
+    width: 110px;
+    margin: 4px;
+    padding: 0;
+    display: inline-block;
+    border-radius: 8px;
+    background-color: white;
+    color: black;
+    border: solid 1px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+  }
 
-    /* .t_button button:hover{
+  /* .t_button button:hover{
         height: 40px;
         width: 110px;
     } */
 
-    .img_div{
-        margin: 30px;
-        align-items: center;
-        background-color: #444444;
-        height: 30vh;
-    }
+  .img_div {
+    margin: 30px;
+    align-items: center;
+    background-color: #444444;
+    height: 30vh;
+  }
 
-    .t_button > div > button > input[type="text"], .t_button > div > button > input[type="number"]{
-        width: 60px;
-        height:100%;
+  .t_button > div > button > input[type="text"],
+  .t_button > div > button > input[type="number"] {
+    width: 60px;
+    height: 100%;
 
-        border-left-width:0;
-        border-right-width:0;
-        border-top-width:0;
-        border-bottom-width:0.5px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0.5px;
 
-        font-size:1em;
-        padding-left: 5px;
-        text-align: center;
-        /* font-style: oblique; */
-        display:inline;
-        outline:none;
-        box-sizing: border-box;
-        color:black;
-    }
+    font-size: 1em;
+    padding-left: 5px;
+    text-align: center;
+    /* font-style: oblique; */
+    display: inline;
+    outline: none;
+    box-sizing: border-box;
+    color: black;
+  }
 
-    .main_button{
-        margin-left: 20px;
-    }
+  .main_button {
+    margin-left: 20px;
+  }
 
-    .t_button > div > button {
-        /* margin-left: 20%; */
-        height: 60px;
-        width: 150px;
-    }
+  .t_button > div > button {
+    /* margin-left: 20%; */
+    height: 60px;
+    width: 150px;
+  }
 
-    .t_button > div > button > input[type="text"], .t_button > div > button > input[type="number"] {
-        height: auto;
-    }
+  .t_button > div > button > input[type="text"],
+  .t_button > div > button > input[type="number"] {
+    height: auto;
+  }
 
-    .pyramiding-checkbox {
-        font-size: 1.5em;
-        font-weight: bold;
-    }
+  .pyramiding-checkbox {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
 
-    .pyramiding-checkbox > input {
-        zoom: 1.5;
-        margin-left: 30px;
-    }
+  .pyramiding-checkbox > input {
+    zoom: 1.5;
+    margin-left: 30px;
+  }
 
-    #additional-option > div > button {
-        width: 150px;
-        height: 60px;
-    }
+  #additional-option > div > button {
+    width: 150px;
+    height: 60px;
+  }
 
-    /* #additional-option > div > button:hover{
+  /* #additional-option > div > button:hover{
         padding: 0;
         display: inline-block;
         height: 60px;
@@ -633,271 +630,276 @@
         transition:800ms ease all;
     } */
 
-    .horizon_line {
-        border-bottom: 0.5px solid #000000;
-    }
+  .horizon_line {
+    border-bottom: 0.5px solid #000000;
+  }
 
-    #result_container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        width: 100%;
-        font-size: 25px !important;
-    }
+  #result_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    font-size: 25px !important;
+  }
 
-    .content_title > ul {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        max-width: 760px;
-        padding: 0px 5px;
-    }
+  .content_title > ul {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0px 5px;
+  }
 
-    .content_title > ul > li {
-        width: 100%;
-        max-width: 150px;
-    }
+  .content_title > ul > li {
+    width: 100%;
+    max-width: 150px;
+  }
 
-    .img_div {
-        background-color: white;
-    }
+  .img_div {
+    background-color: white;
+  }
 
-    .img_div > img{
-        width: 100%;
-        height: 100%;
-    }
+  .img_div > img {
+    width: 100%;
+    height: 100%;
+  }
 
-    #fee {
-        width: 60px;
-        border-top-width: 0px;
-        border-left-width: 0px;
-        border-right-width: 0px;
-        border-bottom-width: 0.5px;
-        border-radius: 0px;
-        text-align: center;
-    }
-    
-    .test_section {
-        width: 6% !important;
-        font-size: 15px;
-        font-weight: 700;
-        border-right: 2px solid #FFC700;
-        padding: 0 15px 0 0 !important;
-    }
+  #fee {
+    width: 60px;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0.5px;
+    border-radius: 0px;
+    text-align: center;
+  }
 
-    .test_section_container {
-        flex-direction: row;
-        display: flex;
-    }
+  .test_section {
+    width: 6% !important;
+    font-size: 15px;
+    font-weight: 700;
+    border-right: 2px solid #ffc700;
+    padding: 0 0px 0 0 !important;
+  }
 
-    .test_section_container div {
-        padding-top: 0px;
-    }
+  .test_section_container {
+    flex-direction: row;
+    display: flex;
+  }
 
-    .test_input_section {
-        justify-content: space-around;
-        font-size: 15px;
-        font-weight: 500;
-        text-align: center;
-    }
+  .test_section_container div {
+    padding-top: 0px;
+    margin: 0px;
+  }
 
-    .test_input_section_items1 {
-        justify-content: center;
-        width: 80px !important;
-    }
+  .test_input_section {
+    justify-content: space-around;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+  }
 
-    .test_input_section_items2 {
-        justify-content: center;
-        width: 120px !important;
-    }
+  .test_input_section_items1 {
+    justify-content: center;
+    width: 120px !important;
+  }
 
-    .test_input_section_items3 {
-        justify-content: center;
-        width: 180px !important;
-    }
+  .test_input_section_items2 {
+    justify-content: center;
+    width: 150px !important;
+  }
 
-    .test_input_section_items4 {
-        justify-content: center;
-        width: 70px !important;
-    }
+  .test_input_section_items3 {
+    justify-content: center;
+    width: 110px !important;
+  }
 
-    .test_input_section_items3 > input[type="checkbox"] {
-        zoom: 1.3;
-    }
+  .test_input_section_items4 {
+    justify-content: center;
+    width: 70px !important;
+  }
 
-    .test_input_section input {
-        width: 60px;
-        text-align: center;
-        border-top-width: 0px;
-        border-left-width: 0px;
-        border-right-width: 0px;
-        border-bottom-width: 0.5px;
-        border-radius: 0px;
-    }
+  .test_input_section_items3 > input[type="checkbox"] {
+    zoom: 1.3;
+  }
 
-    #trading_widget_container {
-        height: auto;
-    }
+  .test_input_section input {
+    width: 60px;
+    text-align: center;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0.5px;
+    border-radius: 0px;
+  }
 
-    #trading_widget_container {
-        height: 280px;
-    }
+  #trading_widget_container {
+    height: auto;
+  }
 
-    .tradingview-widget-container, .tradingview-widget-container > div {
-        height: 100%;
-    }
+  #trading_widget_container {
+    height: 280px;
+  }
 
-    .result_container_wrapper {
-        margin-top: 30px;
-        justify-content: center;
-    }
+  .tradingview-widget-container,
+  .tradingview-widget-container > div {
+    height: 100%;
+  }
 
-    .result_container {
-        width: 220px !important;
-        height: 330px !important;
-        padding: 0px !important;
-        border: 0.5px solid #FFC700;
-        box-sizing: border-box;
-        border-radius: 25px;
-        flex-direction: column;
-        margin: 0px 30px;
-    }
+  .result_container_wrapper {
+    margin-top: 30px;
+    justify-content: center;
+  }
 
-    .result_header {
-        width: 220px !important;
-        height: 50px !important;
-        padding: 0px !important;
-        background: #FFC700;
-        border-radius: 25px 25px 0px 0px;
-        justify-content: center;
-        align-items: center;
-        font-size: 20px;
-        font-weight: 600;
-    }
+  .result_container {
+    width: 220px !important;
+    height: 330px !important;
+    padding: 0px !important;
+    border: 0.5px solid #ffc700;
+    box-sizing: border-box;
+    border-radius: 25px;
+    flex-direction: column;
+    margin: 0px 30px;
+  }
 
-    .result_content {
-        margin: auto 0px;
-        flex-direction: column;
-        font-size: 15px;
-        font-weight: 500;
-        line-height: 15px;
-        height: 50% !important;
-        padding: 0px !important;
-    }
+  .result_header {
+    width: 220px !important;
+    height: 50px !important;
+    padding: 0px !important;
+    background: #ffc700;
+    border-radius: 25px 25px 0px 0px;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+  }
 
-    .result_content div {
-        padding: 0px;
-    }
+  .result_content {
+    margin: auto 0px;
+    flex-direction: column;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 15px;
+    height: 50% !important;
+    padding: 0px !important;
+  }
 
-    .result_content > div > div:nth-child(1) {
-        width: 100%;
-    }
+  .result_content div {
+    padding: 0px;
+  }
 
-    .result_content > div div p {
-        margin: 6px 10px;
-    }
+  .result_content > div > div:nth-child(1) {
+    width: 100%;
+  }
 
-    .result_content > div > div:nth-child(2) {
-        width: 40%;
-        justify-content: flex-end;
-        font-weight: 700;
-    }
+  .result_content > div div p {
+    margin: 6px 10px;
+  }
 
-    #datepicker_container {
-        flex-direction: row;
-        flex-wrap: nowrap;
-        width: auto !important;
-        height: auto !important;
-    }
+  .result_content > div > div:nth-child(2) {
+    width: 40%;
+    justify-content: flex-end;
+    font-weight: 700;
+  }
 
-    #datepicker_container > div {
-        font-weight: 600;
-        background-color: #FFC700;
-        cursor: pointer;
-        flex-wrap: nowrap;
-        border-radius: 5px;
-        width: auto !important;
-        height: auto !important;
-        flex-direction: row;
+  #datepicker_container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: auto !important;
+    height: auto !important;
+  }
 
-    }
+  #datepicker_container > div {
+    font-weight: 600;
+    background-color: #ffc700;
+    cursor: pointer;
+    flex-wrap: nowrap;
+    border-radius: 5px;
+    width: auto !important;
+    height: auto !important;
+    flex-direction: row;
+  }
 
-    #datepicker_container > div > div:nth-child(2) {
-        vertical-align: middle;
-        text-align: center;
-        align-items: center;
-        padding-bottom: 7px;
-    }
+  #datepicker_container > div > div:nth-child(2) {
+    vertical-align: middle;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 7px;
+  }
 
-    #datepicker_container * {
-        padding-top: 0px !important;
-    }
+  #datepicker_container * {
+    padding-top: 0px !important;
+  }
 
-    #example-custom-input {
-        cursor: pointer;
-        padding: 5px 15px;
-        border: 0;
-        border-radius: 4px;
-        background-color: #FFC700;
-        color: black;
-        width: 130px;
-        text-align: center;
-    }
-    
-    .react-datepicker-wrapper {
-        width: auto !important;
-        height: auto !important;
-    }
+  #example-custom-input {
+    cursor: pointer;
+    padding: 5px 15px;
+    border: 0;
+    border-radius: 4px;
+    background-color: #ffc700;
+    color: black;
+    width: 130px;
+    text-align: center;
+  }
 
-    .react-datepicker__header {
-        display: flex;
-        flex-direction: column;
-        /* max-width: 300px; */
-        
-    }
-    .react-datepicker__month-container {
-        display: flex;
-        flex-direction: column;
-        /* width:200px !important; */
-    }
+  .react-datepicker-wrapper {
+    width: auto !important;
+    height: auto !important;
+  }
 
-    .react-datepicker__month {
-        margin: 0.4rem;
-        text-align: center;
-        max-width: 300px;
-        flex-direction: column;
-    }
+  .react-datepicker__header {
+    display: flex;
+    flex-direction: column;
+    /* max-width: 300px; */
+  }
+  .react-datepicker__month-container {
+    display: flex;
+    flex-direction: column;
+    /* width:200px !important; */
+  }
 
-    .react-datepicker-popper {
-        width:260px !important;
-    }
+  .react-datepicker__month {
+    margin: 0.4rem;
+    text-align: center;
+    max-width: 300px;
+    flex-direction: column;
+  }
 
-    .react-datepicker__day-name, .react-datepicker__day, .react-datepicker__time-name {
-        padding: 0 0 0 5px;
-        height: 25px;
-        font-size: 14px;
-    }
+  .react-datepicker-popper {
+    width: 260px !important;
+  }
 
-    .react-datepicker__current-month, .react-datepicker-time__header, .react-datepicker-year-header {
-        justify-content: center;
-        height: 25px;
-        font-size: 14px !important;
-    }
+  .react-datepicker__day-name,
+  .react-datepicker__day,
+  .react-datepicker__time-name {
+    padding: 0 0 0 5px;
+    height: 25px;
+    font-size: 14px;
+  }
 
-    #datepicker_container > div:nth-child(1) {
-        width:300px; background:#FFC700;
-        display: flex;
-        justify-content: center;
-    }
+  .react-datepicker__current-month,
+  .react-datepicker-time__header,
+  .react-datepicker-year-header {
+    justify-content: center;
+    height: 25px;
+    font-size: 14px !important;
+  }
 
-    .react-datepicker__navigation--next, .react-datepicker__navigation--previous {
-        padding-bottom: 14px !important;
-    }
+  #datepicker_container > div:nth-child(1) {
+    width: 300px;
+    background: #ffc700;
+    display: flex;
+    justify-content: center;
+  }
 
-    .react-datepicker__input-container {
-        width: 300px;
-        height: 30px;
-    }
+  .react-datepicker__navigation--next,
+  .react-datepicker__navigation--previous {
+    padding-bottom: 14px !important;
+  }
 
+  .react-datepicker__input-container {
+    width: 300px;
+    height: 30px;
+  }
 }

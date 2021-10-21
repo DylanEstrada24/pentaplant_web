@@ -1,263 +1,259 @@
 @media (min-width: 360px) and (max-width: 759px) {
+  .autobot_about_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 14px;
+    margin: 0px auto;
+  }
 
-    .autobot_about_wrapper {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        font-size: 14px;
-        margin: 0px auto;
-    }
+  .autobot_about_wrapper > div {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0;
+  }
 
-    .autobot_about_wrapper > div {
-        width: 100%;
-        height: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin: 20px 0;
-    }
+  .autobot_about_section1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0;
+  }
 
-    .autobot_about_section1 {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 0;
-    }
+  .autobot_about_section1 {
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.03);
+  }
 
-    .autobot_about_section1 {
-        width: 100vw;
-        background: rgba(0, 0, 0, 0.03);
-    }
+  .autobot_about_section1_div {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .autobot_about_section1_div {
-        flex-direction: column;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  .autobot_about_section1_div > div:first-child {
+    width: 100%;
+  }
 
-    .autobot_about_section1_div > div:first-child {
-        width: 100%;
-    }
+  .autobot_about_section1_div > div > img {
+    width: 100%;
+    height: 235px;
+    /* margin-right: 10px; */
+  }
 
-    .autobot_about_section1_div > div > img {
-        width: 100%;
-        height: 235px;
-        /* margin-right: 10px; */
-    }
+  .autobot_about_section1_div > div:last-child {
+    width: 100%;
+  }
 
-    .autobot_about_section1_div > div:last-child {
-        width: 100%;
-    }
+  .autobot_about_section1_div > div:last-child > p {
+    font-size: 15px;
+    text-align: left;
+    /* margin-left: 50px; */
+    margin: 0 10px;
+    font-weight: 500;
+  }
 
-    .autobot_about_section1_div > div:last-child > p {
-        font-size: 15px;
-        text-align: left;
-        /* margin-left: 50px; */
-        margin: 0 10px;
-        font-weight: 500;
-    }
-    
-    /* .autobot_about_section1 > div:first-child {
+  /* .autobot_about_section1 > div:first-child {
         width: 40%;
     } */
 
-    .autobot_about_section1 > div img {
-        width: 100%;
-    }
+  .autobot_about_section1 > div img {
+    width: 100%;
+  }
 
-    .autobot_about_section1 > div:last-child {
-        width: 100%;
-    }
-    
-    .autobot_about_section2 {
-        font-size: 16px;
-        /* font-weight: bold; */
-    }
+  .autobot_about_section1 > div:last-child {
+    width: 100%;
+  }
 
-    .autobot_about_section2_text_div_left {
-        width: 90%;
-    }
+  .autobot_about_section2 {
+    font-size: 16px;
+    /* font-weight: bold; */
+  }
 
-    .autobot_about_section2_text_left {
-        font-size: 20px;
-        font-weight: bold;
-        text-align: left;
-    }
+  .autobot_about_section2_text_div_left {
+    width: 90%;
+  }
 
-    .autobot_about_section2_text_div_2 {
-        display: flex;
-        flex-direction: row;
-        width: 90%;
-    }
+  .autobot_about_section2_text_left {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+  }
 
-    .autobot_about_section2_text_div_center {
-        margin-left: 30px;
-        /* width: 60%; */
-        display: none;
-    }
+  .autobot_about_section2_text_div_2 {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+  }
 
-    .autobot_about_section2_text_center {
-        font-size: 15px;
-        text-align: left;
-        margin-top: 0px;
-        margin-bottom: 20px;
-    }
+  .autobot_about_section2_text_div_center {
+    margin-left: 30px;
+    /* width: 60%; */
+    display: none;
+  }
 
-    .autobot_about_section2_text_div_right {
-        margin-left: 4px;
-        /* width: 60%; */
-    }
+  .autobot_about_section2_text_center {
+    font-size: 15px;
+    text-align: left;
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
 
-    .autobot_about_section2_text_right {
-        font-size: 15px;
-        text-align: left;
-        margin: 0;
-    }
+  .autobot_about_section2_text_div_right {
+    margin-left: 4px;
+    /* width: 60%; */
+  }
 
-    .autobot_about_section3 {
-        width: 100%;
-        /* padding-top: 134px; */
-        /* padding-bottom: 176px; */
-        border-bottom: 1px solid #FFC700;
-    }
+  .autobot_about_section2_text_right {
+    font-size: 15px;
+    text-align: left;
+    margin: 0;
+  }
 
-    .autobot_about_section3 > img {
-        width: 100%;
-    }
+  .autobot_about_section3 {
+    width: 100%;
+    /* padding-top: 134px; */
+    /* padding-bottom: 176px; */
+    border-bottom: 1px solid #7cd6dc;
+  }
 
-    .circle {
-        width: 18px;
-        height: 18px;
-        border-radius: 11px;
-        background-color: #FFC700;
-        color: white;
-    }
+  .autobot_about_section3 > img {
+    width: 100%;
+  }
 
+  .circle {
+    width: 18px;
+    height: 18px;
+    border-radius: 11px;
+    background-color: #7cd6dc;
+    color: white;
+  }
 }
 
 @media (min-width: 760px) {
+  .autobot_about_wrapper {
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 18px;
+    margin: 0px auto;
+  }
 
-    .autobot_about_wrapper {
-        max-width: 760px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        font-size: 18px;
-        margin: 0px auto;
-    }
+  .autobot_about_wrapper > div {
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 20px 0;
+  }
 
-    .autobot_about_wrapper > div {
-        height: 420px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-        margin: 20px 0;
-    }
+  .autobot_about_section1 {
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.03);
+  }
 
-    .autobot_about_section1 {
-        width: 100vw;
-        background: rgba(0, 0, 0, 0.03);
-    }
+  .autobot_about_section1_div {
+    width: 1200px;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .autobot_about_section1_div {
-        width: 760px;
-        flex-direction: row;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  .autobot_about_section1_div > div:first-child {
+    width: 40%;
+  }
 
-    .autobot_about_section1_div > div:first-child {
-        width: 40%;
-    }
+  .autobot_about_section1_div > div > img {
+    width: 100%;
+    height: 235px;
+    margin-right: 10px;
+  }
 
-    .autobot_about_section1_div > div > img {
-        width: 100%;
-        height: 235px;
-        margin-right: 10px;
-    }
+  .autobot_about_section1_div > div:last-child {
+    width: 60%;
+  }
 
-    .autobot_about_section1_div > div:last-child {
-        width: 60%;
-    }
+  .autobot_about_section1_div > div:last-child > p {
+    font-size: 15px;
+    text-align: left;
+    margin-left: 50px;
+    font-weight: 500;
+  }
 
-    .autobot_about_section1_div > div:last-child > p {
-        font-size: 15px;
-        text-align: left;
-        margin-left: 50px;
-        font-weight: 500;
-    }
-    
-    .autobot_about_section2 {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
+  .autobot_about_section2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 
-    .autobot_about_section2_text_div_left {
-        width: 35%;
-    }
+  .autobot_about_section2_text_div_left {
+    width: 35%;
+  }
 
-    .autobot_about_section2_text_left {
-        font-size: 20px;
-        font-weight: bold;
-        text-align: left;
-    }
+  .autobot_about_section2_text_left {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+  }
 
-    .autobot_about_section2_text_div_2 {
-        display: flex;
-        flex-direction: row;
-        width: 65%;
-    }
+  .autobot_about_section2_text_div_2 {
+    display: flex;
+    flex-direction: row;
+    width: 65%;
+  }
 
-    .autobot_about_section2_text_div_center {
-        margin-left: 30px;
-        /* width: 60%; */
-    }
+  .autobot_about_section2_text_div_center {
+    margin-left: 30px;
+    /* width: 60%; */
+  }
 
-    .autobot_about_section2_text_center {
-        font-size: 15px;
-        text-align: left;
-        margin-top: 0px;
-        margin-bottom: 20px;
-    }
+  .autobot_about_section2_text_center {
+    font-size: 15px;
+    text-align: left;
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
 
-    .autobot_about_section2_text_div_right {
-        /* margin-left: 4px; */
-        width: 95%;
-    }
+  .autobot_about_section2_text_div_right {
+    /* margin-left: 4px; */
+    width: 95%;
+  }
 
-    .autobot_about_section2_text_right {
-        font-size: 15px;
-        text-align: left;
-        margin: 0;
-    }
+  .autobot_about_section2_text_right {
+    font-size: 15px;
+    text-align: left;
+    margin: 0;
+  }
 
-    .autobot_about_section3 {
-        width: 100%;
-        padding-top: 134px;
-        padding-bottom: 176px;
-        border-bottom: 1px solid #FFC700;
-    }
+  .autobot_about_section3 {
+    width: 100%;
+    padding-top: 134px;
+    padding-bottom: 176px;
+    border-bottom: 1px solid #7cd6dc;
+  }
 
-    .autobot_about_section3 > img {
-        width: 100%;
-    }
+  .autobot_about_section3 > img {
+    width: 60%;
+  }
 
-    .circle {
-        width: 18px;
-        height: 18px;
-        border-radius: 11px;
-        background-color: #FFC700;
-        color: white;
-    }
-
+  .circle {
+    width: 18px;
+    height: 18px;
+    border-radius: 11px;
+    background-color: #7cd6dc;
+    color: white;
+  }
 }

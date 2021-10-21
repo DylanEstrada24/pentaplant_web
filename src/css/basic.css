@@ -1,287 +1,281 @@
 .horizon_line2 {
-    border-bottom: 0.5px solid #000000;
+  border-bottom: 0.5px solid #000000;
 }
 
-@media (min-width: 360px) and (max-width: 759px) {
-    /*=================================*/
-    /*공통 설정*/
-    /*=================================*/
-    html,
-    body {
-        box-sizing: border-box;
-        margin: 0;
-        font-size: 62.5%;
-    }
+@media (min-width: 360px) and (max-width: 1200px) {
+  /*=================================*/
+  /*공통 설정*/
+  /*=================================*/
+  html,
+  body {
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 62.5%;
+  }
 
-    body {
-        margin : 0;
-        text-align: center;
-        font-family: 'Spoqa Han Sans Neo', 'sans-serif'; 
-    }
+  body {
+    margin: 0;
+    text-align: center;
+    font-family: "Spoqa Han Sans Neo", "sans-serif";
+  }
 
-    a:hover,
-    a:visited,
-    a:focus {
-        text-decoration: none !important;
-        /*color: #ffffff;*/
-    }
+  a:hover,
+  a:visited,
+  a:focus {
+    text-decoration: none !important;
+    /*color: #ffffff;*/
+  }
 
-    a,
-    ul,
-    ol,
-    li {
-        text-decoration: none;
-        list-style: none;
-    }
+  a,
+  ul,
+  ol,
+  li {
+    text-decoration: none;
+    list-style: none;
+  }
 
-    /* header */
-    .header {
-        border-bottom: 1px solid #000000;
-        background-color: #FFC700;
-    }
+  /* header */
+  .header {
+    border-bottom: 1px solid #000000;
+    background-color: white;
+  }
 
-    /*=================================*/
-    /*navbar 설정*/
-    /*=================================*/
+  /*=================================*/
+  /*navbar 설정*/
+  /*=================================*/
 
-    .navbar a {
-        color: #000000;
-        display: flex;
-        align-items: center;
-    }
+  .navbar a {
+    color: #000000;
+    display: flex;
+    align-items: center;
+  }
 
-    .navbar{
-        max-width: 760px;
-        z-index: 9999;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #FFC700;
-        /* padding: 8px 12px; */
-        padding-top: 8px;
-        padding-bottom: 8px;
-        height: 50px;
-        color: #000000;
-        margin: 0px auto;
-        position: relative;
-    }
+  .navbar {
+    max-width: 1200px;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    /* padding: 8px 12px; */
+    padding-top: 8px;
+    padding-bottom: 8px;
+    height: 50px;
+    color: #000000;
+    margin: 0px auto;
+    position: relative;
+  }
 
-    .nav_logo{
-        font-size: 24px;
-        padding-left: 12px;
-    }
+  .nav_logo {
+    font-size: 24px;
+    padding-left: 12px;
+  }
 
-    .nav_logo i {
-        padding-right: 5px;
-        color: coral;
-    }
+  .nav_logo i {
+    padding-right: 5px;
+    color: coral;
+  }
 
-    .nav_menu{
-        display: none;
-        list-style: none;
-        padding-left: 0;
-        font-size: 1.5rem;
-        cursor:pointer;
-        
-    }
+  .nav_menu {
+    display: none;
+    list-style: none;
+    padding-left: 0;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
 
-    .nav_menu li div{
-        padding-left: 12px;
-    }
+  .nav_menu li div {
+    padding-left: 12px;
+  }
 
-    .nav_menu li {
-        display: flex;
-        padding: 8px 12px;
-    }
+  .nav_menu li {
+    display: flex;
+    padding: 8px 12px;
+  }
 
-    .nav_menu li a:hover{
-        font-weight: bold;
-        color: coral;
-    }
+  .nav_menu li a:hover {
+    font-weight: bold;
+    color: coral;
+  }
 
+  /*=================================*/
+  /*head_title 설정*/
+  /*=================================*/
 
+  .head_title {
+    background-color: #ffffff;
+    height: 30vh;
+    /* width: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2vh;
+    flex-direction: column;
+    padding-left: 10px;
+    background-size: cover;
+    background-position: center center;
+  }
 
-    /*=================================*/
-    /*head_title 설정*/
-    /*=================================*/
+  .head_title div {
+    max-width: 1200px;
+    width: 100%;
+    text-align: left;
+    display: block;
+    /* vertical-align: middle; */
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: #000000;
+  }
 
-    .head_title {
-        background-color: #FFFFFF;
-        height: 30vh;
-        /* width: 100%; */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 2vh;
-        flex-direction: column;
-        padding-left: 10px;
-        background-size: cover;
-        background-position: center center;
-    }
+  .head_title > div > p {
+    margin-bottom: 0;
+  }
 
-    .head_title div{
-        max-width: 760px;
-        width: 100%;
-        text-align: left;
-        display: block;
-        /* vertical-align: middle; */
-        font-size: 4.5rem;
-        font-weight: bold;
-        color: #000000;
-    }
+  .title_container > div {
+    text-align: left;
+    height: auto;
+    color: white;
+  }
 
-    .head_title > div > p {
-        margin-bottom: 0;
-    }
+  .title_container div p {
+    margin: 0 0 0 0;
+    width: 100%;
+    display: inline;
+  }
 
+  .title_container > div:nth-child(1) {
+    padding-left: 24px;
+    border-left: 6px solid #7cd6dc;
+    font-size: 24px;
+    font-weight: 700;
+    display: inline;
+  }
 
+  .title_container > div:nth-child(2) {
+    padding-left: 22px;
+    border-left: 2px solid #7cd6dc;
+    margin-left: 31px;
+    font-size: 16px;
+    font-weight: 700;
+    display: inline;
+  }
 
-    .title_container > div {
-        text-align: left;
-        height: auto;
-        color: white;
-    }
+  /*=================================*/
+  /* main_content 설정*/
+  /*=================================*/
 
-    .title_container div p {
-        margin: 0 0 0 0;
-        width: 100%;
-        display: inline;
-    }
-    
-    .title_container > div:nth-child(1) {
-        padding-left: 24px;
-        border-left: 6px solid #FFC700;
-        font-size: 24px;
-        font-weight: 700;
-        display: inline;
-    }
+  .main_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 120px;
+    padding: 30px;
+    width: 70vw;
+    background-color: white;
+    font-size: 1.6rem;
+  }
 
-    .title_container > div:nth-child(2) {
-        padding-left: 22px;
-        border-left: 2px solid #FFC700;
-        margin-left: 31px;
-        font-size: 16px;
-        font-weight: 700;
-        display: inline;
-    }
+  .main_content div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-top: 20px;
+  }
 
-    /*=================================*/
-    /* main_content 설정*/
-    /*=================================*/
+  .content_title > div:nth-child(1) {
+    padding-left: 10px;
+  }
 
-    .main_content{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        margin-left: 120px;
-        padding: 30px;
-        width: 70vw;
-        background-color: white;
-        font-size: 1.6rem;
-    }
+  /*=================================*/
+  /*font 설정*/
+  /*=================================*/
 
-    .main_content div{
-        display: flex;
-        align-items: center;
-        width: 100%;
-        padding-top: 20px;
-    }
+  .content_title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
 
-    .content_title > div:nth-child(1) {
-        padding-left: 10px;
-    }
+  .m_text {
+    font-size: 1.5rem;
+  }
 
-    /*=================================*/
-    /*font 설정*/
-    /*=================================*/
+  .s_text {
+    font-size: 1.3rem;
+  }
 
-    .content_title{
-        font-size: 2rem;
-        font-weight: bold;
-    }
+  .b_text {
+    font-size: 2rem;
+    font-weight: bold;
+  }
 
-    .m_text{
-        font-size: 1.5rem;
-    }
+  .red_text {
+    font-weight: bold;
+    color: red;
+  }
 
-    .s_text{
-        font-size: 1.3rem;
-    }
+  .blue_text {
+    font-weight: bold;
+    color: blue;
+  }
 
-    .b_text{
-        font-size: 2rem;
-        font-weight: bold;
-    }
+  /*=================================*/
+  /*button 설정*/
+  /*=================================*/
 
-    .red_text{
-        font-weight: bold;
-        color: red;
-    }
+  .main_button {
+    position: relative;
+    /*padding:0 2em;*/
+    outline: none;
+    height: 40px;
+    width: 120px;
+    border: none;
+    border-radius: 8px;
+    /*border: 2px solid navy;*/
+    /*color:black;*/
+    background-color: #7cd6dc;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 800ms ease all;
+    box-shadow: 2px 2px 5px #999;
+  }
 
-    .blue_text{
-        font-weight: bold;
-        color: blue;
-    }
-
-
-    /*=================================*/
-    /*button 설정*/
-    /*=================================*/
-
-    .main_button{
-        position:relative;
-        /*padding:0 2em;*/
-        outline:none;
-        height: 40px;
-        width: 120px;
-        border:none;
-        border-radius: 8px;
-        /*border: 2px solid navy;*/
-        /*color:black;*/
-        background-color: #FFC700;
-        color:#000000;
-        font-size: 14px;
-        font-weight: 600;
-        cursor:pointer;
-        transition:800ms ease all;
-        box-shadow: 2px 2px 5px #999;
-    }
-
-    /* .main_button:hover{
+  /* .main_button:hover{
         border: none;
         color:white;
         background:#b2b2b2;
     } */
 
-    /*=================================*/
-    /*s_button 설정*/
-    /*=================================*/
+  /*=================================*/
+  /*s_button 설정*/
+  /*=================================*/
 
-    /* .s_button{
+  /* .s_button{
         margin-top: -30px;
     } */
 
-    .s_button button {
-        margin: 4px;
-        padding: 0;
-        display: inline-block;
-        height: 40px;
-        width:120px;
-        border-radius: 8px;
-        background-color: #FFC700;
-        color:#000000;
-        border: none;
-        text-align: center;
-        text-decoration: none;
-        font-size: 15px;
-        cursor: pointer;
-        transition:800ms ease all;
-        font-weight: 600;
-        box-shadow: 2px 2px 5px #999;
-    }
+  .s_button button {
+    margin: 4px;
+    padding: 0;
+    display: inline-block;
+    height: 40px;
+    width: 120px;
+    border-radius: 8px;
+    background-color: #7cd6dc;
+    color: #000000;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 800ms ease all;
+    font-weight: 600;
+    box-shadow: 2px 2px 5px #999;
+  }
 
-    /* .s_button button:hover{
+  /* .s_button button:hover{
         padding: 0;
         display: inline-block;
         height: 30px;
@@ -297,29 +291,29 @@
         transition:800ms ease all;
     } */
 
-    /*=================================*/
-    /*l_button 설정*/
-    /*=================================*/
+  /*=================================*/
+  /*l_button 설정*/
+  /*=================================*/
 
-    .l_button button {
-        margin: 4px;
-        padding: 0;
-        display: inline-block;
-        height: 50px;
-        width:100%;
-        border-radius: 8px;
-        background-color: #FFC700;
-        color:#000000;
-        border: none;
-        text-align: center;
-        text-decoration: none;
-        font-size: 15px;
-        font-weight: 600;
-        cursor: pointer;
-        box-shadow: 2px 2px 5px #999;
-    }
+  .l_button button {
+    margin: 4px;
+    padding: 0;
+    display: inline-block;
+    height: 50px;
+    width: 100%;
+    border-radius: 8px;
+    background-color: #7cd6dc;
+    color: #000000;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px #999;
+  }
 
-    /* .l_button button:hover{
+  /* .l_button button:hover{
         margin: 4px;
         padding: 0;
         display: inline-block;
@@ -336,210 +330,205 @@
         transition:800ms ease all;
     } */
 
-    /*=================================*/
-    /*Ul li 설정*/
-    /*=================================*/
+  /*=================================*/
+  /*Ul li 설정*/
+  /*=================================*/
 
-    .main_content div ul{
-        display: flex;
-        justify-content: space-between;
-        /* width: 50em; */
-    }
+  .main_content div ul {
+    display: flex;
+    justify-content: space-between;
+    /* width: 50em; */
+  }
 
-    .main_content div ul li a{
-        cursor:pointer;
-    }
+  .main_content div ul li a {
+    cursor: pointer;
+  }
 
-    .main_content div ul li a:hover{
-        color: coral;
-    }
+  .main_content div ul li a:hover {
+    color: coral;
+  }
 
-    /*=================================*/
-    /*footer 설정*/
-    /*=================================*/
+  /*=================================*/
+  /*footer 설정*/
+  /*=================================*/
 
-    footer {
-        background-color: black;
-        height: 30vh;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        /* margin-top: 20vh; */
-    }
+  footer {
+    background-color: black;
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* margin-top: 20vh; */
+  }
 
-    footer > div {
-        max-width: 760px;
-        color: white;
-        display: block;
-        width: 100%;
-        transform: rotate(180deg);
-    }
+  footer > div {
+    max-width: 1200px;
+    color: white;
+    display: block;
+    width: 100%;
+    transform: rotate(180deg);
+  }
 
-    .footer_comp_info {
-        margin-top: 50px;
-        margin-bottom: 15px;
-        text-align: center;
-        font-size: 14px;
-        transform: rotate(-180deg);
-    }
+  .footer_comp_info {
+    margin-top: 50px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 14px;
+    transform: rotate(-180deg);
+  }
 
-    .footer_menu_container {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        transform: rotate(-180deg);
-        /* margin-left: 60px; */
-    }
+  .footer_menu_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    transform: rotate(-180deg);
+    /* margin-left: 60px; */
+  }
 
-    .footer_menu_container div {
-        text-align: center;
-        /* margin-bottom: 9px; */
-    }
+  .footer_menu_container div {
+    text-align: center;
+    /* margin-bottom: 9px; */
+  }
 
-    .footer_menu_container > div {
-        text-align: center;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
+  .footer_menu_container > div {
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 
-    .footer_menu_container div > div:nth-child(1), .footer_menu_container div > a > div {
-        font-size: 13px;
-        text-decoration: none; 
-        color: white;
-        font-weight: 700;
-    }
+  .footer_menu_container div > div:nth-child(1),
+  .footer_menu_container div > a > div {
+    font-size: 13px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+  }
 
-    .footer_menu_container div > div:not(div:nth-child(1)) {
-        display: none;
-    }
+  .footer_menu_container div > div:not(div:nth-child(1)) {
+    display: none;
+  }
 
-    .footer_menu_container div div {
-        cursor: pointer;
-    }
+  .footer_menu_container div div {
+    cursor: pointer;
+  }
 
-    .vertical_line {
-        color: #FFC700;
-        font-weight: 600;
-    }
+  .vertical_line {
+    color: #7cd6dc;
+    font-weight: 600;
+  }
 
-    .bold_text {
-        font-weight: 700;
-    }
-
+  .bold_text {
+    font-weight: 700;
+  }
 }
 
+@media (min-width: 1200px) {
+  /*=================================*/
+  /*공통 설정*/
+  /*=================================*/
+  html,
+  body {
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 62.5%;
+    overflow-x: hidden;
+  }
 
+  body {
+    margin: 0;
+    text-align: center;
+    font-family: "Spoqa Han Sans Neo", "sans-serif";
+    font-size: 20px;
+    font-weight: 700;
+  }
 
+  a:hover,
+  a:visited,
+  a:focus {
+    text-decoration: none !important;
+    /*color: #ffffff;*/
+  }
 
+  a,
+  ul,
+  ol,
+  li {
+    text-decoration: none;
+    list-style: none;
+  }
 
+  /* header */
+  .header {
+    border-bottom: 1px solid #000000;
+    background-color: white;
+  }
 
+  /*=================================*/
+  /*navbar 설정*/
+  /*=================================*/
 
+  .navbar a {
+    color: #000000;
+    display: flex;
+    align-items: center;
+  }
 
-@media (min-width: 760px) {
-    /*=================================*/
-    /*공통 설정*/
-    /*=================================*/
-    html,
-    body {
-        box-sizing: border-box;
-        margin: 0;
-        font-size: 62.5%;
-        overflow-x: hidden;
-    }
+  .navbar {
+    max-width: 1200px;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    /* padding: 8px 12px; */
+    padding-top: 8px;
+    padding-bottom: 8px;
+    height: 50px;
+    color: #000000;
+    margin: 0px auto;
+    position: relative;
+  }
 
-    body {
-        margin : 0;
-        text-align: center;
-        font-family: 'Spoqa Han Sans Neo', 'sans-serif'; 
-    }
+  .nav_logo {
+    font-size: 22px;
+    padding-left: 12px;
+  }
 
-    a:hover,
-    a:visited,
-    a:focus {
-        text-decoration: none !important;
-        /*color: #ffffff;*/
-    }
+  .nav_logo i {
+    padding-right: 5px;
+    color: coral;
+  }
 
-    a,
-    ul,
-    ol,
-    li {
-        text-decoration: none;
-        list-style: none;
-    }
+  .nav_menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 600;
+    height: 100%;
+    margin-top: 20px;
+  }
 
-    /* header */
-    .header {
-        border-bottom: 1px solid #000000;
-        background-color: #FFC700;
-    }
+  .nav_menu li:nth-child(even) {
+    padding: 17px 0;
+  }
 
-    /*=================================*/
-    /*navbar 설정*/
-    /*=================================*/
+  .nav_menu li div {
+    padding-left: 12px;
+  }
 
-    .navbar a {
-        color: #000000;
-        display: flex;
-        align-items: center;
-    }
+  .nav_menu li {
+    display: flex;
+    padding: 8px 10px;
+  }
 
-    .navbar{
-        max-width: 760px;
-        z-index: 9999;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #FFC700;
-        /* padding: 8px 12px; */
-        padding-top: 8px;
-        padding-bottom: 8px;
-        height: 50px;
-        color: #000000;
-        margin: 0px auto;
-        position: relative;
-    }
+  .nav_menu li a:hover {
+    font-weight: bold;
+    color: coral;
+  }
 
-    .nav_logo{
-        font-size: 22px;
-        padding-left: 12px;
-    }
-
-    .nav_logo i {
-        padding-right: 5px;
-        color: coral;
-    }
-
-    .nav_menu{
-        display: flex;
-        list-style: none;
-        padding-left: 0;
-        font-size: 14px;
-        cursor:pointer;
-        font-weight: 600;
-        height: 100%;
-        margin-top: 20px;
-    }
-
-    .nav_menu li:nth-child(even) {
-        padding: 17px 0;
-    }
-
-    .nav_menu li div{
-        padding-left: 12px;
-    }
-
-    .nav_menu li {
-        display: flex;
-        padding: 8px 10px;
-    }
-
-    .nav_menu li a:hover{
-        font-weight: bold;
-        color: coral;
-    }
-
-    /* .dropdown {
+  /* .dropdown {
         display: none;
         width: 100vw;
         height: 110px;
@@ -567,218 +556,220 @@
         display: block;
     } */
 
-    .dropdown_content {
-        position: absolute;
-        /* left: 0; */
-        top: 90%;
-        padding: 0 1000em; /* trick from css-tricks comments */
-        margin: 0 -1000em; /* trick from css-tricks comments */
-        z-index: 101;
-        visibility: hidden;
-        opacity: 0;
-        background: #FFC700;
-        font-weight: 500;
-    }
+  .dropdown_content {
+    position: absolute;
+    /* left: 0; */
+    top: 90%;
+    padding: 0 1000em; /* trick from css-tricks comments */
+    margin: 0 -1000em; /* trick from css-tricks comments */
+    z-index: 101;
+    visibility: hidden;
+    opacity: 0;
+    background: white;
+    font-weight: 500;
+  }
 
-    .nav_menu > li:hover > ul {
-        visibility: visible;
-        opacity: 1;
-    }
+  .nav_menu > li:hover > ul {
+    visibility: visible;
+    opacity: 1;
+  }
 
-    .dropdown_content > li {
-        padding: 3px 0;
-    }
+  .dropdown_content > li {
+    padding: 3px 0;
+  }
 
-    .login_button {
-        width: 40px;
-        font-size: 12px;
-        float: right;
-        font-weight: bold;
-        padding-top: 6px;
-    }
+  .login_button {
+    width: 40px;
+    font-size: 12px;
+    float: right;
+    font-weight: bold;
+    padding-top: 6px;
+  }
 
-    .login_button > div:first-child {
-        cursor: pointer;
-    }
+  .login_button > div:first-child {
+    cursor: pointer;
+  }
 
-    /*=================================*/
-    /*head_title 설정*/
-    /*=================================*/
+  /*=================================*/
+  /*head_title 설정*/
+  /*=================================*/
 
-    .head_title {
-        background-color: #FFFFFF;
-        height: 30vh;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        /* margin-bottom: 2vh; */
-        flex-direction: column;
-        background-size: cover;
-        position: relative;
-    }
+  .head_title {
+    background-color: #ffffff;
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-bottom: 2vh; */
+    flex-direction: column;
+    background-size: cover;
+    position: relative;
+  }
 
-    .head_title > div{
-        margin-left: 0px;
-        max-width: 760px;
-        width: 100%;
-        text-align: left;
-        display: flex;
-        font-weight: bold;
-        color: black;
-        align-items: center;
-        height: auto;
-    }
-    
-    .head_title > div > p {
-        margin-bottom: 45px;
-    }
+  .head_title > div {
+    margin-left: 0px;
+    max-width: 1200px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    font-weight: bold;
+    color: black;
+    align-items: center;
+    height: auto;
+    margin-left: 30px;
+  }
 
-    .title_container > div {
-        text-align: left;
-        height: auto;
-        color: white;
-    }
+  .head_title > div > p {
+    margin-bottom: 45px;
+  }
 
-    .title_container div p {
-        margin: 0 0 0 0;
-    }
-    
-    .title_container > div:nth-child(1) {
-        padding-left: 24px;
-        border-left: 6px solid #FFC700;
-        font-size: 34px;
-        font-weight: 700;
-    }
+  .title_container > div {
+    text-align: left;
+    height: auto;
+    color: white;
+  }
 
-    .title_container > div:nth-child(2) {
-        padding-left: 22px;
-        border-left: 2px solid #FFC700;
-        margin-left: 31px;
-        font-size: 20px;
-        font-weight: 700;
-    }
+  .title_container div p {
+    margin: 0 0 0 0;
+  }
 
-    /*=================================*/
-    /* main_content 설정*/
-    /*=================================*/
+  .title_container > div:nth-child(1) {
+    padding-left: 24px;
+    border-left: 6px solid #7cd6dc;
+    font-size: 34px;
+    font-weight: 700;
+  }
 
-    .main_content{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        margin-left: 120px;
-        padding: 30px;
-        width: 70vw;
-        background-color: white;
-        font-size: 1.6rem;
-    }
+  .title_container > div:nth-child(2) {
+    padding-left: 22px;
+    border-left: 2px solid #7cd6dc;
+    margin-left: 31px;
+    font-size: 20px;
+    font-weight: 700;
+  }
 
-    .main_content div{
-        display: flex;
-        align-items: center;
-        width: 100%;
-        padding-top: 20px;
-    }
+  /*=================================*/
+  /* main_content 설정*/
+  /*=================================*/
 
-    /*=================================*/
-    /*font 설정*/
-    /*=================================*/
+  .main_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 120px;
+    padding: 30px;
+    width: 70vw;
+    background-color: white;
+    font-size: 1.6rem;
+  }
 
-    .content_title{
-        font-size: 2rem;
-        font-weight: bold;
-    }
+  .main_content div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-top: 20px;
+    margin: 0px;
+  }
 
-    .m_text{
-        font-size: 1.5rem;
-    }
+  /*=================================*/
+  /*font 설정*/
+  /*=================================*/
 
-    .s_text{
-        font-size: 15px;
-        font-weight: 500;
-    }
+  .content_title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
 
-    .b_text{
-        font-size: 2rem;
-        font-weight: bold;
-        justify-content: flex-end;
-    }
+  .m_text {
+    font-size: 1.5rem;
+  }
 
-    .red_text{
-        font-weight: bold;
-        color: red;
-    }
+  .s_text {
+    font-size: 15px;
+    font-weight: 500;
+  }
 
-    .blue_text{
-        font-weight: bold;
-        color: blue;
-    }
+  .b_text {
+    font-size: 2rem;
+    font-weight: bold;
+    justify-content: flex-end;
+  }
 
-    .vertical_line {
-        color: #FFC700;
-        font-weight: 600;
-    }
+  .red_text {
+    font-weight: bold;
+    color: red;
+  }
 
+  .blue_text {
+    font-weight: bold;
+    color: blue;
+  }
 
-    /*=================================*/
-    /*button 설정*/
-    /*=================================*/
+  .vertical_line {
+    color: #7cd6dc;
+    font-weight: 600;
+  }
 
-    .main_button{
-        position:relative;
-        /*padding:0 2em;*/
-        outline:none;
-        height: 40px;
-        width: 120px;
-        border:none;
-        border-radius: 8px;
-        /*border: 2px solid navy;*/
-        /*color:black;*/
-        background-color: #FFC700;
-        color:#000000;
-        font-size:14px;
-        font-weight: 600;
-        cursor:pointer;
-        transition:800ms ease all;
-        box-shadow: 2px 2px 5px #999;
-    }
+  /*=================================*/
+  /*button 설정*/
+  /*=================================*/
 
-    /* .main_button:hover{
+  .main_button {
+    position: relative;
+    /*padding:0 2em;*/
+    outline: none;
+    height: 40px;
+    width: 120px;
+    border: none;
+    border-radius: 8px;
+    /*border: 2px solid navy;*/
+    /*color:black;*/
+    background-color: #7cd6dc;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 800ms ease all;
+    box-shadow: 2px 2px 5px #999;
+  }
+
+  /* .main_button:hover{
         border: none;
         color:white;
         background:#b2b2b2;
     } */
 
-    /*=================================*/
-    /*s_button 설정*/
-    /*=================================*/
+  /*=================================*/
+  /*s_button 설정*/
+  /*=================================*/
 
-    /* .s_button{
+  /* .s_button{
         margin-top: -30px;
     } */
 
-    .s_button button {
-        margin: 4px;
-        padding: 0;
-        display: inline-block;
-        height: 40px;
-        width: 120px;
-        border-radius: 8px;
-        background-color: #FFC700;
-        color: black;
-        border: none;
-        text-align: center;
-        text-decoration: none;
-        font-size: 14px;
-        cursor: pointer;
-        font-weight: 600;
-        box-shadow: 2px 2px 5px #999;
-        /* transition:800ms ease all; */
-    }
+  .s_button button {
+    margin: 4px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: inline-block;
+    height: 40px;
+    width: 120x;
+    border-radius: 8px;
+    background-color: #7cd6dc;
+    color: black;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 2px 2px 5px #999;
+    /* transition:800ms ease all; */
+  }
 
-    /* .s_button button:hover{
+  /* .s_button button:hover{
         padding: 0;
         display: inline-block;
         height: 30px;
@@ -794,29 +785,29 @@
         transition:800ms ease all;
     } */
 
-    /*=================================*/
-    /*l_button 설정*/
-    /*=================================*/
+  /*=================================*/
+  /*l_button 설정*/
+  /*=================================*/
 
-    .l_button button {
-        margin: 4px;
-        padding: 0;
-        display: inline-block;
-        height: 50px;
-        width:100%;
-        border-radius: 8px;
-        background-color: #FFC700;
-        color:#000000;
-        border: none;
-        text-align: center;
-        text-decoration: none;
-        font-size: 19px;
-        font-weight: 600;
-        cursor: pointer;
-        box-shadow: 2px 2px 5px #999;
-    }
+  .l_button button {
+    margin: 4px;
+    padding: 0;
+    display: inline-block;
+    height: 50px;
+    width: 100%;
+    border-radius: 8px;
+    background-color: #7cd6dc;
+    color: #000000;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px #999;
+  }
 
-    /* .l_button button:hover{
+  /* .l_button button:hover{
         margin: 4px;
         padding: 0;
         display: inline-block;
@@ -833,95 +824,96 @@
         transition:800ms ease all;
     } */
 
-    /*=================================*/
-    /*Ul li 설정*/
-    /*=================================*/
+  /*=================================*/
+  /*Ul li 설정*/
+  /*=================================*/
 
-    .main_content div ul{
-        display: flex;
-        justify-content: space-between;
-        width: 50em;
-    }
+  .main_content div ul {
+    display: flex;
+    justify-content: space-between;
+    width: 50em;
+  }
 
-    .main_content div ul li a{
-        cursor:pointer;
-    }
+  .main_content div ul li a {
+    cursor: pointer;
+  }
 
-    .main_content div ul li a:hover{
-        color: coral;
-    }
+  .main_content div ul li a:hover {
+    color: coral;
+  }
 
-    /*=================================*/
-    /*footer 설정*/
-    /*=================================*/
+  /*=================================*/
+  /*footer 설정*/
+  /*=================================*/
 
-    footer {
-        background-color: black;
-        height: 400px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        font-size: 12px;
-        font-weight: 500;
-        /* margin-top: 20vh; */
-    }
+  footer {
+    background-color: black;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 500;
+    /* margin-top: 20vh; */
+  }
 
-    footer > div {
-        max-width: 760px;
-        color: white;
-        display: flex;
-        width: 100%;
-        margin-top: 86px;
-    }
+  footer > div {
+    max-width: 1200px;
+    color: white;
+    display: flex;
+    width: 100%;
+    margin-top: 86px;
+  }
 
-    .footer_comp_info {
-        text-align: left;
-    }
+  .footer_comp_info {
+    text-align: left;
+    margin-right: 400px;
+    margin-left: 40px;
+  }
 
-    .footer_menu_container {
-        display: flex;
-        flex-direction: row;
-        margin-left: 60px;
-    }
+  .footer_menu_container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 60px;
+  }
 
-    .footer_menu_container div {
-        text-align: left;
-        margin-bottom: 9px;
-    }
+  .footer_menu_container div {
+    text-align: left;
+    margin-bottom: 9px;
+  }
 
-    .footer_menu_container > div {
-        text-align: left;
-        margin-right: 20px;
-    }
+  .footer_menu_container > div {
+    text-align: left;
+    margin-right: 20px;
+  }
 
-    .footer_menu_container div > div:nth-child(1), .footer_menu_container div > a > div {
-        text-decoration: none;
-        color: white;
-        font-size: 15px;
-        font-weight: 700;
-    }
+  .footer_menu_container div > div:nth-child(1),
+  .footer_menu_container div > a > div {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+  }
 
-    .footer_menu_container div div {
-        cursor: pointer;
-    }
+  .footer_menu_container div div {
+    cursor: pointer;
+  }
 
-    .bold_text {
-        font-weight: 700;
-    }
+  .bold_text {
+    font-weight: 700;
+  }
 
-    /* APIKEY 모달 */
-    .ReactModalPortal, .ReactModal__Overlay, .ReactModal__Content {
-        z-index: 99999;
-    }
+  /* APIKEY 모달 */
+  .ReactModalPortal,
+  .ReactModal__Overlay,
+  .ReactModal__Content {
+    z-index: 99999;
+  }
 
-    .ReactModal__Content {
-        inset: auto !important;
-        top: 50% !important;
-        left: 50% !important;
-        transform: translate(-50%, -50%);
-
-    }
-
+  .ReactModal__Content {
+    inset: auto !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+  }
 }
-
-

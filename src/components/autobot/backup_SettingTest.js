@@ -39,51 +39,7 @@ let endDate = new Date();
 class SettingTest extends React.Component {
   componentDidMount() {
     window.scrollTo(0, 0);
-
-    var sessionToken = localStorage.getItem("sessionToken");
-    
-    this.fetchtotalAmount(sessionToken);
-
-    this.firsttrading(sessionToken);
-
   }
-
-  fetchtotalAmount = (token) => {
-    fetch("http://15.164.232.119:5055/totalbalance", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        sessionToken: token,
-      })
-    })
-    .then((res) => res.json())
-    .then((res) => {
-      console.log(res);
-      this.setState({totalAmount: res.USDT});
-    })
-  }
-
-  firsttrading = (token) => {
-    fetch("http://15.164.232.119:5055/firsttrading", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        sessionToken: token,
-      })
-    })
-    .then((res) => res.json())
-    .then((res) => {
-      console.log(res);
-      if (res.firsttrading){
-        this.setState({firsttradingbool: false});
-      }
-    })
-  }
-
 
   constructor(props) {
     super(props);
@@ -125,13 +81,8 @@ class SettingTest extends React.Component {
       startDate: new Date(),
       endDate: new Date(),
       isLoading: false,
-
-      totalAmount: 0,
-      firsttradingbool: true
     };
   }
-
-
 
   countIncrease() {
     if (this.state.count !== 3) {
@@ -262,40 +213,21 @@ class SettingTest extends React.Component {
       ? true
       : false;
 
-    // 피라미딩 진입회수
-    const pyramidingfirstEntry = (document.querySelector(
-      "#first_section_pyramiding_entry"
-    ).value *= 1);
-    const pyramidingsecondEntry = (document.querySelector(
-      "#second_section_pyramiding_entry"
-    ).value *= 1);
-    const pyramidingthirdEntry = (document.querySelector(
-      "#third_section_pyramiding_entry"
-    ).value *= 1);
-
-    // 피라미딩 구간별 이익
-    const pyramidingfirstGain = (document.querySelector(
-      "#first_section_pyramiding_gain"
-    ).value *= 1);
-    const pyramidingsecondGain = (document.querySelector(
-      "#second_section_pyramiding_gain"
-    ).value *= 1);
-    const pyramidingthirdGain = (document.querySelector(
-      "#third_section_pyramiding_gain"
-    ).value *= 1);
-
+    const timePeriod =
+      document.querySelectorAll(".example-custom-input")[0].innerText +
+      "-" +
+      document.querySelectorAll(".example-custom-input")[1].innerText;
 
     let secondActive = false;
     let thirdActive = false;
 
+    let totalAmount = "10000";
 
     // 운용자금 < 구간별 총 설정자금 일 경우 리턴
-    /*
-    if ((this.state.totalAmount *= 1) < firstAmount + secondAmount + thirdAmount) {
+    if ((totalAmount *= 1) < firstAmount + secondAmount + thirdAmount) {
       alert("운용자금이 부족합니다.");
       return false;
     }
-    */
 
     // 반복할 회수
     let count = this.state.count;
@@ -310,54 +242,108 @@ class SettingTest extends React.Component {
     const data = [
       {
         active: true,
+        TimePeriod: timePeriod,
         UpPyramiding: firstPyramiding,
         StartingAmount: firstAmount.toString(),
         PercentRange: firstRange.toString(),
         EntryNum: firstEntry.toString(),
         PercentReturn: firstGain.toString(),
-        pyramidingEntry: pyramidingfirstEntry.toString(),
-        pyramidingGain: pyramidingsecondGain.toString()
       },
       {
         active: secondActive,
+        TimePeriod: timePeriod,
         UpPyramiding: secondPyramiding,
         StartingAmount: secondAmount.toString(),
         PercentRange: secondRange.toString(),
         EntryNum: secondEntry.toString(),
         PercentReturn: secondGain,
-        pyramidingEntry: pyramidingfirstEntry.toString(),
-        pyramidingGain: pyramidingsecondGain.toString()
       },
       {
         active: thirdActive,
+        TimePeriod: timePeriod,
         UpPyramiding: thirdPyramiding,
         StartingAmount: thirdAmount.toString(),
         PercentRange: thirdRange.toString(),
         EntryNum: thirdEntry.toString(),
         PercentReturn: thirdGain.toString(),
-        pyramidingEntry: pyramidingfirstEntry.toString(),
-        pyramidingGain: pyramidingsecondGain.toString()
       },
     ];
 
-    var token = localStorage.getItem("sessionToken");
+    document.querySelector(".result_container_wrapper").innerHTML = "";
 
-    fetch("http://15.164.232.119:5055/updatebotsetting", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        sessionToken: token,
-        inputdata: data
-      })
-    })
-    .then((res) => res.json())
-    .then((res) => {
-      console.log(res);
-    })
+    // console.log(data.data[0].StartingAmount);
 
-
+    try {
+      this.toggleLoaderTrue();
+      trackPromise(
+        axios({
+          method: "post",
+          url: url,
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+          },
+          data: data,
+        })
+          .then((response) => {
+            for (let i = 0; i < Object.keys(response.data.data).length; i++) {
+              if (response.data.data[i].length === 0) {
+                break;
+              }
+              const div = document.createElement("div");
+              div.className = "result_container";
+              div.innerHTML =
+                `
+                            <div class="result_header">
+                                ` +
+                (i + 1) +
+                ` 구간
+                            </div>
+                            <div class="result_content">
+                                <div>
+                                    <div><p>거래량</p></div>
+                                    <div><p>` +
+                response.data.data[i].TradeVolume +
+                `</p></div>
+                                </div>
+                                <div>
+                                    <div><p>거래횟수</p></div>
+                                    <div><p>` +
+                response.data.data[i].TradeCount +
+                `</p></div>
+                                </div>
+                                <div>
+                                    <div><p>수익률</p></div>
+                                    <div><p>` +
+                response.data.data[i].Returns +
+                `</p></div>
+                                </div>
+                                <div>
+                                    <div><p>수익</p></div>
+                                    <div><p>` +
+                response.data.data[i].Profit +
+                `</p></div>
+                                </div>
+                            </div>`;
+              document
+                .querySelector(".result_container_wrapper")
+                .appendChild(div);
+            }
+            this.toggleLoaderFalse();
+          })
+          .catch((error) => {
+            console.log(error);
+          })
+          .finally(() => {
+            if (!this.state.isLoading) {
+              this.toggleLoaderFalse();
+            }
+          })
+      );
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   testIndicator() {
@@ -456,12 +442,10 @@ class SettingTest extends React.Component {
                 {/* <li className="vertical_line">|</li>
                                 <li><a>수수료 설정 <input type="number" placeholder="0.4" id="fee" />%</a></li> */}
               </ul>
-              {this.state.firsttradingbool == false && this.state.totalAmount != 0?
-                <button id="test_button" onClick={this.testButton}>
-                  봇 설정
-                  <br />
-                </button>
-              :null}
+              <button id="test_button" onClick={this.testButton}>
+                봇 설정
+                <br />
+              </button>
             </div>
             <div id="datepicker_container">
               {/*<DatePickerComponent />*/}
@@ -537,7 +521,6 @@ class SettingTest extends React.Component {
                   style={{ display: "none" }}
                   id="select_box_1"
                 >
-                  {/*
                   <select>
                     <option>1단계</option>
                     <option>2단계</option>
@@ -545,7 +528,6 @@ class SettingTest extends React.Component {
                     <option>4단계</option>
                     <option>5단계</option>
                   </select>
-                  */}
                 </div>
               </div>
             </div>
@@ -623,7 +605,6 @@ class SettingTest extends React.Component {
                   style={{ display: "none" }}
                   id="select_box_2"
                 >
-                  {/*
                   <select>
                     <option>1단계</option>
                     <option>2단계</option>
@@ -631,7 +612,6 @@ class SettingTest extends React.Component {
                     <option>4단계</option>
                     <option>5단계</option>
                   </select>
-                  */}
                 </div>
               </div>
             </div>
@@ -709,7 +689,6 @@ class SettingTest extends React.Component {
                   style={{ display: "none" }}
                   id="select_box_3"
                 >
-                  {/*
                   <select>
                     <option>1단계</option>
                     <option>2단계</option>
@@ -717,7 +696,6 @@ class SettingTest extends React.Component {
                     <option>4단계</option>
                     <option>5단계</option>
                   </select>
-                  */}
                 </div>
               </div>
             </div>

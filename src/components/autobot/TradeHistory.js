@@ -35,13 +35,14 @@ class TradeHistory extends Component {
 		})
     }
     componentDidMount() {
+		var token = localStorage.getItem("sessionToken");
 		fetch("http://15.164.232.119:5055/transactionhistory", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
 			},
 			body: JSON.stringify({
-				userid: 1
+				sessionToken: token
 			}),
 		}).then((res) => res.json())
 		.then((res) => {

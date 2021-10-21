@@ -6,12 +6,26 @@ class Login extends Component {
         super(props);
         this.state = {
             isModalOpen: false,
+            sessionTokenExist: false
         };
+    }
+
+    componentDidMount(){
+        var temp = localStorage.getItem("sessionToken");
+        if (temp != null){
+            this.setState({ sessionTokenExist: true});
+        }
+
     }
 
     openModal = () => {
         this.setState({ isModalOpen: true });
     };
+
+    logout = () => {
+        localStorage.removeItem("sessionToken");
+        window.location.reload();
+    }
 
     closeModal = (e) => {
         // console.log(e.target.id);
@@ -25,7 +39,11 @@ class Login extends Component {
     render() {
         return (
             <>
+                {this.state.sessionTokenExist != true ?
                 <div onClick={this.openModal}>로그인</div>
+                : 
+                <div onClick={this.logout}>로그아웃</div>
+                }
                 <SignIn isOpen={this.state.isModalOpen} close={this.closeModal} />
             </>
         );

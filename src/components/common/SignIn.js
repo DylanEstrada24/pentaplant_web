@@ -6,7 +6,13 @@ class SignIn extends Component {
   state = {
     email: "",
     password: "",
+    loginresult: ""
   };
+
+  componentDidMount(){
+    console.log(" signin component came up ");
+    
+  }
 
   loginHandler = (e) => {
     const { name, value } = e.target;
@@ -17,19 +23,32 @@ class SignIn extends Component {
     const { email, password } = this.state;
     console.log(" ============== login clicked   ");
     console.log(" ===================  ");
-    //fetch("http://10.58.2.17:8000/auth/login", {
-    fetch("http://127.0.0.1:3030/login", {
+    fetch("http://15.164.232.119:5055/login", {
+    //fetch("http://127.0.0.1:5055/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        Username: "test",
-        Password: "test",
+        email: email,
+        password: password,
       }),
     })
       .then((res) => res.json())
-      .then((res) => console.log(res));
+      .then((res) => {
+        console.log(res);
+
+        if (res.success != "wrong password" && res.success != "wrong login"){
+          localStorage.setItem('sessionToken', res);
+          window.location.reload();
+        }
+        if (res.success == "wrong password"){
+          this.setState({loginresult: res.success})
+        }
+        if (res.success == "wrong login"){
+          this.setState({ loginresult: res.success});
+        }
+      });
   }; 
 
   render() {
@@ -44,7 +63,7 @@ class SignIn extends Component {
 	      ///<span className="close" onClick={close}>&times;</span> x버튼 누를시 꺼짐
         ////<div className="modalContents" onClick={isOpen}> 로그인 화면은 버튼 클릭해서 들어오면
          /// true인 상태로 있어서 화면이 안꺼진다.
-      
+    
           <div id="modal_container" className="modal" onClick={close}>
             <div id="modal_wrapper" onClick={close}>
               <div className="loginModal">
@@ -74,7 +93,17 @@ class SignIn extends Component {
                       </label>
                       <div id="find_button" className="autoLogin">아이디/비밀번호 찾기</div>
                     </div>
-                    <button className="loginBtn" onClick={() => this.loginClickHandler} type="button">
+
+                    {this.state.loginresult == "wrong login"?
+                    <div>로그인 실패 하였습니다</div>
+                    :null}
+
+                    {this.state.loginresult == "wrong password" ?
+                    <div>비밀번호가 틀렸습니다</div>
+                    :null}
+
+
+                    <button className="loginBtn" onClick={() => this.loginClickHandler()} type="button">
                         {" "}
                         로그인{" "}
                     </button>
