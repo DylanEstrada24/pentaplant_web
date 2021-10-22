@@ -508,7 +508,7 @@ class SettingTest extends React.Component {
                   회
                 </div>
                 <div className="test_input_section_items2">
-                  피라미딩 이익&nbsp;{" "}
+                  피라미딩 상승&nbsp;{" "}
                   <input
                     type="number"
                     placeholder="0"
@@ -592,7 +592,7 @@ class SettingTest extends React.Component {
                   회
                 </div>
                 <div className="test_input_section_items2">
-                  피라미딩 이익&nbsp;{" "}
+                  피라미딩 상승&nbsp;{" "}
                   <input
                     type="number"
                     placeholder="0"
@@ -676,7 +676,7 @@ class SettingTest extends React.Component {
                   회
                 </div>
                 <div className="test_input_section_items2">
-                  피라미딩 이익&nbsp;{" "}
+                  피라미딩 상승&nbsp;{" "}
                   <input
                     type="number"
                     placeholder="0"
