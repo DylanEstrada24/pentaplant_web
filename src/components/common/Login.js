@@ -40,9 +40,9 @@ class Login extends Component {
         return (
             <>
                 {this.state.sessionTokenExist != true ?
-                <div onClick={this.openModal}>로그인</div>
+                <div onClick={this.openModal} style={{marginLeft: -10}}>로그인</div>
                 : 
-                <div onClick={this.logout}>로그아웃</div>
+                <div onClick={this.logout} style={{marginLeft: -30}}>로그아웃</div>
                 }
                 <SignIn isOpen={this.state.isModalOpen} close={this.closeModal} />
             </>
