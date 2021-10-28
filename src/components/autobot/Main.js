@@ -22,7 +22,7 @@ class Main extends React.Component {
     window.scrollTo(0, 0);
 
     var temp = localStorage.getItem("sessionToken");
-    this.fetchtotalAmount(temp);
+    //this.fetchtotalAmount(temp);
 
     // const script1 = document.createElement("script");
 
