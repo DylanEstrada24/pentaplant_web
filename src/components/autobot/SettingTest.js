@@ -61,7 +61,9 @@ class SettingTest extends React.Component {
     .then((res) => res.json())
     .then((res) => {
       console.log(res);
-      this.setState({totalAmount: res.USDT});
+      this.setState({totalAmount: res.USDT}, () => {
+        console.log("  current total amount after totalbalance     ",this.state.totalAmount)
+      });
     })
   }
 
@@ -79,7 +81,9 @@ class SettingTest extends React.Component {
     .then((res) => {
       console.log(res);
       if (res.firsttrading){
-        this.setState({firsttradingbool: false});
+        this.setState({firsttradingbool: false}, () => {
+          console.log("  current firsttradingbool after totalbalance     ",this.state.firsttradingbool);
+        })
       }
     })
   }
