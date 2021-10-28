@@ -24,7 +24,8 @@ class Login extends Component {
 
     logout = () => {
         localStorage.removeItem("sessionToken");
-        window.location.reload();
+        //window.location.reload();
+        window.location.href = window.location.origin;
     }
 
     closeModal = (e) => {
