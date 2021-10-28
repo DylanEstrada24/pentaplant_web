@@ -131,7 +131,8 @@ class SettingTest extends React.Component {
       isLoading: false,
 
       totalAmount: 0,
-      firsttradingbool: true
+      firsttradingbool: true,
+      botsetclicked: 0
     };
   }
 
@@ -203,6 +204,9 @@ class SettingTest extends React.Component {
   }
 
   testButton() {
+
+    this.setState({botsetclicked: 1});
+
     // API는 기입된 구간까지(2구간까지 했으면 2번) 요청함.
 
     const url = `http://pentaplant-1933825305.ap-northeast-2.elb.amazonaws.com/backtest`; // 임시주소
@@ -359,8 +363,16 @@ class SettingTest extends React.Component {
     .then((res) => res.json())
     .then((res) => {
       console.log(res);
+      if (res.result == "insufficient"){
+        this.setState({botsetclicked: 2})
+      }
+      if (res.result == "success"){
+        this.setState({botsetclicked: 4})
+      }
+      if (res.result == "already"){
+        this.setState({botsetclicked: 3})
+      }
     })
-
 
   }
 
@@ -455,7 +467,22 @@ class SettingTest extends React.Component {
               </div>
               <ul id="test_subtitle_button" className="content_subtitle">
                 <li>
+                  {this.state.botsetclicked == 0 ?
                   <a>운용자금 {this.state.totalAmount.toLocaleString()}$ </a>
+                  :
+                  null}
+                  {this.state.botsetclicked == 1?
+                  <a>잠시만 기다려 주세요.</a>
+                  :null}
+                  {this.state.botsetclicked == 2?
+                  <a>자금이 부족합니다.</a>
+                  :null}
+                  {this.state.botsetclicked == 3?
+                  <a>이미 봇이 가동중입니다.</a>
+                  :null}
+                  {this.state.botsetclicked == 4?
+                  <a>봇 설정 완료 되었습니다.</a>
+                  :null}
                 </li>
                 {/* <li className="vertical_line">|</li>
                                 <li><a>수수료 설정 <input type="number" placeholder="0.4" id="fee" />%</a></li> */}
