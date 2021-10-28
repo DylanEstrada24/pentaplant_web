@@ -46,6 +46,7 @@ import translation from "../../translation";
     componentDidMount(){
       var temp2 = localStorage.getItem("sessionToken");
       this.setState({temp: temp2})
+      console.log (" menubar.js   sessionToken  ", temp2)
     }
 
 
