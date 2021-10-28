@@ -21,6 +21,9 @@ class Main extends React.Component {
   componentDidMount() {
     window.scrollTo(0, 0);
 
+    var temp = localStorage.getItem("sessionToken");
+    fetchtotalAmount(temp);
+
     // const script1 = document.createElement("script");
 
     // script1.type = "text/javascript";
@@ -133,11 +136,13 @@ class Main extends React.Component {
                   <div>주문설정</div>
                 </div>
                 <div id="autobot_button_container2">
+                  {/*
                   <Link to="autobot/test">
                     <button className="main_button" style={{ margin: "10px" }}>
                       테스트
                     </button>
                   </Link>
+                  */}
                   {/* <Link to="autobot/setting"><button className="main_button">고급설정</button></Link> */}
                 </div>
               </div>
