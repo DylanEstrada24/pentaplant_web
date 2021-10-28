@@ -34,6 +34,11 @@ function Menubar() {
     //     setToggleBar(!toggleBar)
     // }
 
+    var temp = ""
+    var temp = localStorage.getItem("sessionToken");
+    console.log(" ======= loginmenubar.js  sessionToken   ", temp);
+
+
     return (
         <>
             <nav className="navbar">

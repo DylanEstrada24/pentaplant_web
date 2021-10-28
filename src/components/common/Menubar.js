@@ -168,7 +168,12 @@ import translation from "../../translation";
                   <Link to="/autobot/about">ABOUT</Link>
                 </li>
                 <li>
+                  {this.state.temp != ""?
                   <Link to="/autobot/purchase">AUTO 결제</Link>
+                  :null}
+                  {this.state.temp == ""?
+                  <Link to="/autobot/about">AUTO 결제</Link>
+                  :null}
                 </li>
                 <li>
                   {this.state.temp != "" ?
