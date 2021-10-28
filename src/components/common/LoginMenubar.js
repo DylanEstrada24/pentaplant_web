@@ -81,7 +81,9 @@ function Menubar() {
                             <li><Link to="/autobot/about">ABOUT</Link></li>
                             <li><Link to="/autobot/purchase">AUTO 결제</Link></li>
                         </ul>
+                        </>
                         :
+                        <>
                         <Link to="/autobot/about">AUTO 로봇</Link>
                         <ul className="dropdown_content">
                             <li><Link to="/autobot/about">ABOUT</Link></li>
