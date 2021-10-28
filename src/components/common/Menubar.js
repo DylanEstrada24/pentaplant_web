@@ -288,6 +288,11 @@ import translation from "../../translation";
                 API 키 인증 완료.
               </div>
               :null}
+              {this.state.apiresult == "already"?
+              <div>
+                API 키가 이미 등록 되어있습니다.
+                </div>
+                :null}
             </div>
           </Modal>
         </nav>
