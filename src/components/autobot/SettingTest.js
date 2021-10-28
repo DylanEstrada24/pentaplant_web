@@ -41,10 +41,12 @@ class SettingTest extends React.Component {
     window.scrollTo(0, 0);
 
     var sessionToken = localStorage.getItem("sessionToken");
-    
-    this.fetchtotalAmount(sessionToken);
+    if (sessionToken != null){
+      this.fetchtotalAmount(sessionToken);
 
-    this.firsttrading(sessionToken);
+      this.firsttrading(sessionToken);
+    }
+    
 
   }
 
