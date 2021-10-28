@@ -320,7 +320,7 @@ class SettingTest extends React.Component {
         EntryNum: firstEntry.toString(),
         PercentReturn: firstGain.toString(),
         pyramidingEntry: pyramidingfirstEntry.toString(),
-        pyramidingGain: pyramidingsecondGain.toString()
+        pyramidingGain: pyramidingfirstGain.toString()
       },
       {
         active: secondActive,
@@ -329,7 +329,7 @@ class SettingTest extends React.Component {
         PercentRange: secondRange.toString(),
         EntryNum: secondEntry.toString(),
         PercentReturn: secondGain,
-        pyramidingEntry: pyramidingfirstEntry.toString(),
+        pyramidingEntry: pyramidingsecondEntry.toString(),
         pyramidingGain: pyramidingsecondGain.toString()
       },
       {
@@ -339,8 +339,8 @@ class SettingTest extends React.Component {
         PercentRange: thirdRange.toString(),
         EntryNum: thirdEntry.toString(),
         PercentReturn: thirdGain.toString(),
-        pyramidingEntry: pyramidingfirstEntry.toString(),
-        pyramidingGain: pyramidingsecondGain.toString()
+        pyramidingEntry: pyramidingthirdEntry.toString(),
+        pyramidingGain: pyramidingthirdGain.toString()
       },
     ];
 
