@@ -39,8 +39,15 @@ class SignIn extends Component {
         console.log(res);
 
         if (res.success != "wrong password" && res.success != "wrong login"){
-          localStorage.setItem('sessionToken', res);
-          window.location.reload();
+          var currsessionToken = localStorage.getItem("sessionToken");
+          if (currsessionToken == null){
+            localStorage.setItem('sessionToken', res);
+            window.location.reload();
+          }else{
+            localStorage.removeItem("sessionToken");
+            localStorage.setItem('sessionToken', res);
+            window.location.reload();
+          }
         }
         if (res.success == "wrong password"){
           this.setState({loginresult: res.success})
