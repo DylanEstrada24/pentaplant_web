@@ -60,6 +60,7 @@ class Main extends React.Component {
     // this._ref.current.appendChild(script2);
   }
 
+  /*
   fetchtotalAmount = (token) => {
     fetch("http://15.164.232.119:5055/totalbalance", {
       method: "POST",
@@ -77,6 +78,7 @@ class Main extends React.Component {
       this.setState({btctotalAmount: res.BTC})
     })
   }
+  */
 
   render() {
     return (
@@ -90,9 +92,9 @@ class Main extends React.Component {
                   <div>가동코인 Set</div>
                 </div>
                 <div id="wallet" className="s_text">
-                  <div>현재나의 {this.state.totalAmount} $</div>
+                  <div></div>
                   <div class="vertical_line">|</div>
-                  <div>{this.state.btctotalAmount} BTC</div>
+                  <div></div>
                 </div>
                 <div
                   id="autobot_button_container1"
