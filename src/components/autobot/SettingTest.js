@@ -51,7 +51,7 @@ class SettingTest extends React.Component {
   }
 
   fetchtotalAmount = (token) => {
-    fetch("http://15.164.232.119:5055/totalbalance", {
+    fetch("http://15.164.232.119:5055/totalbalancetwo", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -70,7 +70,7 @@ class SettingTest extends React.Component {
   }
 
   firsttrading = (token) => {
-    fetch("http://15.164.232.119:5055/firsttrading", {
+    fetch("http://15.164.232.119:5055/firsttradingtwo", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
