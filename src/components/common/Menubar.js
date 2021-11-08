@@ -302,6 +302,11 @@ import translation from "../../translation";
                 API 키가 이미 등록 되어있습니다.
                 </div>
                 :null}
+                {this.state.apiresult == "alreadybot"?
+              <div>
+                이미 봇이 가동 중입니다.
+                </div>
+                :null}
             </div>
           </Modal>
         </nav>
